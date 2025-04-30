@@ -1,0 +1,128 @@
+﻿<Page x:Class="_4lab.RegisterUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_4lab"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="400">
+
+    <Page.Resources>
+        <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Orange"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderBrush" Value="Orange"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#1A1A1A">
+        <Border Background="#C26100"
+                CornerRadius="10"
+                Padding="20"
+                Width="320"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Title -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Username -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Email -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Password -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Confirm Password -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Button -->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <!-- Labels -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- Input fields -->
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                           Text="REGISTER USER"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Text="USERNAME"
+                           Foreground="Black"
+                           FontWeight="Bold"/>
+                <TextBox Grid.Row="1" Grid.Column="1"
+                         x:Name="UsernameBox"
+                         Background="Black"
+                         Foreground="White"
+                         Margin="5,0,0,0"
+                         Padding="8"
+                         BorderThickness="0"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Text="EMAIL"
+                           Foreground="Black"
+                           FontWeight="Bold"/>
+                <TextBox Grid.Row="2" Grid.Column="1"
+                         x:Name="EmailBox"
+                         Background="Black"
+                         Foreground="White"
+                         Margin="5,0,0,0"
+                         Padding="8"
+                         BorderThickness="0"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           Text="PASSWORD"
+                           Foreground="Black"
+                           FontWeight="Bold"/>
+                <PasswordBox Grid.Row="3" Grid.Column="1"
+                             x:Name="PasswordBox"
+                             Background="Black"
+                             Foreground="White"
+                             Margin="5,0,0,0"
+                             Padding="8"
+                             BorderThickness="0"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0"
+                           Text="CONFIRM PASSWORD"
+                           Foreground="Black"
+                           FontWeight="Bold"/>
+                <PasswordBox Grid.Row="4" Grid.Column="1"
+                             x:Name="ConfirmPasswordBox"
+                             Background="Black"
+                             Foreground="White"
+                             Margin="5,0,0,0"
+                             Padding="8"
+                             BorderThickness="0"/>
+
+                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                        Content="REGISTER"
+                        Style="{StaticResource OrangeBlackButtonStyle}"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,10,0,0"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
