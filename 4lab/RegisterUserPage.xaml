@@ -55,7 +55,7 @@
                     <!-- Button -->
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="120"/>
                     <!-- Labels -->
                     <ColumnDefinition Width="*"/>
                     <!-- Input fields -->
@@ -72,48 +72,56 @@
                 <TextBlock Grid.Row="1" Grid.Column="0"
                            Text="USERNAME"
                            Foreground="Black"
-                           FontWeight="Bold"/>
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Margin="0,5,5,5"/>
                 <TextBox Grid.Row="1" Grid.Column="1"
                          x:Name="UsernameBox"
                          Background="Black"
                          Foreground="White"
-                         Margin="5,0,0,0"
+                         Margin="5,5,0,5"
                          Padding="8"
                          BorderThickness="0"/>
 
                 <TextBlock Grid.Row="2" Grid.Column="0"
                            Text="EMAIL"
                            Foreground="Black"
-                           FontWeight="Bold"/>
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Margin="0,5,5,5"/>
                 <TextBox Grid.Row="2" Grid.Column="1"
                          x:Name="EmailBox"
                          Background="Black"
                          Foreground="White"
-                         Margin="5,0,0,0"
+                         Margin="5,5,0,5"
                          Padding="8"
                          BorderThickness="0"/>
 
                 <TextBlock Grid.Row="3" Grid.Column="0"
                            Text="PASSWORD"
                            Foreground="Black"
-                           FontWeight="Bold"/>
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Margin="0,5,5,5"/>
                 <PasswordBox Grid.Row="3" Grid.Column="1"
                              x:Name="PasswordBox"
                              Background="Black"
                              Foreground="White"
-                             Margin="5,0,0,0"
+                             Margin="5,5,0,5"
                              Padding="8"
                              BorderThickness="0"/>
 
                 <TextBlock Grid.Row="4" Grid.Column="0"
                            Text="CONFIRM PASSWORD"
                            Foreground="Black"
-                           FontWeight="Bold"/>
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Margin="0,5,5,5"/>
                 <PasswordBox Grid.Row="4" Grid.Column="1"
                              x:Name="ConfirmPasswordBox"
                              Background="Black"
                              Foreground="White"
-                             Margin="5,0,0,0"
+                             Margin="5,5,0,5"
                              Padding="8"
                              BorderThickness="0"/>
 
