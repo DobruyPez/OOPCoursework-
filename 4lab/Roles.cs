@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace Roles
 {
-    public class User { 
-            
+    public enum SubscriptionType
+    {
+        Light,
+        Semi,
+        Pro
+    }
+
+    public class User
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
     }
 
     public class Team {
@@ -19,6 +32,8 @@ namespace Roles
         }
     }
 
-    public class Player { 
+    public class Player : User
+    {
+        public SubscriptionType Subscription { get; set; }
     }
 }

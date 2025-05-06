@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace _4lab
         public void RegisterUser()
         {
             _parentWindow.ShowContent(new RegisterUserPage());
+
         }
 
         private void RegisterUser(object sender, RoutedEventArgs e)
