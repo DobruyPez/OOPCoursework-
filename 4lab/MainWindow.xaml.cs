@@ -5,6 +5,8 @@ using System.Windows.Navigation;
 using System.Globalization;
 using System.Threading;
 using System.ComponentModel;
+using System.Data.Entity;
+using System.Runtime.Remoting.Contexts;
 
 namespace _4lab
 {
@@ -63,6 +65,7 @@ namespace _4lab
         private void RegisterUser(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new RegisterUserPage());
+            //DataBaseInteractor.ModifyDatabase();
         }
 
         private void LanguageButton_Click(object sender, RoutedEventArgs e)
