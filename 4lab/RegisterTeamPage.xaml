@@ -11,10 +11,10 @@
         <!-- Кнопка "Создать команду" -->
         <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Black"/>
-            <Setter Property="Foreground" Value="Orange"/>
+            <Setter Property="Foreground" Value="#995200"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderBrush" Value="Orange"/>
+            <Setter Property="BorderBrush" Value="#995200"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
@@ -34,7 +34,7 @@
     </Page.Resources>
 
     <Grid Background="#1A1A1A">
-        <Border Background="#C26100"
+        <Border Background="#995200"
                 CornerRadius="10"
                 Padding="20"
                 Width="320"
@@ -42,7 +42,7 @@
                 VerticalAlignment="Center">
             <StackPanel>
                 <TextBlock Text="CREATE A TEAM"
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="20"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
@@ -58,7 +58,7 @@
 
                 <TextBlock Text="TEAM REGION" Foreground="Black" FontWeight="Bold"/>
                 <ComboBox Background="Black"
-                          Foreground="White"
+                          Foreground="Black"
                           Margin="0,5,0,15"
                           Padding="8"
                           BorderThickness="0">
