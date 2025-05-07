@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Globalization;
+using System.Threading;
+using System.ComponentModel;
+using System.Data.Entity;
+using System.Runtime.Remoting.Contexts;
+using System.Windows.Navigation;
 
 namespace _4lab
 {
@@ -20,10 +16,14 @@ namespace _4lab
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isEnglish = true;
+
         public MainWindow()
         {
             InitializeComponent();
+            SetLanguage(isEnglish); // Set initial language
             LoadInitialContent();
+            MainFrame.Navigated += MainFrame_Navigated; // Attach navigation event handler
         }
 
         private void LoadInitialContent()
@@ -62,9 +62,61 @@ namespace _4lab
                 MainFrame.GoForward();
             }
         }
+
         private void RegisterUser(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new RegisterUserPage());
+            //DataBaseInteractor.ModifyDatabase();
+        }
+
+        private void LanguageButton_Click(object sender, RoutedEventArgs e)
+        {
+            isEnglish = !isEnglish;
+            SetLanguage(isEnglish);
+            LanguageButton.Content = isEnglish ? "EN" : "RU";
+            RefreshCurrentPage();
+        }
+
+        private void SetLanguage(bool useEnglish)
+        {
+            string culture = useEnglish ? "en-US" : "ru-RU";
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
+
+            // Update UI elements
+            BackButton.ToolTip = useEnglish ? "Back" : "Назад";
+            ForwardButton.ToolTip = useEnglish ? "Forward" : "Вперед";
+            LanguageButton.ToolTip = useEnglish ? "Switch to Russian" : "Переключить на английский";
+
+            // Notify UI of culture change
+            foreach (var element in LogicalTreeHelper.GetChildren(this))
+            {
+                if (element is FrameworkElement frameworkElement)
+                {
+                    frameworkElement.Language = System.Windows.Markup.XmlLanguage.GetLanguage(culture);
+                }
+            }
+        }
+
+        private void RefreshCurrentPage()
+        {
+            if (MainFrame.Content is Page currentPage)
+            {
+                // Create a new instance of the current page type
+                Page newPage = (Page)Activator.CreateInstance(currentPage.GetType(), this);
+                MainFrame.Navigate(newPage);
+            }
+        }
+        private void SubscriptionButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+           
+        }
+        private void NavigateToUserProfile(object sender, RoutedEventArgs e)
+        {
+            // Placeholder for current user data; replace with actual user retrieval logic
+            string currentUsername = "TestUser"; // Fetch from session or database
+            string currentEmail = "test@example.com"; // Fetch from session or database
+            MainFrame.Navigate(new UserProfilePage(currentUsername, currentEmail));
         }
     }
 }

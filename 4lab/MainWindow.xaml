@@ -3,26 +3,102 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:_4lab"
         Title="My Application" Height="600" Width="800">
+    <Window.Resources>
+        <!-- Improved Button Style for Home and Navigation -->
+        <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#995200"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5"
+                                BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#E68A00"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#B36B00"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Enhanced Language Button Style -->
+        <Style x:Key="LanguageButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#000000"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#FFFFFF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="8"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1A1A1A"/>
+                                <Setter Property="BorderBrush" Value="#CCCCCC"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#333333"/>
+                                <Setter Property="BorderBrush" Value="#999999"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <DockPanel>
-        <Grid DockPanel.Dock="Top" Height="60" Background="#CC7A00">
+        <Grid DockPanel.Dock="Top" Height="60" Background="#995200">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Навигация -->
+            <!-- Navigation -->
             <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0">
-                <Button Content="Home" Style="{StaticResource OrangeBlackButtonStyle}" Margin="5" Click="NavigateToHome"/>
-                <Button Content="←" Style="{StaticResource OrangeBlackButtonStyle}" Margin="5" x:Name="BackButton" Click="BackButton_Click" IsEnabled="False" ToolTip="Назад"/>
-                <Button Content="→" Style="{StaticResource OrangeBlackButtonStyle}" Margin="5" x:Name="ForwardButton" Click="ForwardButton_Click" IsEnabled="False" ToolTip="Вперед"/>
+                <Button Content="Home" Style="{StaticResource OrangeBlackButtonStyle}" Click="NavigateToHome"/>
+                <Button Content="←" Style="{StaticResource OrangeBlackButtonStyle}" x:Name="BackButton" Click="BackButton_Click" IsEnabled="False" ToolTip="Back" FontSize="18" FontWeight="ExtraBold" Width="40" Height="40"/>
+                <Button Content="→" Style="{StaticResource OrangeBlackButtonStyle}" x:Name="ForwardButton" Click="ForwardButton_Click" IsEnabled="False" ToolTip="Forward" FontSize="18" FontWeight="ExtraBold" Width="40" Height="40"/>
             </StackPanel>
 
-            <!-- Логотип -->
-            <TextBlock Grid.Column="1" Text="STANDOFF 2" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <!-- Logo -->
+            <TextBlock Grid.Column="1" Text="STANDOFF 2" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="177,0,0,0"/>
 
-            <!-- Иконка пользователя -->
-            <Button Grid.Column="2" Width="40" Height="40" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right" Content="👤" FontSize="18" Click="RegisterUser"/>
+            <!-- User Icon and Language Switch -->
+            <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                <Button Style="{StaticResource LanguageButtonStyle}" Content="EN" x:Name="LanguageButton" Click="LanguageButton_Click" ToolTip="Switch Language"/>
+                <Button Style="{StaticResource OrangeBlackButtonStyle}" Content="👤" Click="RegisterUser" Width="50" Height="50" FontSize="24" Margin="5,0"/>
+                <Button Content="🏠" Style="{StaticResource OrangeBlackButtonStyle}" Click="NavigateToUserProfile" Width="50" Height="50" FontSize="24" ToolTip="Personal Cabinet" Margin="5,0"/>
+            </StackPanel>
         </Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </DockPanel>
