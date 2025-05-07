@@ -49,6 +49,11 @@ namespace _4lab
         {
 
         }
+
+        private void SubscriptionButton_Click(object sender, RoutedEventArgs e)
+        {
+            _parentWindow.ShowContent(new PremiumSubscrationPage());
+        }
     }
 
 }
