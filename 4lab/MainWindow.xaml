@@ -6,7 +6,7 @@
     <Window.Resources>
         <!-- Improved Button Style for Home and Navigation -->
         <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="#CC7A00"/>
+            <Setter Property="Background" Value="#995200"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Padding" Value="10,5"/>
@@ -76,7 +76,7 @@
         </Style>
     </Window.Resources>
     <DockPanel>
-        <Grid DockPanel.Dock="Top" Height="60" Background="#CC7A00">
+        <Grid DockPanel.Dock="Top" Height="60" Background="#995200">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
@@ -91,12 +91,13 @@
             </StackPanel>
 
             <!-- Logo -->
-            <TextBlock Grid.Column="1" Text="STANDOFF 2" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Text="STANDOFF 2" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="177,0,0,0"/>
 
             <!-- User Icon and Language Switch -->
             <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
                 <Button Style="{StaticResource LanguageButtonStyle}" Content="EN" x:Name="LanguageButton" Click="LanguageButton_Click" ToolTip="Switch Language"/>
-                <Button Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Right" Content="👤" FontSize="18" Click="RegisterUser"/>
+                <Button Style="{StaticResource OrangeBlackButtonStyle}" Content="👤" Click="RegisterUser" Width="50" Height="50" FontSize="24" Margin="5,0"/>
+                <Button Content="🏠" Style="{StaticResource OrangeBlackButtonStyle}" Click="NavigateToUserProfile" Width="50" Height="50" FontSize="24" ToolTip="Personal Cabinet" Margin="5,0"/>
             </StackPanel>
         </Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>

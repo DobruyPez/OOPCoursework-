@@ -63,8 +63,8 @@ namespace _4lab
                     context.Users.Add(newPlayer);
                     context.SaveChanges();
                 }
+                NavigationService.Navigate(new UserProfilePage(newPlayer.Username, newPlayer.Email));
 
-                MessageBox.Show("Registration successful!");
 
                 // Возврат на предыдущую страницу или главное меню
                 if (NavigationService.CanGoBack)
@@ -87,6 +87,7 @@ namespace _4lab
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
+
     }
 }
 

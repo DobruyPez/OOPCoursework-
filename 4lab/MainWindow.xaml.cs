@@ -7,6 +7,7 @@ using System.Threading;
 using System.ComponentModel;
 using System.Data.Entity;
 using System.Runtime.Remoting.Contexts;
+using System.Windows.Navigation;
 
 namespace _4lab
 {
@@ -105,6 +106,17 @@ namespace _4lab
                 Page newPage = (Page)Activator.CreateInstance(currentPage.GetType(), this);
                 MainFrame.Navigate(newPage);
             }
+        }
+        private void SubscriptionButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+           
+        }
+        private void NavigateToUserProfile(object sender, RoutedEventArgs e)
+        {
+            // Placeholder for current user data; replace with actual user retrieval logic
+            string currentUsername = "TestUser"; // Fetch from session or database
+            string currentEmail = "test@example.com"; // Fetch from session or database
+            MainFrame.Navigate(new UserProfilePage(currentUsername, currentEmail));
         }
     }
 }
