@@ -25,9 +25,4 @@ namespace Services
         public static bool CheckGameRooms() { return true; }
         public static bool CreateGameRoom() { return true; }
     }
-
-    //public static class admincontrolservice : usercontrolservice
-    //{
-
-    //}
 }

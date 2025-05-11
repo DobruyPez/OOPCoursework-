@@ -1,26 +1,76 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Windows;
+using System.Windows.Controls;
+using _4lab.Migrations;
+using Roles;
 
 namespace _4lab
 {
     public partial class UserProfilePage : Page
     {
-        public UserProfilePage(string username, string email)
+        public UserProfilePage()
         {
             InitializeComponent();
-            UsernameTextBlock.Text = $"Username: {username}";
-            EmailTextBlock.Text = $"Email: {email}";
-            // Team info can be set here if available; for now, it defaults to "Not in a team"
+            LoadUserData();
+        }
+
+        private void LoadUserData()
+        {
+            var user = CurrentUser.Instance.GetCurrentUser();
+            if (user != null)
+            {
+                if(user is Player)
+                {
+                    Player playerUser = (Player)user;
+                    UsernameTextBlock.Text = user.Username;
+                    EmailTextBlock.Text = user.Email;
+                    TwitchTextBox.Text = playerUser.TwitchLink ?? "";
+                    DiscordTextBox.Text = playerUser.DiscordLink ?? "";
+                    using (var context = new _4lab.BD.DBContext())
+                    {
+                        var team = context.Teams.FirstOrDefault(t => t.Id == playerUser.TeamId);
+                        TeamTextBlock.Text = team?.Name ?? "No team";
+                    }
+                }
+
+                
+            }
         }
 
         private void SaveLinksButton_Click(object sender, RoutedEventArgs e)
         {
-            string twitch = TwitchTextBox.Text;
-            string discord = DiscordTextBox.Text;
+            try
+            {
+                using (var context = new _4lab.BD.DBContext())
+                {
+                    var user = CurrentUser.Instance.GetCurrentUser();              
+                    
+                    if (user != null)
+                    {
+                        if (user is Player)
+                        {
+                            var dbUser = context.Players.Find(user.Id);
+                            dbUser.TwitchLink = TwitchTextBox.Text;
+                            dbUser.DiscordLink = DiscordTextBox.Text;
+                            context.SaveChanges();
+                        }
+                        //else if(user is Admin)
+                        //{
 
-            // For now, just show a confirmation message
-            MessageBox.Show($"Links saved!\nTwitch: {twitch}\nDiscord: {discord}", "Success",
-                MessageBoxButton.OK, MessageBoxImage.Information);
+                        //}
+
+                        MessageBox.Show("Ссылки успешно сохранены!", "Успех",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сохранении ссылок: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
