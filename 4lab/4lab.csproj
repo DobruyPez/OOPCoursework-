@@ -116,9 +116,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Migrations\202505102035367_InitialCreate.cs" />
-    <Compile Include="Migrations\202505102035367_InitialCreate.Designer.cs">
-      <DependentUpon>202505102035367_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202505111450541_InitialCreate.cs" />
+    <Compile Include="Migrations\202505111450541_InitialCreate.Designer.cs">
+      <DependentUpon>202505111450541_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DataBaseInteractor.cs" />
     <Compile Include="Migrations\DBContext.cs" />
@@ -195,8 +195,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202505102035367_InitialCreate.resx">
-      <DependentUpon>202505102035367_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202505111450541_InitialCreate.resx">
+      <DependentUpon>202505111450541_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
