@@ -62,7 +62,8 @@ namespace _4lab
                     {
                         Username = username,
                         Email = email,
-                        PasswordHash = hashedPassword
+                        PasswordHash = hashedPassword,
+                        Role = UserRole.Player,
                     };
 
                     context.Users.Add(user);
@@ -98,7 +99,7 @@ namespace _4lab
             using (var context = new _4lab.BD.DBContext())
             {
                 var user = context.Users.FirstOrDefault(u => u.Email == email);
-                if (user == null || !DataBaseInteractor.VerifyPassword(hashedPassword, user.PasswordHash))
+                if (user == null || !DataBaseInteractor.VerifyPassword(password, user.PasswordHash))
                 {
                     MessageBox.Show("Неверный email или пароль.", "Ошибка",
                         MessageBoxButton.OK, MessageBoxImage.Error);
@@ -106,7 +107,6 @@ namespace _4lab
                 }
 
                 Player player = null;
-                Team team = null;
                 if (user.Role == UserRole.Player)
                 {
                     player = context.Players.FirstOrDefault(p => p.Id == user.Id);

@@ -19,6 +19,7 @@ namespace _4lab.BD
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("public");
             // Отключение PluralizingTableNameConvention для точного соответствия именам таблиц
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 

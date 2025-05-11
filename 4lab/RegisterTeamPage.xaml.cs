@@ -49,6 +49,35 @@ namespace _4lab
                     context.Teams.Add(team);
                     context.SaveChanges();
 
+                    var currUser = CurrentUser.Instance.GetCurrentUser();
+                    if (currUser != null && currUser is Player playerUser)
+                    {
+                        // Обновляем TeamId в объекте CurrentUser
+                        playerUser.TeamId = team.Id;
+
+                        // Находим пользователя в базе данных и обновляем TeamId
+                        var user = context.Players.FirstOrDefault(u => u.Email == currUser.Email);
+                        if (user != null)
+                        {
+                            user.TeamId = team.Id;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Пользователь не найден в базе данных.", "Ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
+                        }
+
+                        // Сохраняем изменения для пользователя
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Текущий пользователь не найден или не является игроком.", "Ошибка",
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
                     MessageBox.Show("Команда успешно создана!", "Успех",
                         MessageBoxButton.OK, MessageBoxImage.Information);
 

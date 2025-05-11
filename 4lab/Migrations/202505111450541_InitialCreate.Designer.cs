@@ -13,7 +13,7 @@ namespace _4lab.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202505102035367_InitialCreate"; }
+            get { return "202505111450541_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

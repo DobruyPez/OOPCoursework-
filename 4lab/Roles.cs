@@ -37,7 +37,7 @@ namespace Roles
         public string Name { get; set; }
         public string Region { get; set; }
         public string Password { get; set; }
-        public int OwnerId { get; set; } // Ссылка на пользователя, создавшего команду
+        public int OwnerId { get; set; } 
     }
 
 

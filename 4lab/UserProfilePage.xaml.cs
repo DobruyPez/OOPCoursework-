@@ -18,24 +18,38 @@ namespace _4lab
 
         private void LoadUserData()
         {
-            var user = CurrentUser.Instance.GetCurrentUser();
-            if (user != null)
+            try
             {
-                if(user is Player)
+                var user = CurrentUser.Instance.GetCurrentUser();
+                if (user != null && user is Player playerUser)
                 {
-                    Player playerUser = (Player)user;
                     UsernameTextBlock.Text = user.Username;
                     EmailTextBlock.Text = user.Email;
                     TwitchTextBox.Text = playerUser.TwitchLink ?? "";
                     DiscordTextBox.Text = playerUser.DiscordLink ?? "";
-                    using (var context = new _4lab.BD.DBContext())
+
+                    try
                     {
-                        var team = context.Teams.FirstOrDefault(t => t.Id == playerUser.TeamId);
-                        TeamTextBlock.Text = team?.Name ?? "No team";
+                        using (var context = new _4lab.BD.DBContext())
+                        {
+                            var team = context.Teams
+                                .FirstOrDefault(t => t.Id == playerUser.TeamId && t.OwnerId == playerUser.Id);
+
+                            TeamTextBlock.Text = team?.Name ?? "No team";
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка загрузки команды: {ex.Message}", "Ошибка",
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        TeamTextBlock.Text = "Ошибка загрузки";
                     }
                 }
-
-                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки данных: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
