@@ -4,27 +4,35 @@
              xmlns:local="clr-namespace:_4lab"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Black"/>
-            <Setter Property="Foreground" Value="Orange"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderBrush" Value="Orange"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ResourceDictionary>
+            <!-- Подключение только английского словаря по умолчанию -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="English.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Стиль кнопки -->
+            <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="Foreground" Value="Orange"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="BorderBrush" Value="Orange"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="5">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

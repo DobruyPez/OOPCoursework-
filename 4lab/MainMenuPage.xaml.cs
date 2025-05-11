@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace _4lab
 {
     /// <summary>
-    /// Логика взаимодействия для MainMenuControl.xaml
+    /// Логика взаимодействия для MainMenuPage.xaml
     /// </summary>
     public partial class MainMenuPage : Page
     {
@@ -36,18 +36,12 @@ namespace _4lab
 
         private void FindPraccsButton_Click(object sender, RoutedEventArgs e)
         {
-            _parentWindow.ShowContent(new TeamMatchesPage());
+            _parentWindow.ShowContent(new TeamMatchesPage(_parentWindow));
         }
 
         public void RegisterUser()
         {
             _parentWindow.ShowContent(new RegisterUserPage());
-
-        }
-
-        private void RegisterUser(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void SubscriptionButton_Click(object sender, RoutedEventArgs e)
@@ -55,5 +49,4 @@ namespace _4lab
             _parentWindow.ShowContent(new PremiumSubscrationPage());
         }
     }
-
 }

@@ -23,7 +23,7 @@ namespace _4lab
                 System.Diagnostics.Debug.WriteLine($"Ошибка загрузки: {ex.Message}");
             }
 
-            DataBaseInteractor.CreateDatabase();
+            _4lab.DB.DataBaseInteractor.CreateDatabase();
         }
     }
 }

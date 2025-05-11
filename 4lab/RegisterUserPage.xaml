@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:_4lab"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="400">
-
+      d:DesignHeight="700" d:DesignWidth="500"
+      Title="RegisterUserPage">
     <Page.Resources>
         <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Black"/>
@@ -31,105 +31,62 @@
             </Setter>
         </Style>
     </Page.Resources>
-
     <Grid Background="#1A1A1A">
         <Border Background="#995200"
                 CornerRadius="10"
                 Padding="20"
-                Width="320"
+                Width="400"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <!-- Title -->
-                    <RowDefinition Height="Auto"/>
-                    <!-- Username -->
-                    <RowDefinition Height="Auto"/>
-                    <!-- Email -->
-                    <RowDefinition Height="Auto"/>
-                    <!-- Password -->
-                    <RowDefinition Height="Auto"/>
-                    <!-- Confirm Password -->
-                    <RowDefinition Height="Auto"/>
-                    <!-- Button -->
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="120"/>
-                    <!-- Labels -->
-                    <ColumnDefinition Width="*"/>
-                    <!-- Input fields -->
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-                           Text="REGISTER USER"
-                           Foreground="White"
+            <StackPanel>
+                <TextBlock Text="{DynamicResource RegisterUserTitle}"
+                           Foreground="Black"
                            FontSize="20"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
                            Margin="0,0,0,20"/>
-
-                <TextBlock Grid.Row="1" Grid.Column="0"
-                           Text="USERNAME"
-                           Foreground="Black"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center"
-                           Margin="0,5,5,5"/>
-                <TextBox Grid.Row="1" Grid.Column="1"
-                         x:Name="UsernameBox"
+                <TextBlock Text="{DynamicResource UsernameLabel}" Foreground="Black" FontWeight="Bold"/>
+                <TextBox x:Name="UsernameBox"
                          Background="Black"
                          Foreground="White"
-                         Margin="5,5,0,5"
+                         Margin="0,5,0,15"
                          Padding="8"
                          BorderThickness="0"/>
-
-                <TextBlock Grid.Row="2" Grid.Column="0"
-                           Text="EMAIL"
-                           Foreground="Black"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center"
-                           Margin="0,5,5,5"/>
-                <TextBox Grid.Row="2" Grid.Column="1"
-                         x:Name="EmailBox"
+                <TextBlock Text="{DynamicResource EmailLabel}" Foreground="Black" FontWeight="Bold"/>
+                <TextBox x:Name="EmailBox"
                          Background="Black"
                          Foreground="White"
-                         Margin="5,5,0,5"
+                         Margin="0,5,0,15"
                          Padding="8"
                          BorderThickness="0"/>
-
-                <TextBlock Grid.Row="3" Grid.Column="0"
-                           Text="PASSWORD"
-                           Foreground="Black"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center"
-                           Margin="0,5,5,5"/>
-                <PasswordBox Grid.Row="3" Grid.Column="1"
-                             x:Name="PasswordBox"
+                <TextBlock Text="{DynamicResource PasswordLabel}" Foreground="Black" FontWeight="Bold"/>
+                <PasswordBox x:Name="PasswordBox"
                              Background="Black"
                              Foreground="White"
-                             Margin="5,5,0,5"
+                             Margin="0,5,0,15"
                              Padding="8"
                              BorderThickness="0"/>
-
-                <TextBlock Grid.Row="4" Grid.Column="0"
-                           Text="CONFIRM PASSWORD"
-                           Foreground="Black"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center"
-                           Margin="0,5,5,5"/>
-                <PasswordBox Grid.Row="4" Grid.Column="1"
-                             x:Name="ConfirmPasswordBox"
+                <TextBlock Text="{DynamicResource ConfirmPasswordLabel}" Foreground="Black" FontWeight="Bold"/>
+                <PasswordBox x:Name="ConfirmPasswordBox"
                              Background="Black"
                              Foreground="White"
-                             Margin="5,5,0,5"
+                             Margin="0,5,0,15"
                              Padding="8"
                              BorderThickness="0"/>
-
-                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-                        Content="REGISTER"
-                        Style="{StaticResource OrangeBlackButtonStyle}"
-                        Margin="0,10,0,0" Height="18" VerticalAlignment="Top" Click="RegisterButton_Click"/>
-            </Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button x:Name="RegisterButton"
+                            Content="{DynamicResource RegisterButton}"
+                            Style="{StaticResource OrangeBlackButtonStyle}"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,10,0"
+                            Click="RegisterButton_Click"/>
+                    <Button x:Name="SignInButton"
+                            Content="Sign In"
+                            Style="{StaticResource OrangeBlackButtonStyle}"
+                            HorizontalAlignment="Center"
+                            Click="SignInButton_Click"/>
+                </StackPanel>
+            </StackPanel>
         </Border>
     </Grid>
 </Page>

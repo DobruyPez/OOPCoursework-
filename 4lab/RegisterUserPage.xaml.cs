@@ -1,25 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using _4lab.DB;
+using _4lab.Migrations;
 using Roles;
 
 namespace _4lab
 {
-    /// <summary>
-    /// Логика взаимодействия для RegisterUserPage.xaml
-    /// </summary>
     public partial class RegisterUserPage : Page
     {
         public RegisterUserPage()
@@ -29,65 +18,105 @@ namespace _4lab
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            // Валидация данных
-            if (string.IsNullOrWhiteSpace(UsernameBox.Text) ||
-                string.IsNullOrWhiteSpace(EmailBox.Text) ||
-                string.IsNullOrWhiteSpace(PasswordBox.Password) ||
-                PasswordBox.Password != ConfirmPasswordBox.Password)
+            string username = UsernameBox.Text;
+            string email = EmailBox.Text;
+            string password = PasswordBox.Password;
+            string confirmPassword = ConfirmPasswordBox.Password;
+
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
             {
-                MessageBox.Show("Please fill all fields correctly and ensure passwords match.");
+                MessageBox.Show("Все поля должны быть заполнены.", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
+            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Введите корректный email.", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Пароли не совпадают.", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            string hashedPassword = DataBaseInteractor.HashPassword(password);
+
             try
             {
-                // Создание нового Player
-                var newPlayer = new Player
+                using (var context = new _4lab.BD.DBContext())
                 {
-                    Username = UsernameBox.Text,
-                    Email = EmailBox.Text,
-                    PasswordHash = HashPassword(PasswordBox.Password),
-                    Subscription = SubscriptionType.Light // Значение по умолчанию для нового игрока
-                };
-
-                // Сохранение в БД
-                using (var context = new DBContext())
-                {
-                    // Проверка на существующего пользователя
-                    if (context.Users.Any(u => u.Username == newPlayer.Username || u.Email == newPlayer.Email))
+                    if (context.Users.Any(u => u.Email == email))
                     {
-                        MessageBox.Show("Username or email already exists.");
+                        MessageBox.Show("Пользователь с таким email уже существует.", "Ошибка",
+                            MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
 
-                    context.Users.Add(newPlayer);
+                    var user = new Player
+                    {
+                        Username = username,
+                        Email = email,
+                        PasswordHash = hashedPassword
+                    };
+
+                    context.Users.Add(user);
                     context.SaveChanges();
-                }
-                NavigationService.Navigate(new UserProfilePage(newPlayer.Username, newPlayer.Email));
 
+                    CurrentUser.Instance.SetUser(user);
+                    MessageBox.Show("Регистрация прошла успешно!", "Успех",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Возврат на предыдущую страницу или главное меню
-                if (NavigationService.CanGoBack)
-                {
-                    NavigationService.GoBack();
+                    NavigationService.Navigate(new MainMenuPage((Window.GetWindow(this) as MainWindow)));
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Registration failed: {ex.Message}");
+                MessageBox.Show($"Ошибка при регистрации: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        // Простое хэширование пароля
-        private string HashPassword(string password)
+        private void SignInButton_Click(object sender, RoutedEventArgs e)
         {
-            using (var sha256 = SHA256.Create())
+            string email = EmailBox.Text;
+            string password = PasswordBox.Password;
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+                MessageBox.Show("Email и пароль должны быть заполнены.", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            using (var context = new _4lab.BD.DBContext())
+            {
+                var user = context.Users.FirstOrDefault(u => u.Email == email);
+                if (user == null || !DataBaseInteractor.VerifyPassword(hashedPassword, user.PasswordHash))
+                {
+                    MessageBox.Show("Неверный email или пароль.", "Ошибка",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                Player player = null;
+                Team team = null;
+                if (user.Role == UserRole.Player)
+                {
+                    player = context.Players.FirstOrDefault(p => p.Id == user.Id);
+                }
+
+                CurrentUser.Instance.Login(null, player);
+                MessageBox.Show("Вход выполнен успешно!", "Успех",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                NavigationService.Navigate(new MainMenuPage((MainWindow)Window.GetWindow(this)));
             }
         }
-
     }
 }
-

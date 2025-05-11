@@ -4,16 +4,11 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using System.Globalization;
 using System.Threading;
-using System.ComponentModel;
-using System.Data.Entity;
-using System.Runtime.Remoting.Contexts;
-using System.Windows.Navigation;
+using System.Windows.Markup;
+using Roles;
 
 namespace _4lab
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private bool isEnglish = true;
@@ -21,9 +16,9 @@ namespace _4lab
         public MainWindow()
         {
             InitializeComponent();
-            SetLanguage(isEnglish); // Set initial language
+            SetLanguage(isEnglish);
             LoadInitialContent();
-            MainFrame.Navigated += MainFrame_Navigated; // Attach navigation event handler
+            MainFrame.Navigated += MainFrame_Navigated;
         }
 
         private void LoadInitialContent()
@@ -66,7 +61,6 @@ namespace _4lab
         private void RegisterUser(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new RegisterUserPage());
-            //DataBaseInteractor.ModifyDatabase();
         }
 
         private void LanguageButton_Click(object sender, RoutedEventArgs e)
@@ -83,17 +77,18 @@ namespace _4lab
             Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
 
-            // Update UI elements
-            BackButton.ToolTip = useEnglish ? "Back" : "Назад";
-            ForwardButton.ToolTip = useEnglish ? "Forward" : "Вперед";
-            LanguageButton.ToolTip = useEnglish ? "Switch to Russian" : "Переключить на английский";
+            Application.Current.Resources.MergedDictionaries.Clear();
+            var newDict = new ResourceDictionary
+            {
+                Source = new Uri(useEnglish ? "English.xaml" : "Russian.xaml", UriKind.Relative)
+            };
+            Application.Current.Resources.MergedDictionaries.Add(newDict);
 
-            // Notify UI of culture change
             foreach (var element in LogicalTreeHelper.GetChildren(this))
             {
                 if (element is FrameworkElement frameworkElement)
                 {
-                    frameworkElement.Language = System.Windows.Markup.XmlLanguage.GetLanguage(culture);
+                    frameworkElement.Language = XmlLanguage.GetLanguage(culture);
                 }
             }
         }
@@ -102,21 +97,42 @@ namespace _4lab
         {
             if (MainFrame.Content is Page currentPage)
             {
-                // Create a new instance of the current page type
-                Page newPage = (Page)Activator.CreateInstance(currentPage.GetType(), this);
+                Page newPage;
+                Type pageType = currentPage.GetType();
+
+                if (pageType == typeof(MainMenuPage))
+                {
+                    newPage = new MainMenuPage(this);
+                }
+                else if (pageType == typeof(UserProfilePage))
+                {
+                    newPage = new UserProfilePage();
+                }
+                else if (pageType == typeof(TeamMatchesPage))
+                {
+                    newPage = new TeamMatchesPage(this);
+                }
+                else
+                {
+                    newPage = (Page)Activator.CreateInstance(pageType);
+                }
+
                 MainFrame.Navigate(newPage);
             }
         }
-        private void SubscriptionButton_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-           
-        }
+
         private void NavigateToUserProfile(object sender, RoutedEventArgs e)
         {
-            // Placeholder for current user data; replace with actual user retrieval logic
-            string currentUsername = "TestUser"; // Fetch from session or database
-            string currentEmail = "test@example.com"; // Fetch from session or database
-            MainFrame.Navigate(new UserProfilePage(currentUsername, currentEmail));
+            if (CurrentUser.Instance.IsLoggedIn)
+            {
+                MainFrame.Navigate(new UserProfilePage());
+            }
+            else
+            {
+                MessageBox.Show("Please register or sign in first.", "Not Logged In",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                MainFrame.Navigate(new RegisterUserPage());
+            }
         }
     }
 }
