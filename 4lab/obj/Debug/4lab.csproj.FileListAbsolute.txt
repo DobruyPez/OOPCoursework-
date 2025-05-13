@@ -1,64 +1,3 @@
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.exe.config
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.exe
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.pdb
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.SqlServer.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework6.Npgsql.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.HashCode.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Npgsql.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Buffers.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Collections.Immutable.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Memory.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Numerics.Vectors.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Encodings.Web.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Json.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Channels.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.ValueTuple.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.SqlServer.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework6.Npgsql.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.HashCode.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Npgsql.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Buffers.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Collections.Immutable.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Memory.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Numerics.Vectors.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Encodings.Web.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Json.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Channels.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.ValueTuple.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.AssemblyReference.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.SuggestedBindingRedirects.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.exe.config
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainMenuPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\TeamMatchesPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainMenuPage.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainWindow.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterTeamPage.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterUserPage.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\TeamMatchesPage.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\App.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab_MarkupCompile.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab_MarkupCompile.lref
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\App.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainWindow.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterTeamPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterUserPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.g.resources
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\_4lab.Properties.Resources.resources
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.GenerateResource.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.CoreCompileInputs.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.Up2Date
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.exe
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.pdb
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\4lab.exe.config
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\4lab.exe
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\4lab.pdb
@@ -97,8 +36,6 @@ C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Channels.xml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.ValueTuple.xml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.AssemblyReference.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.SuggestedBindingRedirects.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.exe.config
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\MainMenuPage.baml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\TeamMatchesPage.baml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\MainMenuPage.g.cs
@@ -124,3 +61,74 @@ C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\PremiumSubscrationPage.g.cs
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\PremiumSubscrationPage.baml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\UserProfilePage.g.cs
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\UserProfilePage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.AssemblyReference.cache
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainMenuPage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainMenuPage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainWindow.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\PremiumSubscrationPage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterTeamPage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterUserPage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\TeamMatchesPage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\UserProfilePage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\App.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab_MarkupCompile.cache
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab_MarkupCompile.lref
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.exe.config
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.exe
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.pdb
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.SqlServer.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework6.Npgsql.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Npgsql.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Buffers.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Collections.Immutable.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Memory.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Numerics.Vectors.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Encodings.Web.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Json.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Channels.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.ValueTuple.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.SqlServer.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework6.Npgsql.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Npgsql.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Buffers.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Collections.Immutable.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Memory.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Numerics.Vectors.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Encodings.Web.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Json.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Channels.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.ValueTuple.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\App.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\MainWindow.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\PremiumSubscrationPage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterTeamPage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterUserPage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\TeamMatchesPage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\UserProfilePage.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.g.resources
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\_4lab.Properties.Resources.resources
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.GenerateResource.cache
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.CoreCompileInputs.cache
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.Up2Date
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.exe
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.pdb
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\BCrypt.Net-Next.dll
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\BCrypt.Net-Next.xml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\_4lab.Migrations.InitialCreate.resources
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\BCrypt.Net-Next.dll
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\BCrypt.Net-Next.xml
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\_4lab.Migrations.InitialCreate.resources
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\PaymentPage.g.cs
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\PaymentPage.baml

@@ -26,38 +26,21 @@ namespace _4lab
         public PremiumSubscrationPage()
         {
             InitializeComponent();
-            SetupButtonHandlers();
         }
 
-        private void SetupButtonHandlers()
+        private void ChooseLite_Click(object sender, RoutedEventArgs e)
         {
-            // Access the Grid directly (assuming it's the root element of the Page)
-            var grid = this.Content as Grid;
-            if (grid != null)
-            {
-                foreach (var border in grid.Children)
-                {
-                    if (border is Border borderElement)
-                    {
-                        var stackPanel = borderElement.Child as StackPanel;
-                        var button = stackPanel?.Children.OfType<Button>().FirstOrDefault();
-                        if (button != null)
-                        {
-                            button.Click += SubscriptionButton_Click;
-                        }
-                    }
-                }
-            }
+            NavigationService.Navigate(new PaymentPage("Lite"));
         }
 
-        private void SubscriptionButton_Click(object sender, RoutedEventArgs e)
+        private void ChooseStandard_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button)
-            {
-                string plan = button.Content.ToString().Replace("Choose ", "");
-                MessageBox.Show($"You have selected the {plan} plan!", "Subscription Confirmation",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+            NavigationService.Navigate(new PaymentPage("Standard"));
+        }
+
+        private void ChoosePro_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PaymentPage("Pro"));
         }
     }
 }

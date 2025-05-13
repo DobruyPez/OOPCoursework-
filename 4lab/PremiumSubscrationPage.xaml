@@ -14,40 +14,34 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
-        <!-- Lite Subscription -->
         <Border Grid.Column="0" Margin="20" Background="#995200" CornerRadius="10">
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Lite" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
-                <TextBlock Text="$9.99/month" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="Basic features" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="1 user" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="Limited support" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <Button Content="Choose Lite" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" />
+                <TextBlock Text="{DynamicResource LitePlan}" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource LitePrice}" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource LiteFeatures}" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource LiteUsers}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource LiteSupport}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
+                <Button x:Name="ChooseLiteButton" Content="{DynamicResource ChooseLite}" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" Click="ChooseLite_Click" />
             </StackPanel>
         </Border>
-
-        <!-- Standard Subscription -->
         <Border Grid.Column="1" Margin="20" Background="#995200" CornerRadius="10">
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Standard" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
-                <TextBlock Text="$19.99/month" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="Advanced features" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="Up to 3 users" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="Priority support" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <Button Content="Choose Standard" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" />
+                <TextBlock Text="{DynamicResource StandardPlan}" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource StandardPrice}" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource StandardFeatures}" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource StandardUsers}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource StandardSupport}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
+                <Button x:Name="ChooseStandardButton" Content="{DynamicResource ChooseStandard}" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" Click="ChooseStandard_Click" />
             </StackPanel>
         </Border>
-
-        <!-- Pro Subscription -->
         <Border Grid.Column="2" Margin="20" Background="#995200" CornerRadius="10">
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Pro" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
-                <TextBlock Text="$29.99/month" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="All features" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="Unlimited users" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="24/7 support" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <Button Content="Choose Pro" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" />
+                <TextBlock Text="{DynamicResource ProPlan}" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource ProPrice}" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource ProFeatures}" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource ProUsers}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
+                <TextBlock Text="{DynamicResource ProSupport}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
+                <Button x:Name="ChooseProButton" Content="{DynamicResource ChoosePro}" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" Click="ChoosePro_Click" />
             </StackPanel>
         </Border>
     </Grid>
