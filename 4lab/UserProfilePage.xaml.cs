@@ -59,8 +59,8 @@ namespace _4lab
             {
                 using (var context = new _4lab.BD.DBContext())
                 {
-                    var user = CurrentUser.Instance.GetCurrentUser();              
-                    
+                    var user = CurrentUser.Instance.GetCurrentUser();
+
                     if (user != null)
                     {
                         if (user is Player)
@@ -83,6 +83,25 @@ namespace _4lab
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка при сохранении ссылок: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Clear the current user session
+                CurrentUser.Instance.Logout();
+
+                // Navigate to the login page
+                NavigationService?.Navigate(new Uri("RegisterUserPage.xaml", UriKind.Relative));
+
+                MessageBox.Show("Вы успешно вышли из аккаунта!", "Успех",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при выходе из аккаунта: {ex.Message}", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
