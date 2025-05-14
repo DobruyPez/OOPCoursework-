@@ -39,53 +39,18 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
             <StackPanel>
-                <TextBlock Text="{DynamicResource RegisterUserTitle}"
+                <TextBlock x:Name="TitleTextBlock"
                            Foreground="Black"
                            FontSize="20"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"
                            Margin="0,0,0,20"/>
-                <TextBlock Text="{DynamicResource UsernameLabel}" Foreground="Black" FontWeight="Bold"/>
-                <TextBox x:Name="UsernameBox"
-                         Background="Black"
-                         Foreground="White"
-                         Margin="0,5,0,15"
-                         Padding="8"
-                         BorderThickness="0"/>
-                <TextBlock Text="{DynamicResource EmailLabel}" Foreground="Black" FontWeight="Bold"/>
-                <TextBox x:Name="EmailBox"
-                         Background="Black"
-                         Foreground="White"
-                         Margin="0,5,0,15"
-                         Padding="8"
-                         BorderThickness="0"/>
-                <TextBlock Text="{DynamicResource PasswordLabel}" Foreground="Black" FontWeight="Bold"/>
-                <PasswordBox x:Name="PasswordBox"
-                             Background="Black"
-                             Foreground="White"
-                             Margin="0,5,0,15"
-                             Padding="8"
-                             BorderThickness="0"/>
-                <TextBlock Text="{DynamicResource ConfirmPasswordLabel}" Foreground="Black" FontWeight="Bold"/>
-                <PasswordBox x:Name="ConfirmPasswordBox"
-                             Background="Black"
-                             Foreground="White"
-                             Margin="0,5,0,15"
-                             Padding="8"
-                             BorderThickness="0"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                    <Button x:Name="RegisterButton"
-                            Content="{DynamicResource RegisterButton}"
-                            Style="{StaticResource OrangeBlackButtonStyle}"
-                            HorizontalAlignment="Center"
-                            Margin="0,0,10,0"
-                            Click="RegisterButton_Click"/>
-                    <Button x:Name="SignInButton"
-                            Content="Sign In"
-                            Style="{StaticResource OrangeBlackButtonStyle}"
-                            HorizontalAlignment="Center"
-                            Click="SignInButton_Click"/>
-                </StackPanel>
+                <ContentControl x:Name="AuthContentControl"/>
+                <Button x:Name="ToggleButton"
+                        Style="{StaticResource OrangeBlackButtonStyle}"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,0"
+                        Click="ToggleButton_Click"/>
             </StackPanel>
         </Border>
     </Grid>

@@ -61,6 +61,9 @@
     <system:String x:Key="ConfirmPasswordLabel">ПОДТВЕРДИТЬ ПАРОЛЬ</system:String>
     <system:String x:Key="RegisterButton">ЗАРЕГИСТРИРОВАТЬСЯ</system:String>
     <system:String x:Key="SignInButton">ВОЙТИ</system:String>
+    <system:String x:Key="LoginButton">ВОЙТИ</system:String>
+    <system:String x:Key="GoToRegisterButton">Перейти к регистрации</system:String>
+    <system:String x:Key="GoToLoginButton">Перейти ко входу</system:String>
 
     <!-- TeamMatchesPage -->
     <system:String x:Key="TeamMatchesTitle">МАТЧИ КОМАНД</system:String>
