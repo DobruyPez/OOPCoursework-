@@ -5,27 +5,184 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="350">
-    <StackPanel>
-        <TextBlock Text="{DynamicResource EmailLabel}" Foreground="Black" FontWeight="Bold"/>
-        <TextBox x:Name="EmailBox"
-                 Background="Black"
-                 Foreground="White"
-                 Margin="0,5,0,15"
-                 Padding="8"
-                 BorderThickness="0"/>
-        <TextBlock Text="{DynamicResource PasswordLabel}" Foreground="Black" FontWeight="Bold"/>
-        <PasswordBox x:Name="PasswordBox"
-                     Background="Black"
-                     Foreground="White"
-                     Margin="0,5,0,15"
-                     Padding="8"
-                     BorderThickness="0"/>
-        <Button x:Name="LoginButton"
-                Content="{DynamicResource LoginButton}"
-                Style="{StaticResource OrangeBlackButtonStyle}"
-                HorizontalAlignment="Center"
-                Margin="0,20,0,10"
-                Padding="20,10"
-                Click="LoginButton_Click"/>
+    <UserControl.Resources>
+        <!-- Стиль для TextBlock -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="2" BlurRadius="4" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для TextBox -->
+        <Style x:Key="InputStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="#FF8C00"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="250"/>
+            <!-- Увеличена ширина -->
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#FF8C00" ShadowDepth="0" BlurRadius="5" Opacity="0.5"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для PasswordBox -->
+        <Style x:Key="PasswordBoxStyle" TargetType="{x:Type PasswordBox}">
+            <Setter Property="Background" Value="#FF8C00"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="250"/>
+            <!-- Увеличена ширина -->
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#FF8C00" ShadowDepth="0" BlurRadius="5" Opacity="0.5"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Шаблон для Button -->
+        <ControlTemplate x:Key="CustomButtonTemplate" TargetType="{x:Type Button}">
+            <Border x:Name="ButtonBorder" 
+                    CornerRadius="10" 
+                    Background="#FF8C00" 
+                    BorderBrush="Black" 
+                    BorderThickness="1">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#4A4A4A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0.9" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#995200" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Border.RenderTransform>
+                    <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                </Border.RenderTransform>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для Button -->
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Margin" Value="0,20,0,10"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Стиль для StackPanel -->
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Style="{StaticResource StackPanelStyle}">
+        <TextBlock Text="{DynamicResource EmailLabel}" Style="{StaticResource TextBlockStyle}"/>
+        <TextBox x:Name="EmailBox" Style="{StaticResource InputStyle}" Height="36"/>
+        <TextBlock Text="{DynamicResource PasswordLabel}" Style="{StaticResource TextBlockStyle}"/>
+        <PasswordBox x:Name="PasswordBox" Style="{StaticResource PasswordBoxStyle}" Height="36"/>
+        <Button x:Name="LoginButton" Content="{DynamicResource LoginButton}" Style="{StaticResource ButtonStyle}" Click="LoginButton_Click"/>
     </StackPanel>
 </UserControl>

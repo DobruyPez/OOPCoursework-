@@ -138,3 +138,11 @@ D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.exe
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.pdb
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterControl.baml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\RegisterControl.g.cs
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\LoginControl.baml
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\RegisterControl.baml
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\LoginControl.g.cs
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\RegisterControl.g.cs
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\DarkTheme.baml
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\LightTheme.baml
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\TeamPage.g.cs
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\TeamPage.baml

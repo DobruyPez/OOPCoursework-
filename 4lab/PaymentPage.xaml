@@ -7,18 +7,42 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PaymentPage"
-      Background="#000000">
+      Background="#1A1A1A">
     <Page.Resources>
-        <!-- Стиль для текстовых полей -->
-        <Style TargetType="TextBox">
-            <Setter Property="Background" Value="#333333" />
-            <Setter Property="Foreground" Value="#FFFFFF" />
-            <Setter Property="BorderBrush" Value="#995200" />
-            <Setter Property="BorderThickness" Value="2" />
-            <Setter Property="Padding" Value="5" />
-            <Setter Property="Margin" Value="0,5" />
-            <Setter Property="FontSize" Value="14" />
-            <Setter Property="FontFamily" Value="Segoe UI" />
+        <!-- Стиль для TextBlock -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="2" BlurRadius="4" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для заголовков TextBlock -->
+        <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,30,0,20"/> <!-- Увеличен верхний отступ -->
+        </Style>
+
+        <!-- Стиль для TextBox -->
+        <Style x:Key="InputStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#333333"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Width" Value="250"/> <!-- Уменьшена ширина -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
@@ -26,35 +50,17 @@
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="5">
-                            <ScrollViewer x:Name="PART_ContentHost" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <!-- Стиль для кнопки -->
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="#995200" />
-            <Setter Property="Foreground" Value="#FFFFFF" />
-            <Setter Property="FontSize" Value="16" />
-            <Setter Property="FontFamily" Value="Segoe UI" />
-            <Setter Property="Padding" Value="10,5" />
-            <Setter Property="Margin" Value="0,20" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="#995200"
-                                BorderThickness="2"
-                                CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ScrollViewer x:Name="PART_ContentHost"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#B37400" />
-                                <Setter Property="RenderTransform">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                                <Setter Property="Effect">
                                     <Setter.Value>
-                                        <ScaleTransform ScaleX="1.05" ScaleY="1.05" CenterX="0.5" CenterY="0.5" />
+                                        <DropShadowEffect Color="#FF8C00" ShadowDepth="0" BlurRadius="5" Opacity="0.5"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -63,32 +69,137 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!-- Шаблон для Button -->
+        <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
+            <Border x:Name="ButtonBorder" 
+                    CornerRadius="10" 
+                    Background="#2A2A2A" 
+                    BorderBrush="Black" 
+                    BorderThickness="1">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#4A4A4A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0.9" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#2A2A2A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Border.RenderTransform>
+                    <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                </Border.RenderTransform>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для Button -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="0,10"/>
+            <Setter Property="Width" Value="250"/> <!-- Уменьшена ширина -->
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <!-- Стиль для Border -->
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Margin" Value="20"/> <!-- Уменьшен отступ -->
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#FF8C00" Offset="0"/>
+                        <GradientStop Color="#995200" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Padding" Value="15"/> <!-- Уменьшен внутренний отступ -->
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="5" BlurRadius="10" Opacity="0.5"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
     <Grid>
-        <Border Background="#1A1A1A" CornerRadius="10" Margin="50" Padding="20">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
-                <TextBlock x:Name="PlanTitle" Text="Оплата плана Pro" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" Margin="0,0,0,20" />
-                <TextBlock Text="Номер карты" Foreground="#FFFFFF" FontSize="14" FontFamily="Segoe UI" />
-                <TextBox x:Name="CardNumber" MaxLength="16" />
-                <Grid>
+        <Border Style="{StaticResource BorderStyle}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/> <!-- Заголовок -->
+                    <RowDefinition Height="Auto"/> <!-- Номер карты -->
+                    <RowDefinition Height="Auto"/> <!-- Срок действия и CVV -->
+                    <RowDefinition Height="Auto"/> <!-- Имя владельца -->
+                    <RowDefinition Height="Auto"/> <!-- Кнопка -->
+                    <RowDefinition Height="40"/> <!-- Фиксированное место для сообщения -->
+                </Grid.RowDefinitions>
+                <!-- Заголовок -->
+                <TextBlock Grid.Row="0" x:Name="PlanTitle" Text="Оплата плана Pro" Style="{StaticResource HeaderTextBlockStyle}"/>
+                <!-- Номер карты -->
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                    <TextBlock Text="Номер карты" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBox x:Name="CardNumber" MaxLength="16" Style="{StaticResource InputStyle}"/>
+                </StackPanel>
+                <!-- Срок действия и CVV -->
+                <Grid Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="0,0,10,0">
-                        <TextBlock Text="Срок действия" Foreground="#FFFFFF" FontSize="14" FontFamily="Segoe UI" />
-                        <TextBox x:Name="ExpiryDate" MaxLength="5" />
+                        <TextBlock Text="Срок действия" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="ExpiryDate" MaxLength="5" Style="{StaticResource InputStyle}"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1">
-                        <TextBlock Text="CVV" Foreground="#FFFFFF" FontSize="14" FontFamily="Segoe UI" />
-                        <TextBox x:Name="Cvv" MaxLength="3" />
+                        <TextBlock Text="CVV" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBox x:Name="Cvv" MaxLength="3" Style="{StaticResource InputStyle}"/>
                     </StackPanel>
                 </Grid>
-                <TextBlock Text="Имя владельца" Foreground="#FFFFFF" FontSize="14" FontFamily="Segoe UI" Margin="0,10,0,0" />
-                <TextBox x:Name="CardHolder" />
-                <Button x:Name="PayButton" Content="Оплатить" Click="PayButton_Click" />
-                <TextBlock x:Name="StatusMessage" Foreground="#FFFFFF" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="0,10,0,0" Visibility="Collapsed" />
-            </StackPanel>
+                <!-- Имя владельца -->
+                <StackPanel Grid.Row="3" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <TextBlock Text="Имя владельца" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBox x:Name="CardHolder" Style="{StaticResource InputStyle}"/>
+                </StackPanel>
+                <!-- Кнопка -->
+                <Button Grid.Row="4" x:Name="PayButton" Content="Оплатить" Click="PayButton_Click" Style="{StaticResource ButtonStyle}" 
+                        HorizontalAlignment="Center"/>
+                <!-- Сообщение о статусе -->
+                <TextBlock Grid.Row="5" x:Name="StatusMessage" Style="{StaticResource TextBlockStyle}" 
+                           HorizontalAlignment="Center" Margin="0,10,0,0" Visibility="Collapsed" TextWrapping="Wrap" MaxWidth="250"/>
+            </Grid>
         </Border>
     </Grid>
 </Page>

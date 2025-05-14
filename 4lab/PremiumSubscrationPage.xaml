@@ -7,41 +7,175 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PremiumSubscrationPage"
-      Background="#000000">
+      Background="#1A1A1A">
+    <Page.Resources>
+        <!-- Стиль для TextBlock -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="2" BlurRadius="4" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для заголовков TextBlock -->
+        <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <!-- Стиль для цен TextBlock -->
+        <Style x:Key="PriceTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <!-- Стиль для StackPanel -->
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+
+        <!-- Стиль для Border -->
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#995200" Offset="0"/>
+                        <GradientStop Color="#995200" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="5" BlurRadius="10" Opacity="0.5"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Шаблон для Button -->
+        <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
+            <Border x:Name="ButtonBorder" 
+                    CornerRadius="10" 
+                    Background="#2A2A2A" 
+                    BorderBrush="Black" 
+                    BorderThickness="1">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#4A4A4A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0.9" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#2A2A2A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Border.RenderTransform>
+                    <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                </Border.RenderTransform>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для Button -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="Margin" Value="0,20,0,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Page.Resources>
+
     <Grid x:Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Margin="20" Background="#995200" CornerRadius="10">
-            <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{DynamicResource LitePlan}" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource LitePrice}" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource LiteFeatures}" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource LiteUsers}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource LiteSupport}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <Button x:Name="ChooseLiteButton" Content="{DynamicResource ChooseLite}" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" Click="ChooseLite_Click" />
+
+        <!-- Lite Plan -->
+        <Border Grid.Column="0" Style="{StaticResource BorderStyle}">
+            <StackPanel Style="{StaticResource StackPanelStyle}">
+                <TextBlock Text="{DynamicResource LitePlan}" Style="{StaticResource HeaderTextBlockStyle}" />
+                <TextBlock Text="{DynamicResource LitePrice}" Style="{StaticResource PriceTextBlockStyle}" />
+                <TextBlock Text="{DynamicResource LiteFeatures}" Style="{StaticResource TextBlockStyle}" />
+                <TextBlock Text="{DynamicResource LiteUsers}" Style="{StaticResource TextBlockStyle}" />
+                <TextBlock Text="{DynamicResource LiteSupport}" Style="{StaticResource TextBlockStyle}" />
+                <Button x:Name="ChooseLiteButton" 
+                        Content="{DynamicResource ChooseLite}" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Click="ChooseLite_Click" />
             </StackPanel>
         </Border>
-        <Border Grid.Column="1" Margin="20" Background="#995200" CornerRadius="10">
-            <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{DynamicResource StandardPlan}" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource StandardPrice}" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource StandardFeatures}" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource StandardUsers}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource StandardSupport}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <Button x:Name="ChooseStandardButton" Content="{DynamicResource ChooseStandard}" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" Click="ChooseStandard_Click" />
+
+        <!-- Standard Plan -->
+        <Border Grid.Column="1" Style="{StaticResource BorderStyle}">
+            <StackPanel Style="{StaticResource StackPanelStyle}">
+                <TextBlock Text="{DynamicResource StandardPlan}" Style="{StaticResource HeaderTextBlockStyle}" />
+                <TextBlock Text="{DynamicResource StandardPrice}" Style="{StaticResource PriceTextBlockStyle}" />
+                <TextBlock Text="{DynamicResource StandardFeatures}" Style="{StaticResource TextBlockStyle}" />
+                <TextBlock Text="{DynamicResource StandardUsers}" Style="{StaticResource TextBlockStyle}" />
+                <TextBlock Text="{DynamicResource StandardSupport}" Style="{StaticResource TextBlockStyle}" />
+                <Button x:Name="ChooseStandardButton" 
+                        Content="{DynamicResource ChooseStandard}" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Click="ChooseStandard_Click" />
             </StackPanel>
         </Border>
-        <Border Grid.Column="2" Margin="20" Background="#995200" CornerRadius="10">
-            <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{DynamicResource ProPlan}" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource ProPrice}" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource ProFeatures}" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource ProUsers}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <TextBlock Text="{DynamicResource ProSupport}" Foreground="#FFFFFF" Margin="0,5,0,0" HorizontalAlignment="Center" />
-                <Button x:Name="ChooseProButton" Content="{DynamicResource ChoosePro}" Background="#000000" Foreground="#FFFFFF" Margin="0,20,0,0" Padding="10,5" Click="ChoosePro_Click" />
+
+        <!-- Pro Plan -->
+        <Border Grid.Column="2" Style="{StaticResource BorderStyle}">
+            <StackPanel Style="{StaticResource StackPanelStyle}">
+                <TextBlock Text="{DynamicResource ProPlan}" Style="{StaticResource HeaderTextBlockStyle}" />
+                <TextBlock Text="{DynamicResource ProPrice}" Style="{StaticResource PriceTextBlockStyle}" />
+                <TextBlock Text="{DynamicResource ProFeatures}" Style="{StaticResource TextBlockStyle}" />
+                <TextBlock Text="{DynamicResource ProUsers}" Style="{StaticResource TextBlockStyle}" />
+                <TextBlock Text="{DynamicResource ProSupport}" Style="{StaticResource TextBlockStyle}" />
+                <Button x:Name="ChooseProButton" 
+                        Content="{DynamicResource ChoosePro}" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Click="ChoosePro_Click" />
             </StackPanel>
         </Border>
     </Grid>
