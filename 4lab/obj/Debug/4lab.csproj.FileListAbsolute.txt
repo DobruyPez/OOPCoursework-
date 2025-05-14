@@ -36,8 +36,6 @@ C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Channels.xml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.ValueTuple.xml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.AssemblyReference.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.SuggestedBindingRedirects.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.exe.config
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\MainMenuPage.baml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\TeamMatchesPage.baml
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\MainMenuPage.g.cs
@@ -129,3 +127,8 @@ D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.pdb
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\BCrypt.Net-Next.dll
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\BCrypt.Net-Next.xml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\_4lab.Migrations.InitialCreate.resources
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\BCrypt.Net-Next.dll
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\BCrypt.Net-Next.xml
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\_4lab.Migrations.InitialCreate.resources
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\PaymentPage.g.cs
+C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\PaymentPage.baml

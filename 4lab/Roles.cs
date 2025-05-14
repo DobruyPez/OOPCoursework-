@@ -91,6 +91,11 @@ namespace Roles
             if (Player == null) return Admin;
             else return Player;
         }
+
+        internal void Logout()
+        {
+            Player = null;
+        }
     }
     public class TeamOffer
     {
