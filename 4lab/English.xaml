@@ -60,6 +60,9 @@
     <system:String x:Key="PasswordLabel">PASSWORD</system:String>
     <system:String x:Key="ConfirmPasswordLabel">CONFIRM PASSWORD</system:String>
     <system:String x:Key="RegisterButton">REGISTER</system:String>
+    <system:String x:Key="GoToRegisterButton">Go to Register</system:String>
+    <system:String x:Key="GoToLoginButton">Go to Login</system:String>
+    <system:String x:Key="LoginButton">LOGIN</system:String>
 
     <!-- TeamMatchesPage -->
     <system:String x:Key="TeamMatchesTitle">TEAM MATCHES</system:String>
