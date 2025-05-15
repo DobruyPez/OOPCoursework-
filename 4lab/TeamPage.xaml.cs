@@ -18,99 +18,65 @@ namespace _4lab
 {
     public partial class TeamPage : Page
     {
-        public bool IsCreator { get; set; } = true; // Замените на реальную логику
-        private bool HasSelection => MembersList.SelectedItem != null;
+        // Переменная для хранения описания команды (замените на вашу модель данных, если есть)
+        private string teamDescription = "Описание команды будет здесь...";
 
         public TeamPage()
         {
             InitializeComponent();
-            InitializeButtons();
-            UpdateButtonStates();
+            // Устанавливаем начальное описание в TextBox
+            TeamDescriptionBox.Text = teamDescription;
         }
 
-        private void InitializeButtons()
+        // Обработчик выбора участника в списке
+        private void MembersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Очищаем панели кнопок
-            ButtonsPanel.Children.Clear();
-            AdminControlsPanel.Visibility = Visibility.Collapsed;
+            // Логика при выборе участника (можно оставить пустым, если не используется)
+        }
 
-            // Добавляем соответствующие кнопки в зависимости от роли
-            if (IsCreator)
+        // Обработчик для кнопки "Сохранить описание"
+        private void SaveDescriptionButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Сохраняем описание из TextBox
+            teamDescription = TeamDescriptionBox.Text;
+            MessageBox.Show("Описание команды успешно сохранено!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        // Обработчик для кнопки "Пригласить участника"
+        private void InviteMemberButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Здесь можно добавить логику приглашения участника, например, открыть диалоговое окно
+            MessageBox.Show("Открыть форму приглашения участника?", "Пригласить участника", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        // Обработчик для кнопки "Изменить роль"
+        private void ChangeRoleButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Проверяем, выбран ли участник
+            if (MembersList.SelectedItem != null)
             {
-                var inviteButton = new Button
-                {
-                    Content = "Пригласить",
-                    Style = (Style)FindResource("ButtonStyle")
-                };
-                inviteButton.Click += InviteButton_Click;
-                ButtonsPanel.Children.Add(inviteButton);
-
-                AdminControlsPanel.Visibility = Visibility.Visible;
+                // Здесь можно добавить логику изменения роли, например, открыть диалоговое окно
+                MessageBox.Show($"Изменение роли для участника: {MembersList.SelectedItem}", "Изменить роль", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                var leaveButton = new Button
-                {
-                    Content = "Покинуть",
-                    Style = (Style)FindResource("ButtonStyle"),
-                    Margin = new Thickness(10, 0, 0, 0)
-                };
-                leaveButton.Click += LeaveButton_Click;
-                ButtonsPanel.Children.Add(leaveButton);
+                MessageBox.Show("Пожалуйста, выберите участника из списка.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
-        private void UpdateButtonStates()
-        {
-            ChangeRoleButton.IsEnabled = HasSelection;
-            RemoveMemberButton.IsEnabled = HasSelection;
-        }
-
-        private void MembersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            UpdateButtonStates();
-        }
-
-        private void InviteButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Логика приглашения участника
-            MessageBox.Show("Функция приглашения участника");
-        }
-
-        private void LeaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Логика выхода из команды
-            var result = MessageBox.Show("Вы уверены, что хотите покинуть команду?", "Подтверждение", MessageBoxButton.YesNo);
-            if (result == MessageBoxResult.Yes)
-            {
-                NavigationService?.GoBack();
-            }
-        }
-
-        private void ChangeRoleButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (MembersList.SelectedItem is TeamMember member)
-            {
-                MessageBox.Show($"Изменение роли для {member.Name}");
-            }
-        }
-
+        // Обработчик для кнопки "Удалить"
         private void RemoveMemberButton_Click(object sender, RoutedEventArgs e)
         {
-            if (MembersList.SelectedItem is TeamMember member)
+            // Проверяем, выбран ли участник
+            if (MembersList.SelectedItem != null)
             {
-                var result = MessageBox.Show($"Вы уверены, что хотите удалить {member.Name} из команды?", "Подтверждение", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
-                {
-                    // Логика удаления участника
-                }
+                // Здесь можно добавить логику удаления участника
+                MessageBox.Show($"Удаление участника: {MembersList.SelectedItem}", "Удалить участника", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите участника из списка.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-    }
-
-    public class TeamMember
-    {
-        public string Name { get; set; }
-        public string Role { get; set; }
     }
 }
