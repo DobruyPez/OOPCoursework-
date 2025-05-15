@@ -134,5 +134,10 @@ namespace _4lab
                 MainFrame.Navigate(new RegisterUserPage());
             }
         }
+        private void NavigateToTeamProfile(object sender, RoutedEventArgs e)
+        {
+          
+           MainFrame.Navigate(new TeamPage());
+        }
     }
 }

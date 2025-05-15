@@ -4,7 +4,100 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d"
-      Background="Black">
+      Background="#1A1A1A">
+    <Page.Resources>
+        <!-- Стиль для TextBlock -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="2" BlurRadius="4" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для иконок TextBlock -->
+        <Style x:Key="IconTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+
+        <!-- Стиль для StackPanel -->
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+
+        <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
+            <Border x:Name="ButtonBorder" 
+            CornerRadius="10" 
+            Background="#995200" 
+            BorderBrush="Black" 
+            BorderThickness="1">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                       To="#4A4A4A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0.9" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                       To="#995200" Duration="0:0:0.3"/>
+                                <!-- Изменено на начальный цвет -->
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                        To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                        To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Border.RenderTransform>
+                    <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                </Border.RenderTransform>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для Button -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="180"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Page.Resources>
     <DockPanel LastChildFill="True">
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
@@ -13,22 +106,22 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
-                <Button Width="180" Height="180" Margin="20" Background="#995200" Foreground="Black" FontWeight="Bold" Click="CreateTeamButton_Click">
-                    <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="👥" FontSize="48" HorizontalAlignment="Center"/>
-                        <TextBlock Text="{DynamicResource CreateTeamButton}" FontSize="14" Margin="0,10,0,0" TextAlignment="Center"/>
+                <Button Style="{StaticResource ButtonStyle}" Click="CreateTeamButton_Click">
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="👥" Style="{StaticResource IconTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource CreateTeamButton}" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
                 </Button>
-                <Button Width="180" Height="180" Background="#995200" Foreground="Black" FontWeight="Bold" Click="FindPraccsButton_Click">
-                    <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="🔍" FontSize="48" HorizontalAlignment="Center"/>
-                        <TextBlock Text="{DynamicResource FindPraccsButton}" FontSize="14" Margin="0,10,0,0" TextAlignment="Center"/>
+                <Button Style="{StaticResource ButtonStyle}" Click="FindPraccsButton_Click">
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="🔍" Style="{StaticResource IconTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource FindPraccsButton}" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
                 </Button>
-                <Button Width="180" Height="180" Margin="20" Background="#995200" Foreground="Black" FontWeight="Bold" Click="SubscriptionButton_Click">
-                    <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="💰" FontSize="48" HorizontalAlignment="Center"/>
-                        <TextBlock Text="{DynamicResource SubscriptionButton}" FontSize="14" Margin="0,10,0,0" TextAlignment="Center"/>
+                <Button Style="{StaticResource ButtonStyle}" Click="SubscriptionButton_Click">
+                    <StackPanel Style="{StaticResource StackPanelStyle}">
+                        <TextBlock Text="💰" Style="{StaticResource IconTextBlockStyle}"/>
+                        <TextBlock Text="{DynamicResource SubscriptionButton}" Style="{StaticResource TextBlockStyle}"/>
                     </StackPanel>
                 </Button>
             </StackPanel>

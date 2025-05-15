@@ -8,27 +8,93 @@
       d:DesignHeight="700" d:DesignWidth="500"
       Title="RegisterUserPage">
     <Page.Resources>
-        <Style x:Key="OrangeBlackButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Black"/>
-            <Setter Property="Foreground" Value="#995200"/>
+        <!-- Стиль для TextBlock -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderBrush" Value="#995200"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
+            <Setter Property="Effect">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
+                    <DropShadowEffect Color="#000000" ShadowDepth="2" BlurRadius="4" Opacity="0.3"/>
                 </Setter.Value>
             </Setter>
+        </Style>
+
+        <!-- Шаблон для Button -->
+        <ControlTemplate x:Key="CustomButtonTemplate" TargetType="{x:Type Button}">
+            <Border x:Name="ButtonBorder" 
+                    CornerRadius="10" 
+                    Background="#FF8C00" 
+                    BorderBrush="Black" 
+                    BorderThickness="1">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#4A4A4A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0.9" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#995200" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                                To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Border.RenderTransform>
+                    <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                </Border.RenderTransform>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для Button -->
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Margin" Value="0,20,0,0"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Стиль для StackPanel -->
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
     </Page.Resources>
     <Grid Background="#1A1A1A">
@@ -38,19 +104,10 @@
                 Width="400"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-            <StackPanel>
-                <TextBlock x:Name="TitleTextBlock"
-                           Foreground="Black"
-                           FontSize="20"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Center"
-                           Margin="0,0,0,20"/>
+            <StackPanel Style="{StaticResource StackPanelStyle}">
+                <TextBlock x:Name="TitleTextBlock" Style="{StaticResource TextBlockStyle}" Margin="0,0,0,-15"/>
                 <ContentControl x:Name="AuthContentControl"/>
-                <Button x:Name="ToggleButton"
-                        Style="{StaticResource OrangeBlackButtonStyle}"
-                        HorizontalAlignment="Center"
-                        Margin="0,20,0,0"
-                        Click="ToggleButton_Click"/>
+                <Button x:Name="ToggleButton" Style="{StaticResource ButtonStyle}" Click="ToggleButton_Click" RenderTransformOrigin="0.482,-1.685" Margin="0,0,0,0"/>
             </StackPanel>
         </Border>
     </Grid>

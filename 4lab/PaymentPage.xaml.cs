@@ -26,13 +26,16 @@ namespace _4lab
 
         private void PayButton_Click(object sender, RoutedEventArgs e)
         {
+            // Сбрасываем сообщение и видимость перед новой проверкой
+            StatusMessage.Text = "";
             StatusMessage.Visibility = Visibility.Visible;
-            StatusMessage.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFFFFF"));
+            StatusMessage.Foreground = new SolidColorBrush(Colors.White); // Белый по умолчанию
 
             // Проверка номера карты (16 цифр)
             if (!Regex.IsMatch(CardNumber.Text, @"^\d{16}$"))
             {
                 StatusMessage.Text = "Неверный номер карты";
+                StatusMessage.Foreground = new SolidColorBrush(Colors.Red); // Красный для ошибки
                 return;
             }
 
@@ -40,6 +43,7 @@ namespace _4lab
             if (!Regex.IsMatch(ExpiryDate.Text, @"^(0[1-9]|1[0-2])\/\d{2}$"))
             {
                 StatusMessage.Text = "Неверный срок действия";
+                StatusMessage.Foreground = new SolidColorBrush(Colors.Red);
                 return;
             }
 
@@ -47,6 +51,7 @@ namespace _4lab
             if (!Regex.IsMatch(Cvv.Text, @"^\d{3}$"))
             {
                 StatusMessage.Text = "Неверный CVV";
+                StatusMessage.Foreground = new SolidColorBrush(Colors.Red);
                 return;
             }
 
@@ -54,12 +59,13 @@ namespace _4lab
             if (string.IsNullOrWhiteSpace(CardHolder.Text))
             {
                 StatusMessage.Text = "Введите имя владельца";
+                StatusMessage.Foreground = new SolidColorBrush(Colors.Red);
                 return;
             }
 
             // Имитация успешной оплаты
-            StatusMessage.Text = "Оплата успешно завершена!";
-            StatusMessage.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#995200"));
+            StatusMessage.Text = "Оплата проведена успешно";
+            StatusMessage.Foreground = new SolidColorBrush(Colors.Green); // Зелёный для успеха
         }
     }
 }

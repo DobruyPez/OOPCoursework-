@@ -15,6 +15,7 @@ namespace _4lab
             InitializeComponent();
             LoadUserData();
         }
+        private bool isDarkTheme = true;
 
         private void LoadUserData()
         {
@@ -105,5 +106,24 @@ namespace _4lab
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        private void ToggleThemeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var currentTheme = Application.Current.Resources.MergedDictionaries.FirstOrDefault();
+
+            Application.Current.Resources.MergedDictionaries.Clear();
+
+            var newTheme = new ResourceDictionary();
+            if (currentTheme != null && currentTheme.Source.ToString().Contains("DarkTheme.xaml"))
+            {
+                newTheme.Source = new Uri("LightTheme.xaml", UriKind.Relative);
+            }
+            else
+            {
+                newTheme.Source = new Uri("DarkTheme.xaml", UriKind.Relative);
+            }
+
+            Application.Current.Resources.MergedDictionaries.Add(newTheme);
+        }
+
     }
 }

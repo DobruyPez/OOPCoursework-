@@ -7,43 +7,199 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="UserProfilePage"
-      Background="#000000">
-    <Grid>
+      Background="#1A1A1A">
+    <Page.Resources>
+        <!-- Стиль для TextBlock -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" ShadowDepth="2" BlurRadius="4" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для заголовков TextBlock -->
+        <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <!-- Стиль для TextBox -->
+        <Style x:Key="InputStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#995200"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="0,10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#FF8C00"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#FF8C00" ShadowDepth="0" BlurRadius="5" Opacity="0.5"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
+            <Border x:Name="ButtonBorder" 
+            CornerRadius="10" 
+            Background="#995200" 
+            BorderBrush="Black" 
+            BorderThickness="1">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                       To="#4A4A4A" Duration="0:0:0.3"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="0.9" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                       To="#995200" Duration="0:0:0.3"/>
+                                <!-- Изменено на начальный цвет -->
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1" Duration="0:0:0.3"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                        To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                <DoubleAnimation Storyboard.TargetName="ButtonBorder"
+                                        Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                        To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+                <Border.RenderTransform>
+                    <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                </Border.RenderTransform>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для Button -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="0,10"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <!-- Стиль для StackPanel -->
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+    </Page.Resources>
+    <Grid Margin="0,0,0,-40">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="303*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid>
+            <!-- Кнопка смены темы с иконкой -->
+            <Button x:Name="ToggleThemeButton"
+            Style="{StaticResource ButtonStyle}"
+            Click="ToggleThemeButton_Click"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Margin="0,10,10,0"
+            Width="50"
+            Height="50"
+            ToolTip="Toggle Theme"
+            Panel.ZIndex="1">
+                <TextBlock Text="🌞"
+                   FontSize="20"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"/>
+            </Button>
+        </Grid>
 
         <!-- Header with User Info -->
-        <StackPanel Grid.Row="0" Margin="20" HorizontalAlignment="Center">
-            <TextBlock x:Name="UsernameTextBlock" Text="Username: [Username]" FontSize="24" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="EmailTextBlock" Text="Email: [Email]" FontSize="18" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="PremiumTextBlock" Text="Subscription: Free" FontSize="16" Foreground="#FFFFFF" Margin="0,10,0,0" HorizontalAlignment="Center"/>
+        <StackPanel Style="{StaticResource StackPanelStyle}">
+            <TextBlock x:Name="UsernameTextBlock" Text="Username: [Username]" Style="{StaticResource HeaderTextBlockStyle}"/>
+            <TextBlock x:Name="EmailTextBlock" Text="Email: [Email]" Style="{StaticResource TextBlockStyle}" FontSize="18"/>
+            <TextBlock x:Name="PremiumTextBlock" Text="Subscription: Free" Style="{StaticResource TextBlockStyle}"/>
         </StackPanel>
 
         <!-- Profile Settings -->
-        <StackPanel Grid.Row="1" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Style="{StaticResource StackPanelStyle}" Height="296" Margin="239,130,0,0" VerticalAlignment="Top" Grid.RowSpan="3" Width="355" HorizontalAlignment="Left">
             <!-- Twitch Link -->
             <StackPanel Orientation="Horizontal" Margin="0,10">
-                <TextBlock Text="Twitch Username:" FontSize="16" Foreground="#FFFFFF" Width="150"/>
-                <TextBox x:Name="TwitchTextBox" Width="200" Height="30" VerticalContentAlignment="Center" Background="#995200" Foreground="#FFFFFF"/>
+                <TextBlock Text="Twitch Username:" Style="{StaticResource TextBlockStyle}" Width="150"/>
+                <TextBox x:Name="TwitchTextBox" Width="200" Style="{StaticResource InputStyle}"/>
             </StackPanel>
 
             <!-- Discord Link -->
             <StackPanel Orientation="Horizontal" Margin="0,10">
-                <TextBlock Text="Discord Username:" FontSize="16" Foreground="#FFFFFF" Width="150"/>
-                <TextBox x:Name="DiscordTextBox" Width="200" Height="30" VerticalContentAlignment="Center" Background="#995200" Foreground="#FFFFFF"/>
+                <TextBlock Text="Discord Username:" Style="{StaticResource TextBlockStyle}" Width="150"/>
+                <TextBox x:Name="DiscordTextBox" Width="200" Style="{StaticResource InputStyle}"/>
             </StackPanel>
 
             <!-- Team Info -->
-            <TextBlock x:Name="TeamTextBlock" Text="Team: Not in a team" FontSize="16" Foreground="#FFFFFF" Margin="0,20,0,0" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="TeamTextBlock" Text="Team: Not in a team" Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Center" Margin="0,20,0,0"/>
 
             <!-- Save Button -->
-            <Button Content="Save Links" Width="150" Height="40" Margin="0,20" Background="#995200" Foreground="#FFFFFF" FontWeight="Bold" Click="SaveLinksButton_Click"/>
+            <Button Content="Save Links" Style="{StaticResource ButtonStyle}" Click="SaveLinksButton_Click"/>
 
             <!-- Log Out Button -->
-            <Button x:Name="LogOutButton" Content="Log Out" Width="150" Height="40" Margin="0,10" Background="#995200" Foreground="#FFFFFF" FontWeight="Bold" Click="LogOutButton_Click"/>
+            <Button x:Name="LogOutButton" Content="Log Out" Style="{StaticResource ButtonStyle}" Click="LogOutButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>
