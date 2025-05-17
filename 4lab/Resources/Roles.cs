@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace Roles
 {
@@ -204,6 +205,78 @@ namespace Roles
                 System.Diagnostics.Debug.WriteLine($"Ошибка при добавлении участника: {ex.Message}");
                 throw;
             }
+        }
+
+        public static bool ChangeMemberRole(int userId, TeamRole newRole)
+        {
+            if (Team == null) return false;
+
+            var member = Team.Members.FirstOrDefault(m => m.UserId == userId);
+            if (member == null || member.Role == newRole) return false;
+
+            try
+            {
+                using (var context = new _4lab.BD.DBContext())
+                {
+                    var dbMember = context.Set<TeamMember>().Find(member.Id);
+                    if (dbMember != null)
+                    {
+                        dbMember.Role = newRole;
+                        context.SaveChanges();
+
+                        // Обновляем локальную копию
+                        member.Role = newRole;
+                        SetCurrentTeam(Team.Id); // Перезагружаем команду
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Ошибка при изменении роли: {ex.Message}");
+            }
+            return false;
+        }
+
+        public static bool RemoveTeamMember(int userId)
+        {
+            if (Team == null) return false;
+
+            var member = Team.Members.FirstOrDefault(m => m.UserId == userId);
+            if (member == null) return false;
+
+            try
+            {
+                using (var context = new _4lab.BD.DBContext())
+                {
+                    // Удаляем участника из команды
+                    var dbMember = context.Set<TeamMember>().Find(member.Id);
+                    if (dbMember != null)
+                    {
+                        context.Set<TeamMember>().Remove(dbMember);
+                    }
+
+                    // Сбрасываем TeamId у игрока
+                    var player = context.Set<Player>().FirstOrDefault(p => p.Id == userId);
+                    if (player != null)
+                    {
+                        player.TeamId = null;
+                        context.Entry(player).State = EntityState.Modified;
+                    }
+
+                    context.SaveChanges();
+
+                    // Обновляем локальную копию
+                    Team.Members.Remove(member);
+                    SetCurrentTeam(Team.Id); // Перезагружаем команду
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Ошибка при удалении участника: {ex.Message}");
+            }
+            return false;
         }
 
         public class CurrentUser

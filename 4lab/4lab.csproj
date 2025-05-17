@@ -118,6 +118,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\RoleToStringConverter.cs" />
+    <Compile Include="Pages\Team\ChangeRole\MemberTemplateSelector.cs" />
     <Compile Include="Pages\Team\DefaultInfoTeamControl.xaml.cs">
       <DependentUpon>DefaultInfoTeamControl.xaml</DependentUpon>
     </Compile>
@@ -133,10 +135,10 @@
     <Compile Include="Pages\MainMenu\MainMenuPage.xaml.cs">
       <DependentUpon>MainMenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Team\TeamInvitationUserControl.xaml.cs">
+    <Compile Include="Pages\Team\AddMembers\TeamInvitationUserControl.xaml.cs">
       <DependentUpon>TeamInvitationUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Team\UsersListPopup.xaml.cs">
+    <Compile Include="Pages\Team\AddMembers\UsersListPopup.xaml.cs">
       <DependentUpon>UsersListPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\AppNavigation.cs" />
@@ -178,11 +180,11 @@
     </Compile>
     <Resource Include="Resources\Languages\English.xaml" />
     <Resource Include="Resources\Languages\Russian.xaml" />
-    <Page Include="Pages\Team\TeamInvitationUserControl.xaml">
+    <Page Include="Pages\Team\AddMembers\TeamInvitationUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Team\UsersListPopup.xaml">
+    <Page Include="Pages\Team\AddMembers\UsersListPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\App.xaml
-181426120263
+181596138387
 
-27-1760393990
+29814753431
 38693369421
-Pages\Team\TeamInvitationUserControl.xaml;Pages\Team\UsersListPopup.xaml;Resources\Stules\GeneralStyle.xaml;Resources\Stules\DarkTheme.xaml;Pages\Team\DefaultInfoTeamControl.xaml;Resources\Stules\LightTheme.xaml;Pages\Authorization\User\LoginControl.xaml;Pages\MainMenu\MainMenuPage.xaml;Windows\MainWindow.xaml;Pages\Payment\PaymentPage.xaml;Pages\Subscription\PremiumSubscrationPage.xaml;Pages\Authorization\User\RegisterControl.xaml;Pages\Authorization\Team\RegisterTeamPage.xaml;Pages\Authorization\User\RegisterUserPage.xaml;Pages\Team\TeamControls.xaml;Pages\TeamMatches\TeamMatchesPage.xaml;Pages\Team\TeamPage.xaml;Pages\UserProfile\UserProfilePage.xaml;
+Pages\Team\AddMembers\TeamInvitationUserControl.xaml;Pages\Team\AddMembers\UsersListPopup.xaml;Resources\Stules\GeneralStyle.xaml;Resources\Stules\DarkTheme.xaml;Pages\Team\DefaultInfoTeamControl.xaml;Resources\Stules\LightTheme.xaml;Pages\Authorization\User\LoginControl.xaml;Pages\MainMenu\MainMenuPage.xaml;Windows\MainWindow.xaml;Pages\Payment\PaymentPage.xaml;Pages\Subscription\PremiumSubscrationPage.xaml;Pages\Authorization\User\RegisterControl.xaml;Pages\Authorization\Team\RegisterTeamPage.xaml;Pages\Authorization\User\RegisterUserPage.xaml;Pages\Team\TeamControls.xaml;Pages\TeamMatches\TeamMatchesPage.xaml;Pages\Team\TeamPage.xaml;Pages\UserProfile\UserProfilePage.xaml;
 
 True
 

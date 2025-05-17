@@ -2,15 +2,19 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:sys="clr-namespace:System;assembly=mscorlib"
-      xmlns:local="clr-namespace:_4lab"
+      xmlns:local="clr-namespace:_4lab.Pages.Team.ChangeRole"
+      xmlns:converters="clr-namespace:_4lab.Converters"
       xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       Title="TeamPage" MinHeight="400" MinWidth="792"
       Background="#1A1A1A">
     <Page.Resources>
-        <!-- Стиль TextBlockStyle, определён первым, чтобы избежать проблем с порядком -->
+        <!-- Конвертер для ролей -->
+        <converters:RoleToStringConverter x:Key="RoleToStringConverter"/>
+
+        <!-- Стиль TextBlockStyle -->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -22,7 +26,7 @@
             <Setter Property="VerticalAlignment" Value="Stretch"/>
         </Style>
 
-        <!-- Стиль HeaderTextBlockStyle, зависит от TextBlockStyle -->
+        <!-- Стиль HeaderTextBlockStyle -->
         <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -32,17 +36,17 @@
 
         <!-- Шаблон CustomButtonTemplate для кнопок -->
         <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
-            <Border x:Name="ButtonBorder" 
-                    CornerRadius="10" 
-                    Background="#FF8C00" 
-                    BorderBrush="Black" 
+            <Border x:Name="ButtonBorder"
+                    CornerRadius="10"
+                    Background="#FF8C00"
+                    BorderBrush="Black"
                     BorderThickness="1">
                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
                 <Border.Triggers>
                     <EventTrigger RoutedEvent="MouseEnter">
                         <BeginStoryboard>
                             <Storyboard>
-                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder"
                                                 Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
                                                 To="#4A4A4A" Duration="0:0:0.3"/>
                                 <DoubleAnimation Storyboard.TargetName="ButtonBorder"
@@ -54,7 +58,7 @@
                     <EventTrigger RoutedEvent="MouseLeave">
                         <BeginStoryboard>
                             <Storyboard>
-                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder"
                                                 Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
                                                 To="#FF8C00" Duration="0:0:0.3"/>
                                 <DoubleAnimation Storyboard.TargetName="ButtonBorder"
@@ -82,7 +86,7 @@
             </Border>
         </ControlTemplate>
 
-        <!-- Стиль ButtonStyle, использует CustomButtonTemplate -->
+        <!-- Стиль ButtonStyle -->
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
@@ -116,7 +120,14 @@
                                     <Border x:Name="Border" Background="Transparent" CornerRadius="5">
                                         <ContentPresenter HorizontalAlignment="Stretch"/>
                                     </Border>
-                                    <!-- Триггеры остаются без изменений -->
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#4A4A4A"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#FF8C00"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
@@ -125,37 +136,94 @@
             </Setter>
         </Style>
 
-        <!-- DataTemplate для элементов ListBox -->
-        <DataTemplate x:Key="MemberTemplate">
+        <!-- BooleanToVisibilityConverter -->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+        <!-- Ресурсы локализации -->
+        <sys:String x:Key="TeamPageTitle">Страница команды</sys:String>
+        <sys:String x:Key="MembersLabel">Участники</sys:String>
+        <sys:String x:Key="TeamDescriptionLabel">Описание команды</sys:String>
+        <sys:String x:Key="InfoViewButton">Просмотр</sys:String>
+        <sys:String x:Key="EditViewButton">Редактировать</sys:String>
+        <sys:String x:Key="RemoveButton">Удалить</sys:String>
+
+        <!-- Шаблон для владельца -->
+        <DataTemplate x:Key="OwnerTemplate">
             <Grid Margin="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Ellipse Width="40" Height="40" Fill="#FF8C00" Grid.Column="0"/>
-                <TextBlock Text="{Binding Name}" Style="{StaticResource TextBlockStyle}" FontSize="14" Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                <TextBlock Text="{Binding Role}" Style="{StaticResource TextBlockStyle}" FontSize="12" Foreground="#AAAAAA" Grid.Column="2" VerticalAlignment="Center"/>
+
+                <Ellipse Width="40" Height="40" Fill="Gold" Grid.Column="0"/>
+                <TextBlock Text="{Binding Name}" Style="{StaticResource TextBlockStyle}" 
+                          Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Role, Converter={StaticResource RoleToStringConverter}}" 
+                          Grid.Column="2" VerticalAlignment="Center" 
+                          FontWeight="Bold" Style="{StaticResource TextBlockStyle}"/>
             </Grid>
         </DataTemplate>
 
-        <!-- Заглушка для BooleanToVisibilityConverter -->
-        <!-- TODO: Реализуйте конвертер в коде или подключите существующий -->
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <!-- Editable Template (for team owner to edit members) -->
+        <DataTemplate x:Key="EditableTemplate">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-        <!-- Заглушка для ресурсов локализации -->
-        <!-- TODO: Определите эти ресурсы в App.xaml или ResourceDictionary -->
-        <sys:String x:Key="TeamPageTitle" xml:space="preserve">Team Page</sys:String>
-        <sys:String x:Key="MembersLabel" xml:space="preserve">Members</sys:String>
-        <sys:String x:Key="TeamDescriptionLabel" xml:space="preserve">Team Description</sys:String>
-        <sys:String x:Key="InfoViewButton" xml:space="preserve">View Info</sys:String>
-        <sys:String x:Key="EditViewButton" xml:space="preserve">Edit</sys:String>
+                <Ellipse Width="40" Height="40" Fill="#FF8C00" Grid.Column="0"/>
+                <TextBlock Text="{Binding Name}" Style="{StaticResource TextBlockStyle}" Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center"/>
+
+                <ComboBox Grid.Column="2" 
+                         SelectedValue="{Binding Role, Mode=TwoWay}" 
+                         ItemsSource="{Binding AvailableRoles}"
+                         DisplayMemberPath="Value"
+                         SelectedValuePath="Key"
+                         Margin="5,0,5,0"
+                         Width="120"/>
+
+                <Button Grid.Column="3" 
+                        Content="{DynamicResource RemoveButton}" 
+                        Click="RemoveMember_Click"
+                        CommandParameter="{Binding UserId}"
+                        Style="{StaticResource ButtonStyle}" 
+                        Padding="5" 
+                        MinWidth="80"/>
+            </Grid>
+        </DataTemplate>
+
+        <!-- ReadOnly Template (for regular team members) -->
+        <DataTemplate x:Key="ReadOnlyTemplate">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Width="40" Height="40" Fill="#FF8C00" Grid.Column="0"/>
+                <TextBlock Text="{Binding Name}" Style="{StaticResource TextBlockStyle}" Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Role, Converter={StaticResource RoleToStringConverter}}" 
+                           Style="{StaticResource TextBlockStyle}" Grid.Column="2" VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+
+        <!-- Селектор шаблонов -->
+        <local:MemberTemplateSelector x:Key="MemberTemplateSelector"
+                OwnerTemplate="{StaticResource OwnerTemplate}"
+                EditableTemplate="{StaticResource EditableTemplate}"
+                ReadOnlyTemplate="{StaticResource ReadOnlyTemplate}"/>
     </Page.Resources>
     <DockPanel LastChildFill="True" Margin="0,10,0,0" HorizontalAlignment="Center" MinWidth="730" MinHeight="380" VerticalAlignment="Top">
         <!-- Заголовок страницы -->
-        <TextBlock x:Name="TeamTitle" 
-          DockPanel.Dock="Top" 
-          Style="{StaticResource HeaderTextBlockStyle}"/>
+        <TextBlock x:Name="TeamTitle"
+                   DockPanel.Dock="Top"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   Text="{DynamicResource TeamPageTitle}"/>
 
         <!-- Основное содержимое -->
         <Grid>
@@ -165,50 +233,53 @@
             </Grid.ColumnDefinitions>
 
             <!-- Секция участников -->
-            <Border Grid.Column="0" 
-                   Background="#333333"
-                   CornerRadius="5"
-                   BorderBrush="#FFFFFF"
-                   BorderThickness="1"
-                   Margin="0,0,5,0">
+            <Border Grid.Column="0"
+                    Background="#333333"
+                    CornerRadius="5"
+                    BorderBrush="#FFFFFF"
+                    BorderThickness="1"
+                    Margin="0,0,5,0">
                 <DockPanel>
                     <TextBlock DockPanel.Dock="Top"
-                              Text="{DynamicResource MembersLabel}"
-                              Style="{StaticResource HeaderTextBlockStyle}"
-                              Margin="10"/>
-
-                    <ListBox x:Name="MembersList" 
-                            DockPanel.Dock="Top"
-                            Style="{StaticResource MemberListStyle}" 
-                            ItemTemplate="{StaticResource MemberTemplate}"
-                            ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                               Text="{DynamicResource MembersLabel}"
+                               Style="{StaticResource HeaderTextBlockStyle}"
+                               Margin="10"/>
+                    <ListBox x:Name="MembersList"
+                             DockPanel.Dock="Top"
+                             Style="{StaticResource MemberListStyle}"
+                             ItemTemplateSelector="{StaticResource MemberTemplateSelector}"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"/>
                 </DockPanel>
             </Border>
 
             <!-- Секция описания команды -->
-            <Border Grid.Column="1" 
-                   Background="#333333"
-                   CornerRadius="5"
-                   BorderBrush="#FFFFFF"
-                   BorderThickness="1" HorizontalAlignment="Right" MinWidth="360" MinHeight="338" VerticalAlignment="Center">
-                <DockPanel HorizontalAlignment="Right" MinWidth="358">
+            <Border Grid.Column="1"
+                    Background="#333333"
+                    CornerRadius="5"
+                    BorderBrush="#FFFFFF"
+                    BorderThickness="1"
+                    HorizontalAlignment="Stretch"
+                    MinWidth="360"
+                    VerticalAlignment="Stretch">
+                <DockPanel>
                     <StackPanel DockPanel.Dock="Top"
-                               Orientation="Horizontal" 
-                               Margin="10"
-                               Visibility="{Binding IsOwner, Converter={StaticResource BooleanToVisibilityConverter}}">
-                        <Button Style="{StaticResource ButtonStyle}" 
-                               Content="{DynamicResource InfoViewButton}" 
-                               Click="ShowDefaultInfo_Click" 
-                               Margin="0,0,10,0"/>
-                        <Button Style="{StaticResource ButtonStyle}" 
-                               Content="{DynamicResource EditViewButton}" 
-                               Click="ShowEditControls_Click"/>
+                                Orientation="Horizontal"
+                                Margin="10"
+                                HorizontalAlignment="Center"
+                                Visibility="{Binding IsOwner, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Button Style="{StaticResource ButtonStyle}"
+                                Content="{DynamicResource InfoViewButton}"
+                                Click="ShowDefaultInfo_Click"
+                                Margin="0,0,10,0"/>
+                        <Button Style="{StaticResource ButtonStyle}"
+                                Content="{DynamicResource EditViewButton}"
+                                Click="ShowEditControls_Click"/>
                     </StackPanel>
-
                     <ContentControl x:Name="TeamDescriptionContent"
                                   DockPanel.Dock="Top"
-                                  HorizontalAlignment="Stretch"
-                                  VerticalAlignment="Stretch"/>
+                                  HorizontalContentAlignment="Stretch"
+                                  VerticalContentAlignment="Stretch"
+                                  Margin="10"/>
                 </DockPanel>
             </Border>
         </Grid>

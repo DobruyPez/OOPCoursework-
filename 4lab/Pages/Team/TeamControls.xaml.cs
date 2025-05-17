@@ -3,7 +3,10 @@ using System.Windows;
 using System.Windows.Controls;
 using Roles;
 using System.Windows.Controls.Primitives; 
-using _4lab.Pages.Team; 
+using _4lab.Pages.Team;
+using System.Collections.Generic;
+using System.Data.Entity;
+using static _4lab.TeamPage;
 
 namespace _4lab
 {
@@ -112,22 +115,6 @@ namespace _4lab
 
             // Открываем Popup
             popup.IsOpen = true;
-        }
-
-        private void ChangeRoleButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: Реализовать логику изменения роли
-            MessageBox.Show("Функция изменения роли пока не реализована.",
-                Application.Current.Resources["InfoTitle"]?.ToString() ?? "Информация",
-                MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
-        private void RemoveMemberButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO: Реализовать логику удаления участника
-            MessageBox.Show("Функция удаления участника пока не реализована.",
-                Application.Current.Resources["InfoTitle"]?.ToString() ?? "Информация",
-                MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
