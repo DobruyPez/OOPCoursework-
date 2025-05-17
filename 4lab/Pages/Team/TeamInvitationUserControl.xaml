@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="_4lab.Pages.Team.TeamInvitationUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="300">
+    <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" Padding="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock x:Name="UsernameTextBlock" FontWeight="Bold"/>
+            </StackPanel>
+
+            <Button Grid.Column="1" Content="Пригласить" 
+                    VerticalAlignment="Center" Padding="10 2"
+                    Click="InviteButton_Click"/>
+        </Grid>
+    </Border>
+</UserControl>
