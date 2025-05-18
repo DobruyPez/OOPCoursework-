@@ -1,0 +1,41 @@
+﻿<Page x:Class="_4lab.RegisterTeamPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_4lab"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="RegisterTeamPage"
+      Background="#1A1A1A">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Stules/GeneralStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Stules/DarkTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Border Style="{StaticResource BorderStyle}">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="320">
+                <TextBlock Text="{DynamicResource CreateTeamTitle}"
+                           Style="{StaticResource HeaderTextBlockStyle}" Margin="0,0,0,0"/>
+                <TextBlock Text="{DynamicResource TeamNameLabel}" Style="{StaticResource TextBlockStyle}"/>
+                <TextBox x:Name="TeamNameBox" Style="{StaticResource InputStyle}"/>
+                <TextBlock Text="{DynamicResource TeamRegionLabel}" Style="{StaticResource TextBlockStyle}"/>
+                <ComboBox x:Name="RegionComboBox" Style="{StaticResource ComboBoxStyle}">
+                    <ComboBoxItem Content="{DynamicResource RegionRussia}"/>
+                    <ComboBoxItem Content="{DynamicResource RegionUkraine}"/>
+                    <ComboBoxItem Content="{DynamicResource RegionBelarus}"/>
+                </ComboBox>
+                <TextBlock Text="{DynamicResource TeamPasswordLabel}" Style="{StaticResource TextBlockStyle}"/>
+                <PasswordBox x:Name="TeamPasswordBox" Style="{StaticResource PasswordBoxStyle}"/>
+                <Button Content="{DynamicResource CreateTeamButtonText}"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalAlignment="Stretch"
+                        Click="CreateTeamButton_Click" Margin="0,0,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

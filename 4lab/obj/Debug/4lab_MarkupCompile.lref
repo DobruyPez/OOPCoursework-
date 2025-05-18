@@ -1,10 +1,11 @@
-﻿
+﻿C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\GeneratedInternalTypeHelper.g.cs
 FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\App.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\MainWindow.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\PaymentPage.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\PremiumSubscrationPage.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\RegisterTeamPage.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\RegisterUserPage.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\TeamMatchesPage.xaml;;
-FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\UserProfilePage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Windows\MainWindow.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\Payment\PaymentPage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\Subscription\PremiumSubscrationPage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\Authorization\Team\RegisterTeamPage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\Authorization\User\RegisterUserPage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\TeamMatches\TeamMatchesPage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\Team\TeamPage.xaml;;
+FC:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\Pages\UserProfile\UserProfilePage.xaml;;
 

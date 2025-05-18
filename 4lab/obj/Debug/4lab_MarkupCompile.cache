@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\App.xaml
-13-1024833700
+181596138387
 
-22-970523107
+29814753431
 38408133901
-DarkTheme.xaml;LightTheme.xaml;LoginControl.xaml;MainMenuPage.xaml;MainWindow.xaml;PaymentPage.xaml;PremiumSubscrationPage.xaml;RegisterControl.xaml;RegisterTeamPage.xaml;RegisterUserPage.xaml;TeamMatchesPage.xaml;TeamPage.xaml;UserProfilePage.xaml;
+Pages\Team\AddMembers\TeamInvitationUserControl.xaml;Pages\Team\AddMembers\UsersListPopup.xaml;Resources\Stules\GeneralStyle.xaml;Resources\Stules\DarkTheme.xaml;Pages\Team\DefaultInfoTeamControl.xaml;Resources\Stules\LightTheme.xaml;Pages\Authorization\User\LoginControl.xaml;Pages\MainMenu\MainMenuPage.xaml;Windows\MainWindow.xaml;Pages\Payment\PaymentPage.xaml;Pages\Subscription\PremiumSubscrationPage.xaml;Pages\Authorization\User\RegisterControl.xaml;Pages\Authorization\Team\RegisterTeamPage.xaml;Pages\Authorization\User\RegisterUserPage.xaml;Pages\Team\TeamControls.xaml;Pages\TeamMatches\TeamMatchesPage.xaml;Pages\Team\TeamPage.xaml;Pages\UserProfile\UserProfilePage.xaml;
 
-False
+True
 

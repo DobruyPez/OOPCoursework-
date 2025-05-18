@@ -119,103 +119,137 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="LoginControl.xaml.cs">
+    <Compile Include="Converters\RoleToStringConverter.cs" />
+    <Compile Include="Pages\Team\ChangeRole\MemberTemplateSelector.cs" />
+    <Compile Include="Pages\Team\DefaultInfoTeamControl.xaml.cs">
+      <DependentUpon>DefaultInfoTeamControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Authorization\User\LoginControl.xaml.cs">
       <DependentUpon>LoginControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202505111450541_InitialCreate.cs" />
-    <Compile Include="Migrations\202505111450541_InitialCreate.Designer.cs">
+    <Compile Include="BD\Migrations\202505111450541_InitialCreate.cs" />
+    <Compile Include="BD\Migrations\202505111450541_InitialCreate.Designer.cs">
       <DependentUpon>202505111450541_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\DataBaseInteractor.cs" />
-    <Compile Include="Migrations\DBContext.cs" />
-    <Compile Include="MainMenuPage.xaml.cs">
+    <Compile Include="BD\DataBaseInteractor.cs" />
+    <Compile Include="BD\DBContext.cs" />
+    <Compile Include="Pages\MainMenu\MainMenuPage.xaml.cs">
       <DependentUpon>MainMenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Pages\Team\AddMembers\TeamInvitationUserControl.xaml.cs">
+      <DependentUpon>TeamInvitationUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Team\AddMembers\UsersListPopup.xaml.cs">
+      <DependentUpon>UsersListPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppNavigation.cs" />
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PaymentPage.xaml.cs">
+    <Compile Include="BD\Migrations\Configuration.cs" />
+    <Compile Include="Pages\Payment\PaymentPage.xaml.cs">
       <DependentUpon>PaymentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PremiumSubscrationPage.xaml.cs">
+    <Compile Include="Pages\Subscription\PremiumSubscrationPage.xaml.cs">
       <DependentUpon>PremiumSubscrationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterControl.xaml.cs">
+    <Compile Include="Pages\Authorization\User\RegisterControl.xaml.cs">
       <DependentUpon>RegisterControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterTeamPage.xaml.cs">
+    <Compile Include="Pages\Authorization\Team\RegisterTeamPage.xaml.cs">
       <DependentUpon>RegisterTeamPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterUserPage.xaml.cs">
+    <Compile Include="Pages\Authorization\User\RegisterUserPage.xaml.cs">
       <DependentUpon>RegisterUserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Roles.cs" />
-    <Compile Include="Servise.cs" />
-    <Compile Include="TeamMatchesPage.xaml.cs">
+    <Compile Include="Resources\Roles.cs" />
+    <Compile Include="Pages\Team\TeamControls.xaml.cs">
+      <DependentUpon>TeamControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamMatches\TeamMatchesPage.xaml.cs">
       <DependentUpon>TeamMatchesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TeamPage.xaml.cs">
+    <Compile Include="Pages\Team\TeamPage.xaml.cs">
       <DependentUpon>TeamPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserProfilePage.xaml.cs">
+    <Compile Include="Pages\UserProfile\UserProfilePage.xaml.cs">
       <DependentUpon>UserProfilePage.xaml</DependentUpon>
     </Compile>
-    <Resource Include="English.xaml" />
-    <Resource Include="Russian.xaml" />
-    <Page Include="DarkTheme.xaml">
+    <Resource Include="Resources\Languages\English.xaml" />
+    <Resource Include="Resources\Languages\Russian.xaml" />
+    <Page Include="Pages\Team\AddMembers\TeamInvitationUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LightTheme.xaml">
+    <Page Include="Pages\Team\AddMembers\UsersListPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginControl.xaml">
+    <Page Include="Resources\Stules\GeneralStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainMenuPage.xaml">
+    <Page Include="Resources\Stules\DarkTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Pages\Team\DefaultInfoTeamControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PaymentPage.xaml">
+    <Page Include="Resources\Stules\LightTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PremiumSubscrationPage.xaml">
+    <Page Include="Pages\Authorization\User\LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterControl.xaml">
+    <Page Include="Pages\MainMenu\MainMenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterTeamPage.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterUserPage.xaml">
+    <Page Include="Pages\Payment\PaymentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TeamMatchesPage.xaml">
+    <Page Include="Pages\Subscription\PremiumSubscrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TeamPage.xaml">
+    <Page Include="Pages\Authorization\User\RegisterControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserProfilePage.xaml">
+    <Page Include="Pages\Authorization\Team\RegisterTeamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Authorization\User\RegisterUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Team\TeamControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeamMatches\TeamMatchesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Team\TeamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserProfile\UserProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,7 +268,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202505111450541_InitialCreate.resx">
+    <EmbeddedResource Include="BD\Migrations\202505111450541_InitialCreate.resx">
       <DependentUpon>202505111450541_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -250,6 +284,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
