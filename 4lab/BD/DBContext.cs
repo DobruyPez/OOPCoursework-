@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using _4lab.Resources;
 using Roles;
 using static Roles.CurrentTeam;
 
@@ -17,6 +18,7 @@ namespace _4lab.BD
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<TeamOffer> TeamOffers { get; set; }
+        public DbSet<ChatMessage> ChatMessages { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
