@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\payment\\paymentpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\payment\\paymentpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -165,11 +169,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 252,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 0,
+              "Title": "PaymentPage.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAIwIQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T14:30:09.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "MemberTemplateSelector.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\MemberTemplateSelector.cs",
               "RelativeDocumentMoniker": "4lab\\MemberTemplateSelector.cs",
@@ -181,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserProfilePage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
@@ -192,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TeamControls.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamControls.xaml",
@@ -203,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "DarkTheme.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\DarkTheme.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Stules\\DarkTheme.xaml",
@@ -214,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TeamControls.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamControls.xaml.cs",
@@ -226,19 +243,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TeamPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamPage.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml",
               "RelativeToolTip": "4lab\\Pages\\Team\\TeamPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T06:02:26.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T06:02:26.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TeamPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamPage.xaml.cs",
@@ -250,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UsersListPopup.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml",
@@ -261,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Roles.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Roles.cs",
               "RelativeDocumentMoniker": "4lab\\Resources\\Roles.cs",
@@ -273,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LoginControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
@@ -285,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserProfilePage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
@@ -297,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DBContext.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\BD\\DBContext.cs",
               "RelativeDocumentMoniker": "4lab\\BD\\DBContext.cs",
@@ -309,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "UsersListPopup.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\UsersListPopup.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\UsersListPopup.xaml.cs",
@@ -321,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "MainMenuPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml",
@@ -332,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\drozd\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
               "ToolTip": "C:\\Users\\drozd\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
@@ -343,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "LightTheme.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\LightTheme.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Stules\\LightTheme.xaml",
@@ -354,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "TeamMatchesPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
@@ -365,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "TeamInvitationUserControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamInvitationUserControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamInvitationUserControl.xaml.cs",
@@ -377,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TeamInvitationUserControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml",
@@ -388,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Windows\\MainWindow.xaml.cs",
@@ -400,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "RegisterControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
@@ -412,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "RegisterTeamPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml.cs",
@@ -424,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml",
               "RelativeDocumentMoniker": "4lab\\Windows\\MainWindow.xaml",
@@ -435,19 +451,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "GeneralStyle.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "RelativeToolTip": "4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T07:42:40.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T07:42:40.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "DefaultInfoTeamControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml",
@@ -458,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "RegisterUserPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
@@ -470,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "AppNavigation.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\AppNavigation.cs",
               "RelativeDocumentMoniker": "4lab\\Resources\\AppNavigation.cs",
@@ -482,19 +497,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "English.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Languages\\English.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Languages\\English.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Languages\\English.xaml",
               "RelativeToolTip": "4lab\\Resources\\Languages\\English.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T07:08:41.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T07:08:41.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "App.config",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.config",
               "RelativeDocumentMoniker": "4lab\\App.config",
@@ -506,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "RegisterUserPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
@@ -517,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RegisterTeamPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml",
@@ -528,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\packages.config",
               "RelativeDocumentMoniker": "4lab\\packages.config",
@@ -540,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "DefaultInfoTeamControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
@@ -552,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "PaymentPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Payment\\PaymentPage.xaml",
@@ -563,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "PremiumSubscrationPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
@@ -574,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\App.xaml.cs",
@@ -586,19 +600,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml",
               "RelativeDocumentMoniker": "4lab\\App.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml",
               "RelativeToolTip": "4lab\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-15T23:57:16.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T23:57:16.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "RegisterControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
@@ -609,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "LoginControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
