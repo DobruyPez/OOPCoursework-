@@ -288,6 +288,8 @@ namespace Roles
             public Player Player { get; private set; }
             public bool IsLoggedIn => Admin != null || Player != null;
 
+            public int Id { get; internal set; }
+
             private CurrentUser() { }
 
             public void SetUser(User user)

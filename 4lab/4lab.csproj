@@ -143,6 +143,7 @@
       <DependentUpon>UsersListPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\AppNavigation.cs" />
+    <Compile Include="Resources\ChatMessage.cs" />
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
