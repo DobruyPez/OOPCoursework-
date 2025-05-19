@@ -29,7 +29,8 @@
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0,30,0,20"/>
+            <Setter Property="Margin" Value="0,20,0,20"/>
+            <!-- Уменьшено для адаптивности -->
         </Style>
 
         <!-- Стиль для TextBox -->
@@ -42,7 +43,8 @@
             <Setter Property="Margin" Value="0,5"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
-            <Setter Property="Width" Value="250"/>
+            <Setter Property="MinWidth" Value="200"/>
+            <!-- Минимальная ширина вместо фиксированной -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
@@ -130,7 +132,8 @@
             <Setter Property="FontFamily" Value="Segoe UI"/>
             <Setter Property="Padding" Value="10,5"/>
             <Setter Property="Margin" Value="0,10"/>
-            <Setter Property="Width" Value="250"/>
+            <Setter Property="MinWidth" Value="200"/>
+            <!-- Минимальная ширина вместо фиксированной -->
             <Setter Property="Height" Value="40"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
@@ -156,12 +159,12 @@
         </Style>
     </Page.Resources>
     <Grid>
-        <Border Style="{StaticResource BorderStyle}">
+        <Border Style="{StaticResource BorderStyle}" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                MinWidth="400" MaxWidth="600">
+            <!-- Ограничения для адаптивности -->
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="126*"/>
-                    <ColumnDefinition Width="605*"/>
-                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <!-- Заголовок -->
@@ -175,47 +178,79 @@
                     <!-- Email -->
                     <RowDefinition Height="Auto"/>
                     <!-- Кнопка -->
-                    <RowDefinition Height="40"/>
-                    <!-- Фиксированное место для сообщения -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Сообщение -->
                 </Grid.RowDefinitions>
+
                 <!-- Заголовок -->
-                <TextBlock Grid.Row="0" x:Name="PlanTitle" Text="Оплата плана Pro" Style="{StaticResource HeaderTextBlockStyle}" Margin="136,10,0,65" Grid.Column="1" HorizontalAlignment="Left"/>
+                <TextBlock Grid.Row="0" 
+                           x:Name="PlanTitle" 
+                           Text="Оплата плана Pro" 
+                           Style="{StaticResource HeaderTextBlockStyle}" 
+                           HorizontalAlignment="Center" RenderTransformOrigin="0.504,-0.182" Margin="0,10,0,10"/>
+
                 <!-- Номер карты -->
-                <StackPanel HorizontalAlignment="Left" RenderTransformOrigin="0.517,-0.438" Margin="114,45,0,6" Grid.Column="1">
+                <StackPanel Grid.Row="1" 
+                            HorizontalAlignment="Center" 
+                            Margin="0,10">
                     <TextBlock Text="Номер карты" Style="{StaticResource TextBlockStyle}"/>
                     <TextBox x:Name="CardNumber" MaxLength="16" Style="{StaticResource InputStyle}"/>
                 </StackPanel>
+
                 <!-- Срок действия и CVV -->
-                <Grid Grid.Row="2" HorizontalAlignment="Left" Margin="110,4,0,43" Grid.ColumnSpan="2">
+                <Grid Grid.Row="2" 
+                      HorizontalAlignment="Center" 
+                      Margin="0,5,0,5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="20"/>
+                        <!-- Пространство между полями -->
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0" Margin="0,-10,10,0" RenderTransformOrigin="0.541,-0.827">
+                    <StackPanel Grid.Column="0">
                         <TextBlock Text="Срок действия" Style="{StaticResource TextBlockStyle}"/>
                         <TextBox x:Name="ExpiryDate" MaxLength="5" Style="{StaticResource InputStyle}"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="1" Margin="0,-10,0,0">
+                    <StackPanel Grid.Column="2">
                         <TextBlock Text="CVV" Style="{StaticResource TextBlockStyle}"/>
                         <TextBox x:Name="Cvv" MaxLength="3" Style="{StaticResource InputStyle}"/>
                     </StackPanel>
                 </Grid>
+
                 <!-- Имя владельца -->
-                <StackPanel Grid.Row="2" HorizontalAlignment="Left" Margin="114,58,0,43" Grid.Column="1" Grid.RowSpan="2">
+                <StackPanel Grid.Row="3" 
+                            HorizontalAlignment="Center" 
+                            Margin="0,10">
                     <TextBlock Text="Имя владельца" Style="{StaticResource TextBlockStyle}"/>
                     <TextBox x:Name="CardHolder" Style="{StaticResource InputStyle}"/>
                 </StackPanel>
+
                 <!-- Email -->
-                <StackPanel Grid.Row="3" HorizontalAlignment="Left" Margin="114,-10,0,10" Grid.Column="1" Grid.RowSpan="2">
+                <StackPanel Grid.Row="4" 
+                            HorizontalAlignment="Center" 
+                            Margin="0,10">
                     <TextBlock Text="Email для чека" Style="{StaticResource TextBlockStyle}"/>
                     <TextBox x:Name="Email" Style="{StaticResource InputStyle}"/>
                 </StackPanel>
+
                 <!-- Кнопка -->
-                <Button Grid.Row="4" x:Name="PayButton" Content="Оплатить" Click="PayButton_Click" Style="{StaticResource ButtonStyle}" 
-                        HorizontalAlignment="Left" Margin="114,26,0,48" Grid.Column="1" Grid.RowSpan="2"/>
+                <Button Grid.Row="5" 
+                        x:Name="PayButton" 
+                        Content="Оплатить" 
+                        Click="PayButton_Click" 
+                        Style="{StaticResource ButtonStyle}" 
+                        HorizontalAlignment="Center" 
+                        Margin="0,20,0,10"/>
+
                 <!-- Сообщение о статусе -->
-                <TextBlock Grid.Row="5" x:Name="StatusMessage" Style="{StaticResource TextBlockStyle}" 
-                           HorizontalAlignment="Left" Margin="240,17,0,3" Visibility="Collapsed" TextWrapping="Wrap" MaxWidth="250" Grid.Column="1"/>
+                <TextBlock Grid.Row="6" 
+                           x:Name="StatusMessage" 
+                           Style="{StaticResource TextBlockStyle}" 
+                           HorizontalAlignment="Center" 
+                           Visibility="Collapsed" 
+                           TextWrapping="Wrap" 
+                           MaxWidth="300"/>
+                <!-- Ограничение ширины для текста -->
             </Grid>
         </Border>
     </Grid>
