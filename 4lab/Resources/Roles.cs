@@ -606,7 +606,6 @@ namespace Roles
         [Column(TypeName = "timestamp")]
         public DateTime Date { get; set; }
 
-        // Навигационное свойство
         public virtual User Creator { get; set; }
     }
 }

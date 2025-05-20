@@ -5,10 +5,10 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using _4lab.BD;
-using _4lab.Pages.TeamMatches.RegisterOffer;
+using _4lab.Resources;
 using Roles;
 
-namespace _4lab
+namespace _4lab.Pages.TeamMatches
 {
     public partial class TeamMatchesPage : Page
     {
@@ -168,7 +168,7 @@ namespace _4lab
         {
             if (_parentWindow != null)
             {
-                _parentWindow.ShowContent(new OfferRegistrationPage());
+                _parentWindow.ShowContent(new _4lab.Pages.TeamMatches.RegisterOffer.OfferRegistrationPage());
             }
             else
             {
@@ -180,8 +180,39 @@ namespace _4lab
         {
             if (parameter is Match selectedMatch)
             {
-                MessageBox.Show($"Offer made for {selectedMatch.TeamName}!", "Offer Sent",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                var currentUser = CurrentUser.Instance.GetCurrentUser();
+                if (currentUser == null)
+                {
+                    MessageBox.Show("Пользователь не авторизован.", "Ошибка",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                try
+                {
+                    using (var context = new DBContext())
+                    {
+                        var teamOffer = context.TeamOffers
+                            .FirstOrDefault(to => to.Id == selectedMatch.OfferId);
+
+                        if (teamOffer == null)
+                        {
+                            MessageBox.Show("Офер не найден.", "Ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
+                        }
+
+                        //MessageService.SendMessage(currentUser.Id, selectedMatch.CreatorId, MessageType.TeamOffer);
+
+                        MessageBox.Show($"Предложение отправлено для {selectedMatch.TeamName}!", "Успех",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при отправке предложения: {ex.Message}", "Ошибка",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

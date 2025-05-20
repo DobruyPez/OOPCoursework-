@@ -120,10 +120,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\RoleToStringConverter.cs" />
-    <Compile Include="Message\ChoiceControl.xaml.cs">
+    <Compile Include="Pages\Message\ChoiceControl.xaml.cs">
       <DependentUpon>ChoiceControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Message\MessagesPage.xaml.cs">
+    <Compile Include="Pages\Message\MessagesPage.xaml.cs">
       <DependentUpon>MessagesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml.cs">
@@ -155,7 +155,7 @@
       <DependentUpon>UsersListPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\AppNavigation.cs" />
-    <Compile Include="Resources\ChatMessage.cs" />
+    <Compile Include="Windows\ChatMessage.cs" />
     <Compile Include="Resources\Messages\Message.cs" />
     <Compile Include="Resources\Messages\MessageService.cs" />
     <Compile Include="Windows\MainWindow.xaml.cs">
@@ -196,11 +196,11 @@
     </Compile>
     <Resource Include="Resources\Languages\English.xaml" />
     <Resource Include="Resources\Languages\Russian.xaml" />
-    <Page Include="Message\ChoiceControl.xaml">
+    <Page Include="Pages\Message\ChoiceControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Message\MessagesPage.xaml">
+    <Page Include="Pages\Message\MessagesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -293,9 +293,9 @@ namespace _4lab
                 {
                     newPage = new UserProfilePage();
                 }
-                else if (pageType == typeof(TeamMatchesPage))
+                else if (pageType == typeof(_4lab.Pages.TeamMatches.TeamMatchesPage))
                 {
-                    newPage = new TeamMatchesPage(this);
+                    newPage = new _4lab.Pages.TeamMatches.TeamMatchesPage(this);
                 }
                 else if (pageType == typeof(TeamPage))
                 {

@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace _4lab.Pages.TeamMatches.RegisterOffer
 {
-    /// <summary>
-    /// Логика взаимодействия для OfferRegistrationPage.xaml
-    /// </summary>
     public partial class OfferRegistrationPage : Page
     {
         public OfferRegistrationPage()

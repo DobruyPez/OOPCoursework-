@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="350">
+             d:DesignHeight="450" d:DesignWidth="350">
     <UserControl.Resources>
         <!-- Стиль для TextBlock -->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
@@ -199,7 +199,7 @@
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="8"/>
-            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
             <Setter Property="Height" Value="30"/>
@@ -299,8 +299,36 @@
             <ListBoxItem Content="Ancient"/>
         </ListBox>
 
-        <TextBlock Text="Выберите дату и время:" Style="{StaticResource TextBlockStyle}"/>
-        <DatePicker x:Name="DateTimePicker" Style="{StaticResource DatePickerStyle}" SelectedDateFormat="Short"/>
+        <TextBlock Text="Выберите дату:" Style="{StaticResource TextBlockStyle}"/>
+        <DatePicker x:Name="DatePicker" Style="{StaticResource DatePickerStyle}" SelectedDateFormat="Short"/>
+
+        <TextBlock Text="Выберите время:" Style="{StaticResource TextBlockStyle}"/>
+        <ComboBox x:Name="TimePicker" Style="{StaticResource ComboBoxStyle}">
+            <ComboBoxItem Content="00:00"/>
+            <ComboBoxItem Content="01:00"/>
+            <ComboBoxItem Content="02:00"/>
+            <ComboBoxItem Content="03:00"/>
+            <ComboBoxItem Content="04:00"/>
+            <ComboBoxItem Content="05:00"/>
+            <ComboBoxItem Content="06:00"/>
+            <ComboBoxItem Content="07:00"/>
+            <ComboBoxItem Content="08:00"/>
+            <ComboBoxItem Content="09:00"/>
+            <ComboBoxItem Content="10:00"/>
+            <ComboBoxItem Content="11:00"/>
+            <ComboBoxItem Content="12:00"/>
+            <ComboBoxItem Content="13:00"/>
+            <ComboBoxItem Content="14:00"/>
+            <ComboBoxItem Content="15:00"/>
+            <ComboBoxItem Content="16:00"/>
+            <ComboBoxItem Content="17:00"/>
+            <ComboBoxItem Content="18:00"/>
+            <ComboBoxItem Content="19:00"/>
+            <ComboBoxItem Content="20:00"/>
+            <ComboBoxItem Content="21:00"/>
+            <ComboBoxItem Content="22:00"/>
+            <ComboBoxItem Content="23:00"/>
+        </ComboBox>
 
         <Button x:Name="RegisterOfferButton" Content="Зарегистрировать" Style="{StaticResource ButtonStyle}" Click="RegisterOfferButton_Click"/>
     </StackPanel>

@@ -1,130 +1,5 @@
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\4lab.exe.config
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\4lab.exe
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\4lab.pdb
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\BCrypt.Net-Next.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\EntityFramework.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\EntityFramework.SqlServer.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\EntityFramework6.Npgsql.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\Microsoft.Bcl.HashCode.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\Npgsql.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Buffers.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Collections.Immutable.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Memory.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Numerics.Vectors.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Text.Encodings.Web.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Text.Json.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Channels.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.ValueTuple.dll
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\BCrypt.Net-Next.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\EntityFramework.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\EntityFramework.SqlServer.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\EntityFramework6.Npgsql.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\Microsoft.Bcl.HashCode.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\Npgsql.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Buffers.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Collections.Immutable.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Memory.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Numerics.Vectors.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Text.Encodings.Web.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Text.Json.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Channels.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\bin\Debug\System.ValueTuple.xml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.AssemblyReference.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\AddMembers\TeamInvitationUserControl.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\AddMembers\UsersListPopup.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Resources\Stules\GeneralStyle.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Resources\Stules\DarkTheme.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\DefaultInfoTeamControl.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Resources\Stules\LightTheme.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\User\LoginControl.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\MainMenu\MainMenuPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\User\RegisterControl.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\TeamControls.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\AddMembers\TeamInvitationUserControl.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\AddMembers\UsersListPopup.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\DefaultInfoTeamControl.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\User\LoginControl.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\MainMenu\MainMenuPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Windows\MainWindow.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Payment\PaymentPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Subscription\PremiumSubscrationPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\User\RegisterControl.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\Team\RegisterTeamPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\User\RegisterUserPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\TeamControls.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\TeamMatches\TeamMatchesPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\TeamPage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\UserProfile\UserProfilePage.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\App.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab_MarkupCompile.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab_MarkupCompile.lref
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\App.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Windows\MainWindow.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Payment\PaymentPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Subscription\PremiumSubscrationPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\Team\RegisterTeamPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Authorization\User\RegisterUserPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\TeamMatches\TeamMatchesPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\Team\TeamPage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\Pages\UserProfile\UserProfilePage.baml
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.g.resources
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\_4lab.Migrations.InitialCreate.resources
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\_4lab.Properties.Resources.resources
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.GenerateResource.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.CoreCompileInputs.cache
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.csproj.CopyComplete
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.exe
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\4lab.pdb
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.exe.config
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.exe
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\4lab.pdb
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\BCrypt.Net-Next.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.SqlServer.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework6.Npgsql.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.HashCode.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Npgsql.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Buffers.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Collections.Immutable.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Memory.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Numerics.Vectors.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Encodings.Web.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Json.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Channels.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.ValueTuple.dll
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\BCrypt.Net-Next.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework.SqlServer.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\EntityFramework6.Npgsql.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Microsoft.Bcl.HashCode.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\Npgsql.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Buffers.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Collections.Immutable.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Memory.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Numerics.Vectors.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Encodings.Web.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Text.Json.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Channels.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\bin\Debug\System.ValueTuple.xml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.AssemblyReference.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Message\ChoiceControl.baml
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Message\ChoiceControl.baml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.baml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Team\AddMembers\TeamInvitationUserControl.baml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Team\AddMembers\UsersListPopup.baml
@@ -136,8 +11,8 @@ D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Authorization\User\LoginContr
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\MainMenu\MainMenuPage.baml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Authorization\User\RegisterControl.baml
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Team\TeamControls.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Message\ChoiceControl.g.cs
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Message\MessagesPage.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Message\ChoiceControl.g.cs
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Message\MessagesPage.g.cs
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.g.cs
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.g.cs
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Team\AddMembers\TeamInvitationUserControl.g.cs
@@ -159,22 +34,3 @@ D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\App.g.cs
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab_MarkupCompile.cache
 D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab_MarkupCompile.lref
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\App.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Message\MessagesPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Windows\MainWindow.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Payment\PaymentPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Subscription\PremiumSubscrationPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Authorization\Team\RegisterTeamPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Authorization\User\RegisterUserPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\TeamMatches\TeamMatchesPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\Team\TeamPage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\Pages\UserProfile\UserProfilePage.baml
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.g.resources
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\_4lab.Migrations.InitialCreate.resources
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\_4lab.Properties.Resources.resources
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.GenerateResource.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.CoreCompileInputs.cache
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.csproj.Up2Date
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.exe
-D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\4lab.pdb
