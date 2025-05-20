@@ -7,6 +7,7 @@ using _4lab.Pages.Team;
 using System.Collections.Generic;
 using System.Data.Entity;
 using static _4lab.TeamPage;
+using System.Linq;
 
 namespace _4lab
 {
@@ -115,6 +116,70 @@ namespace _4lab
 
             // Открываем Popup
             popup.IsOpen = true;
+        }
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var team = CurrentTeam.Team;
+            if (team == null)
+            {
+                MessageBox.Show(
+                    Application.Current.Resources["NoTeamSelected"]?.ToString() ?? "Команда не выбрана",
+                    Application.Current.Resources["ErrorTitle"]?.ToString() ?? "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Подтверждение удаления
+            var result = MessageBox.Show(
+                Application.Current.Resources["ConfirmTeamDelete"]?.ToString() ?? "Вы уверены, что хотите удалить команду? Это действие нельзя отменить.",
+                Application.Current.Resources["ConfirmTitle"]?.ToString() ?? "Подтверждение",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+
+            if (result != MessageBoxResult.Yes)
+                return;
+
+            try
+            {
+                using (var context = new _4lab.BD.DBContext())
+                {
+                    // Находим команду со всеми связанными данными
+                    var teamToDelete = context.Teams
+                        .Include(t => t.Members)
+                        .FirstOrDefault(t => t.Id == team.Id);
+
+                    if (teamToDelete != null)
+                    {                        
+                        CurrentTeam.ClearAllTeamMembers();
+                        context.Teams.Remove(teamToDelete);
+                        context.SaveChanges();
+
+                        CurrentTeam.ClearCurrentTeam();
+
+                        MessageBox.Show(
+                            Application.Current.Resources["TeamDeletedSuccess"]?.ToString() ?? "Команда успешно удалена",
+                            Application.Current.Resources["SuccessTitle"]?.ToString() ?? "Успех",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        // Можно вызвать событие для обновления UI
+                        // OnTeamDeleted?.Invoke();
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            Application.Current.Resources["TeamNotFound"]?.ToString() ?? "Команда не найдена",
+                            Application.Current.Resources["ErrorTitle"]?.ToString() ?? "Ошибка",
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"{Application.Current.Resources["DeleteError"]?.ToString() ?? "Ошибка при удалении команды"}: {ex.Message}",
+                    Application.Current.Resources["ErrorTitle"]?.ToString() ?? "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

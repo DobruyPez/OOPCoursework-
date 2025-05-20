@@ -60,7 +60,7 @@ namespace _4lab
 
                     var user = new Player
                     {
-                        Username = username,
+                        Name = username,
                         Email = email,
                         PasswordHash = hashedPassword,
                         Role = UserRole.Player,

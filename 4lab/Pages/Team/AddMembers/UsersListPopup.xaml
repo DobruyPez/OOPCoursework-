@@ -5,36 +5,115 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="400">
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <UserControl.Resources>
+        <!-- Стиль TextBlockStyle -->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
 
-        <TextBlock Grid.Row="0" 
-               Text="Пригласить участников" 
-               Margin="0 0 0 10"/>
+        <!-- Стиль HeaderTextBlockStyle -->
+        <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Foreground" Value="#FF8C00"/>
+        </Style>
 
-        <TextBox Grid.Row="1" 
-             x:Name="SearchBox" 
-             TextChanged="SearchBox_TextChanged" 
-             Margin="0 0 0 10"/>
+        <!-- Стиль для кнопок -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF8C00"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="5"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E67C00"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#D26900"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-            <ItemsControl x:Name="UsersList">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <ContentPresenter Content="{Binding}"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
+        <!-- Шаблон для элементов списка -->
+        <DataTemplate x:Key="UserItemTemplate">
+            <Border Background="#2A2A2A" CornerRadius="8" Margin="0,5" Padding="10"
+                    BorderBrush="#FF8C00" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="3" 
-            Content="Закрыть" 
-            HorizontalAlignment="Right"
-            Click="CloseButton_Click"/>
-    </Grid>
+                    <TextBlock Text="{Binding Username}" 
+                               Style="{StaticResource TextBlockStyle}"
+                               FontWeight="SemiBold"/>
+
+                    <Button Grid.Column="1" 
+                            Content="Пригласить"
+                            Style="{StaticResource ButtonStyle}"
+                            Tag="{Binding}"
+                            Padding="8,3"
+                            MinWidth="80"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Border Background="#333333" CornerRadius="10" Padding="15"
+            BorderBrush="#FF8C00" BorderThickness="2">
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок -->
+            <TextBlock Grid.Row="0" 
+                       Text="Пригласить участников" 
+                       Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <!-- Поиск -->
+            <TextBox Grid.Row="1" 
+                     x:Name="SearchBox" 
+                     TextChanged="SearchBox_TextChanged"
+                     Background="#444444"
+                     Foreground="White"
+                     BorderBrush="#FF8C00"
+                     BorderThickness="1"
+                     Padding="8"
+                     Margin="0,0,0,15"
+                     FontSize="14"
+                     VerticalContentAlignment="Center"/>
+
+            <!-- Список пользователей -->
+            <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+                <ItemsControl x:Name="UsersList" ItemTemplate="{StaticResource UserItemTemplate}"/>
+            </ScrollViewer>
+        </Grid>
+    </Border>
 </UserControl>

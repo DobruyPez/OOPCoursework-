@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\obj\Debug\
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\obj\Debug\
 _4lab
 none
 false
 DEBUG;TRACE
-C:\Labs\4 sem\OOP KP\OOPCoursework-\4lab\App.xaml
-181596138387
+D:\laby\4_sem\OOP\4_5lab\4lab\4lab\App.xaml
+22-715740910
 
-29-597890913
-38408133901
-Pages\Team\AddMembers\TeamInvitationUserControl.xaml;Pages\Team\AddMembers\UsersListPopup.xaml;Resources\Stules\GeneralStyle.xaml;Resources\Stules\DarkTheme.xaml;Pages\Team\DefaultInfoTeamControl.xaml;Resources\Stules\LightTheme.xaml;Pages\Authorization\User\LoginControl.xaml;Pages\MainMenu\MainMenuPage.xaml;Windows\MainWindow.xaml;Pages\Payment\PaymentPage.xaml;Pages\Subscription\PremiumSubscrationPage.xaml;Pages\Authorization\User\RegisterControl.xaml;Pages\Authorization\Team\RegisterTeamPage.xaml;Pages\Authorization\User\RegisterUserPage.xaml;Pages\Team\TeamControls.xaml;Pages\TeamMatches\TeamMatchesPage.xaml;Pages\Team\TeamPage.xaml;Pages\UserProfile\UserProfilePage.xaml;
+35-1062479797
+38693369421
+Pages\Message\ChoiceControl.xaml;Pages\Message\MessagesPage.xaml;Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml;Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.xaml;Pages\Team\AddMembers\TeamInvitationUserControl.xaml;Pages\Team\AddMembers\UsersListPopup.xaml;Resources\Stules\GeneralStyle.xaml;Resources\Stules\DarkTheme.xaml;Pages\Team\DefaultInfoTeamControl.xaml;Resources\Stules\LightTheme.xaml;Pages\Authorization\User\LoginControl.xaml;Pages\MainMenu\MainMenuPage.xaml;Windows\MainWindow.xaml;Pages\Payment\PaymentPage.xaml;Pages\Subscription\PremiumSubscrationPage.xaml;Pages\Authorization\User\RegisterControl.xaml;Pages\Authorization\Team\RegisterTeamPage.xaml;Pages\Authorization\User\RegisterUserPage.xaml;Pages\Team\TeamControls.xaml;Pages\TeamMatches\TeamMatchesPage.xaml;Pages\Team\TeamPage.xaml;Pages\UserProfile\UserProfilePage.xaml;
 
-False
+True
 

@@ -31,7 +31,7 @@ namespace _4lab.Pages.Team
                 {
                     // Получаем всех пользователей, которые еще не в команде
                     var availablePlayers = context.Players
-                        .Where(u => !context.Players.Any(tm => tm.Id == u.Id && tm.TeamId == _teamId))
+                        .Where(u => !context.Players.Any(tm => tm.Id == u.Id && tm.TeamId == _teamId) && u.TeamId == null)
                         .ToList();
 
                     UsersList.Items.Clear();
@@ -45,8 +45,7 @@ namespace _4lab.Pages.Team
                             () => OnInvitationSent?.Invoke());
 
                         UsersList.Items.Add(invitationControl);
-                    }
-                    ;
+                    };
                 }
             }
             catch (Exception ex)
@@ -58,25 +57,46 @@ namespace _4lab.Pages.Team
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(SearchBox.Text))
+            try
             {
-                UsersList.ItemsSource = _allUsers;
-                return;
+                if (string.IsNullOrWhiteSpace(SearchBox.Text))
+                {
+                    LoadUsers(); // Просто перезагружаем полный список
+                    return;
+                }
+
+                var searchText = SearchBox.Text.ToLower();
+
+                using (var context = new _4lab.BD.DBContext())
+                {
+                    // Ищем пользователей, которые не в текущей команде и соответствуют поисковому запросу
+                    var filteredUsers = context.Players
+                        .Where(u => u.TeamId == null &&
+                                   (u.Name != null && u.Name.ToLower().Contains(searchText) ||
+                                    u.Email != null && u.Email.ToLower().Contains(searchText)))
+                        .ToList();
+
+                    UsersList.Items.Clear();
+
+                    foreach (var player in filteredUsers)
+                    {
+                        var invitationControl = new TeamInvitationUserControl(
+                            player,
+                            _teamId,
+                            () =>
+                            {
+                                OnInvitationSent?.Invoke();
+                                LoadUsers();
+                            });
+
+                        UsersList.Items.Add(invitationControl);
+                    }
+                }
             }
-
-            var searchText = SearchBox.Text.ToLower();
-            UsersList.ItemsSource = _allUsers
-                .Where(u => u.Username.ToLower().Contains(searchText) ||
-                             u.Email.ToLower().Contains(searchText))
-                .ToList();
-        }
-
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            var parent = Parent as Popup;
-            if (parent != null)
+            catch (Exception ex)
             {
-                parent.IsOpen = false;
+                MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

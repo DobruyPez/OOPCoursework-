@@ -103,7 +103,8 @@
     <system:String x:Key="NoRegion">No Region</system:String>
     <system:String x:Key="SaveButton">Save</system:String>
     <system:String x:Key="InviteButton">Invite</system:String>
-    <system:String x:Key="ChangeRoleButton">Change Role</system:String>
+    <system:String x:Key="DeleteTeam">Delete Team</system:String>
     <system:String x:Key="RemoveButton">Delete</system:String>
+    <system:String x:Key="LeaveTeamButtonText">Leave Team</system:String>
 
 </ResourceDictionary>

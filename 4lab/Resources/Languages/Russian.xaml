@@ -104,6 +104,7 @@
     <system:String x:Key="NoRegion">Регион не указан</system:String>
     <system:String x:Key="SaveButton">Сохранить</system:String>
     <system:String x:Key="InviteButton">Пригласить</system:String>
-    <system:String x:Key="ChangeRoleButton">Изменить роль</system:String>
+    <system:String x:Key="DeleteTeam">Удалить Команду</system:String>
     <system:String x:Key="RemoveButton">Удалить</system:String>
+    <system:String x:Key="LeaveTeamButtonText">Покинуть Команду</system:String>
 </ResourceDictionary>

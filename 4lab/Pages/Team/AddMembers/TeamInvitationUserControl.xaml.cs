@@ -19,18 +19,19 @@ namespace _4lab.Pages.Team
             _teamId = teamId;
             _onInviteSent = onInviteSent;
 
-            UsernameTextBlock.Text = user.Username;
+            UsernameTextBlock.Text = user.Name;
         }
 
         private void InviteButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                _4lab.Resources.MessageService.SendMessage(CurrentUser.Instance.GetCurrentUser().Id, User.Id,  $"{CurrentUser.Instance.GetCurrentUser().Name} приглашает вас в команду {CurrentTeam.Team.Name}", _4lab.Resources.MessageType.TeamInvitation);
                 // Используем новую логику CurrentTeam для добавления участника
-                CurrentTeam.AddTeamMember(
-                    User.Id,
-                    User.Username,
-                    TeamRole.Member);
+                //CurrentTeam.AddTeamMember(
+                //    User.Id,
+                //    User.Username,
+                //    TeamRole.Member);
 
                 MessageBox.Show("Приглашение отправлено успешно", "Успех",
                     MessageBoxButton.OK, MessageBoxImage.Information);
