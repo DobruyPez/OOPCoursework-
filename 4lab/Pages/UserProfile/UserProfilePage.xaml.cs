@@ -25,7 +25,7 @@ namespace _4lab
                 var user = CurrentUser.Instance.GetCurrentUser();
                 if (user != null && user is Player playerUser)
                 {
-                    UsernameTextBlock.Text = user.Username;
+                    UsernameTextBlock.Text = user.Name;
                     EmailTextBlock.Text = user.Email;
                     TwitchTextBox.Text = playerUser.TwitchLink ?? "";
                     DiscordTextBox.Text = playerUser.DiscordLink ?? "";

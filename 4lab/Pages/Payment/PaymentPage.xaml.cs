@@ -154,14 +154,14 @@ namespace _4lab
             };
 
             return $@"Чек об оплате
--------------------
-План: {plan}
-Сумма: {amount:C}
-Владелец карты: {cardHolder}
-Email: {email}
-Дата: {DateTime.Now:dd.MM.yyyy HH:mm}
--------------------
-Спасибо за покупку!";
+                    -------------------
+                    План: {plan}
+                    Сумма: {amount:C}
+                    Владелец карты: {cardHolder}
+                    Email: {email}
+                    Дата: {DateTime.Now:dd.MM.yyyy HH:mm}
+                    -------------------
+                    Спасибо за покупку!";
         }
 
         // Отправка чека по email

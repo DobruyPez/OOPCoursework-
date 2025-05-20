@@ -24,6 +24,19 @@ namespace _4lab
                 NavigationService.Navigate(new RegisterUserPage());
                 return;
             }
+            var role = CurrentUser.Instance.GetCurrentUser();
+            if (role is Player)
+            {
+                var player = CurrentUser.Instance.Player;
+                if (player.TeamId != null)
+                {
+                    MessageBox.Show("Вы не можете создать команду пока есть старая",
+                    Application.Current.Resources["ErrorTitle"]?.ToString() ?? "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                    NavigationService.Navigate(new TeamPage());
+                    return;
+                } 
+            } 
 
             string teamName = TeamNameBox.Text;
             string teamRegion = (RegionComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
@@ -48,10 +61,20 @@ namespace _4lab
                         OwnerId = CurrentUser.Instance.GetCurrentUser().Id
                     };
 
+                    var currUser = CurrentUser.Instance.GetCurrentUser();
+                    var captain = new TeamMember
+                    {
+                        UserId = currUser.Id,
+                        UserName = currUser.Name, 
+                        TeamId = team.Id, 
+                        Role = TeamRole.Captain, 
+                        Team = team 
+                    };
+
                     context.Teams.Add(team);
+                    team.Members.Add(captain);
                     context.SaveChanges();
 
-                    var currUser = CurrentUser.Instance.GetCurrentUser();
                     if (currUser != null && currUser is Player playerUser)
                     {
                         // Обновляем TeamId в объекте CurrentUser

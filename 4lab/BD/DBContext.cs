@@ -19,6 +19,7 @@ namespace _4lab.BD
         public DbSet<Team> Teams { get; set; }
         public DbSet<TeamOffer> TeamOffers { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -39,12 +40,6 @@ namespace _4lab.BD
                 .Property(t => t.OwnerId)
                 .IsRequired(); // OwnerId обязателен (один создатель)
 
-            // Настройка TeamOffer
-            modelBuilder.Entity<TeamOffer>()
-                .HasKey(to => to.Id)
-                .Property(to => to.Team1Id)
-                .IsRequired(); // Team1Id обязателен
-
             // Внешние ключи
             modelBuilder.Entity<Player>()
                 .Property(p => p.TeamId)
@@ -58,9 +53,63 @@ namespace _4lab.BD
                 .WithMany(t => t.Members)
                 .HasForeignKey(m => m.TeamId);
 
+            modelBuilder.Entity<Message>()
+                .HasRequired(m => m.Sender)
+                .WithMany()
+                .HasForeignKey(m => m.SenderId)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Message>()
+                .HasRequired(m => m.Receiver)
+                .WithMany()
+                .HasForeignKey(m => m.ReceiverId)
+                .WillCascadeOnDelete(false);
+
+            // Конфигурация для enum
+            modelBuilder.Entity<Message>()
+                 .Property(m => m.MessageTypeString)
+                 .HasColumnName("message_type") // Должно совпадать с [Column]
+                 .IsRequired()
+                 .HasMaxLength(20)
+                 .IsUnicode(false)
+                 .HasColumnType("varchar");
+            
+            // Настройка TeamOffer с новой структурой
             modelBuilder.Entity<TeamOffer>()
-                .HasIndex(to => to.Team1Id);
-                //.HasIndex(to => to.Team2Id); // Индексы для Team1Id и Team2Id
+                .HasKey(to => to.Id);
+
+            modelBuilder.Entity<TeamOffer>()
+                .Property(to => to.Name)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            modelBuilder.Entity<TeamOffer>()
+                .Property(to => to.CreatorId)
+                .IsRequired();
+
+            modelBuilder.Entity<TeamOffer>()
+                .Property(to => to.Maps)
+                .IsRequired()
+                .HasMaxLength(200);
+
+            modelBuilder.Entity<TeamOffer>()
+                .Property(to => to.Date)
+                .HasColumnType("timestamp")
+                .IsRequired();
+
+            // Внешний ключ для CreatorId
+            modelBuilder.Entity<TeamOffer>()
+                .HasRequired(to => to.Creator)
+                .WithMany()
+                .HasForeignKey(to => to.CreatorId)
+                .WillCascadeOnDelete(false);
+
+            // Индексы для быстрого поиска
+            modelBuilder.Entity<TeamOffer>()
+                .HasIndex(to => to.CreatorId);
+
+            modelBuilder.Entity<TeamOffer>()
+                .HasIndex(to => to.Date);
         }
     }
 }

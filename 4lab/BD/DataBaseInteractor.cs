@@ -68,11 +68,11 @@ namespace _4lab.DB
             if (!context.Users.Any())
             {
                 // Добавляем базовых User
-                context.Users.Add(new User { Username = "John Doe", Email = "john@example.com", PasswordHash = "hashedpassword" });
-                context.Users.Add(new User { Username = "Jane Smith", Email = "jane@example.com", PasswordHash = "hashedpassword" });
+                context.Users.Add(new User { Name = "John Doe", Email = "john@example.com", PasswordHash = "hashedpassword" });
+                context.Users.Add(new User { Name = "Jane Smith", Email = "jane@example.com", PasswordHash = "hashedpassword" });
 
                 // Добавляем Player с подпиской
-                context.Users.Add(new Player { Username = "Alex Player", Email = "alex@example.com", PasswordHash = "hashedpassword", Subscription = SubscriptionType.Pro });
+                context.Users.Add(new Player { Name = "Alex Player", Email = "alex@example.com", PasswordHash = "hashedpassword", Subscription = SubscriptionType.Pro });
             }
         }
     }

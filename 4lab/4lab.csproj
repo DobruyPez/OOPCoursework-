@@ -120,6 +120,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\RoleToStringConverter.cs" />
+    <Compile Include="Message\ChoiceControl.xaml.cs">
+      <DependentUpon>ChoiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Message\MessagesPage.xaml.cs">
+      <DependentUpon>MessagesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml.cs">
+      <DependentUpon>OfferRegistrationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.xaml.cs">
+      <DependentUpon>OfferRegistrationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Team\ChangeRole\MemberTemplateSelector.cs" />
     <Compile Include="Pages\Team\DefaultInfoTeamControl.xaml.cs">
       <DependentUpon>DefaultInfoTeamControl.xaml</DependentUpon>
@@ -144,6 +156,8 @@
     </Compile>
     <Compile Include="Resources\AppNavigation.cs" />
     <Compile Include="Resources\ChatMessage.cs" />
+    <Compile Include="Resources\Messages\Message.cs" />
+    <Compile Include="Resources\Messages\MessageService.cs" />
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -182,6 +196,22 @@
     </Compile>
     <Resource Include="Resources\Languages\English.xaml" />
     <Resource Include="Resources\Languages\Russian.xaml" />
+    <Page Include="Message\ChoiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Message\MessagesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Team\AddMembers\TeamInvitationUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

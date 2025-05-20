@@ -42,19 +42,6 @@ namespace _4lab
 
         public TeamPage()
         {
-            if (!CurrentUser.Instance.IsLoggedIn || CurrentTeam.Team == null)
-            {
-                MessageBox.Show("Пожалуйста, войдите в систему и выберите команду.", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
-                NavigationService?.Navigate(new Uri("Pages/Authorization/User/RegisterUserPage.xaml", UriKind.Relative));
-
-                NavigateToRegisterRequested?.Invoke();
-                var mainWindow = System.Windows.Window.GetWindow(this) as MainWindow;
-                mainWindow?.MainFrame.Navigate(new RegisterUserPage());
-
-                return;
-            }
-
             InitializeComponent();
 
             defaultInfoControl = new DefaultInfoTeamControl();
@@ -173,6 +160,15 @@ namespace _4lab
             public int UserId { get; set; }
             public string Name { get; set; }
             public bool IsOwner { get; set; }
+
+            public MemberViewModel()
+            {
+                this.RoleChanged += (s, e) =>
+                {
+                    CurrentTeam.ChangeMemberRole(this.UserId, this.Role);
+                };
+            }
+
             public IEnumerable<KeyValuePair<TeamRole, string>> AvailableRoles
             {
                 get
@@ -231,20 +227,6 @@ namespace _4lab
             }
         }
 
-        private void UpdateMemberRole(int userId, TeamRole newRole)
-        {
-            if (CurrentTeam.ChangeMemberRole(userId, newRole))
-            {
-                MessageBox.Show("Роль успешно изменена", "Успех",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
-            {
-                MessageBox.Show("Не удалось изменить роль", "Ошибка",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
         private void RemoveMember_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as System.Windows.Controls.Button;
@@ -252,6 +234,7 @@ namespace _4lab
             {
                 var result = MessageBox.Show("Вы уверены, что хотите удалить участника?",
                     "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
 
                 if (result == MessageBoxResult.Yes)
                 {
