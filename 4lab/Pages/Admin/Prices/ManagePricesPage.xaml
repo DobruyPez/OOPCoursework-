@@ -1,0 +1,35 @@
+﻿<Page x:Class="_4lab.Pages.Admin.Prices.ManagePricesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Manage Prices">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Управление ценами подписок" 
+                   FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Width="300">
+            <TextBlock Text="Lite:" Margin="0,5"/>
+            <TextBox x:Name="LitePriceBox" Text="{Binding LitePrice, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="SemiPro:" Margin="0,5"/>
+            <TextBox x:Name="SemiProPriceBox" Text="{Binding SemiProPrice, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="Pro:" Margin="0,5"/>
+            <TextBox x:Name="ProPriceBox" Text="{Binding ProPrice, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+
+        <Button Grid.Row="2" Content="Сохранить цены" 
+                Click="SavePricesButton_Click" 
+                Margin="0,20" Padding="10,5" HorizontalAlignment="Left"/>
+    </Grid>
+</Page>

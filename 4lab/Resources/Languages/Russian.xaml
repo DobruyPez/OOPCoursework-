@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- MainWindow -->
+    <system:String x:Key="HomeButton">Главная</system:String>
+    <system:String x:Key="BackButtonTooltip">Назад</system:String>
+    <system:String x:Key="ForwardButtonTooltip">Вперед</system:String>
+    <system:String x:Key="LanguageButtonTooltip">Переключить на английский</system:String>
+    <system:String x:Key="LogoText">STANDOFF 2</system:String>
+    <system:String x:Key="PersonalCabinetTooltip">Личный кабинет</system:String>
+
+    <!-- MainMenuPage -->
+    <system:String x:Key="CreateTeamButton">СОЗДАТЬ КОМАНДУ</system:String>
+    <system:String x:Key="FindPraccsButton">НАЙТИ ПРАКТИКИ</system:String>
+    <system:String x:Key="SubscriptionButton">ПОДПИСКА</system:String>
+    <system:String x:Key="TermsOfUse">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</system:String>
+    <system:String x:Key="PrivacyPolicy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</system:String>
+    <system:String x:Key="CookiePolicy">ПОЛИТИКА КУКИ</system:String>
+    <system:String x:Key="SocialMedia">СОЦИАЛЬНЫЕ СЕТИ</system:String>
+    <system:String x:Key="SocialMediaLinks">X (ТВИТТЕР), ТВИЧ</system:String>
+    <system:String x:Key="Instagram">ИНСТАГРАМ</system:String>
+    <system:String x:Key="Contact">КОНТАКТЫ</system:String>
+    <system:String x:Key="HelpCenterDiscord">ЦЕНТР ПОМОЩИ, ДИСКОРД</system:String>
+    <system:String x:Key="TeamFinder">ПОИСК КОМАНД</system:String>
+
+    <!-- PremiumSubscrationPage -->
+    <system:String x:Key="LitePlan">Лайт</system:String>
+    <system:String x:Key="LitePrice">/месяц</system:String>
+    <system:String x:Key="LiteFeatures">Базовые функции</system:String>
+    <system:String x:Key="LiteUsers">1 пользователь</system:String>
+    <system:String x:Key="LiteSupport">Ограниченная поддержка</system:String>
+    <system:String x:Key="ChooseLite">Выбрать Лайт</system:String>
+    <system:String x:Key="StandardPlan">Стандарт</system:String>
+    <system:String x:Key="StandardPrice">/месяц</system:String>
+    <system:String x:Key="StandardFeatures">Расширенные функции</system:String>
+    <system:String x:Key="StandardUsers">До 3 пользователей</system:String>
+    <system:String x:Key="StandardSupport">Приоритетная поддержка</system:String>
+    <system:String x:Key="ChooseStandard">Выбрать Стандарт</system:String>
+    <system:String x:Key="ProPlan">Про</system:String>
+    <system:String x:Key="ProPrice">/месяц</system:String>
+    <system:String x:Key="ProFeatures">Все функции</system:String>
+    <system:String x:Key="ProUsers">Неограниченное количество пользователей</system:String>
+    <system:String x:Key="ProSupport">Поддержка 24/7</system:String>
+    <system:String x:Key="ChoosePro">Выбрать Про</system:String>
+
+    <!-- RegisterTeamPage -->
+    <system:String x:Key="CreateTeamTitle">СОЗДАТЬ КОМАНДУ</system:String>
+    <system:String x:Key="TeamNameLabel">НАЗВАНИЕ КОМАНДЫ</system:String>
+    <system:String x:Key="TeamRegionLabel">РЕГИОН КОМАНДЫ</system:String>
+    <system:String x:Key="TeamPasswordLabel">ПАРОЛЬ КОМАНДЫ</system:String>
+    <system:String x:Key="CreateTeamButtonText">СОЗДАТЬ КОМАНДУ</system:String>
+    <system:String x:Key="RegionRussia">РОССИЙСКАЯ ФЕДЕРАЦИЯ</system:String>
+    <system:String x:Key="RegionUkraine">УКРАИНА</system:String>
+    <system:String x:Key="RegionBelarus">РЕСПУБЛИКА БЕЛАРУСЬ</system:String>
+
+    <!-- RegisterUserPage -->
+    <system:String x:Key="RegisterUserTitle">РЕГИСТРАЦИЯ ПОЛЬЗОВАТЕЛЯ</system:String>
+    <system:String x:Key="UsernameLabel">ИМЯ ПОЛЬЗОВАТЕЛЯ</system:String>
+    <system:String x:Key="EmailLabel">ЭЛЕКТРОННАЯ ПОЧТА</system:String>
+    <system:String x:Key="PasswordLabel">ПАРОЛЬ</system:String>
+    <system:String x:Key="ConfirmPasswordLabel">ПОДТВЕРДИТЬ ПАРОЛЬ</system:String>
+    <system:String x:Key="RegisterButton">ЗАРЕГИСТРИРОВАТЬСЯ</system:String>
+    <system:String x:Key="SignInButton">ВОЙТИ</system:String>
+    <system:String x:Key="LoginButton">ВОЙТИ</system:String>
+    <system:String x:Key="GoToRegisterButton">Перейти к регистрации</system:String>
+    <system:String x:Key="GoToLoginButton">Перейти ко входу</system:String>
+
+    <!-- TeamMatchesPage -->
+    <system:String x:Key="TeamMatchesTitle">МАТЧИ КОМАНД</system:String>
+    <system:String x:Key="SearchLabel">ПОИСК МАТЧЕЙ</system:String>
+    <system:String x:Key="SearchButton">ПОИСК</system:String>
+    <system:String x:Key="MatchListHeader">ДОСТУПНЫЕ МАТЧИ</system:String>
+    <system:String x:Key="JoinMatchButton">ПРИСОЕДИНИТЬСЯ К МАТЧУ</system:String>
+   
+    <!-- UserProfilePage -->
+    <system:String x:Key="TwitchLabel">ССЫЛКА НА TWITCH</system:String>
+    <system:String x:Key="DiscordLabel">ССЫЛКА НА DISCORD</system:String>
+    <system:String x:Key="TeamLabel">КОМАНДА</system:String>
+    <system:String x:Key="SaveLinksButton">СОХРАНИТЬ</system:String>
+
+    <!-- Ошибки -->
+    <system:String x:Key="LoginRequiredMessage">Пожалуйста, войдите в систему и выберите команду.</system:String>
+    <system:String x:Key="TeamDataLoadError">Ошибка загрузки данных команды</system:String>
+    <system:String x:Key="OwnerOnlyEditMessage">Только владелец команды может редактировать данные.</system:String>
+    <system:String x:Key="ErrorTitle">Ошибка</system:String>
+    <system:String x:Key="SuccessTitle">Успех</system:String>
+    <system:String x:Key="AllFieldsRequired">Все поля должны быть заполнены.</system:String>
+    <system:String x:Key="UserNotFound">Пользователь не найден в базе данных.</system:String>
+    <system:String x:Key="UserNotPlayer">Текущий пользователь не является игроком.</system:String>
+    <system:String x:Key="TeamCreatedSuccess">Команда успешно создана!</system:String>
+    <system:String x:Key="TeamCreationError">Ошибка при создании команды</system:String>
+    <system:String x:Key="NoTeamSelected">Команда не выбрана</system:String>
+    <system:String x:Key="NoMembers">Нет участников</system:String>
+    <system:String x:Key="NoDescription">Описание отсутствует</system:String>
+    <system:String x:Key="RegionLabel">Регион</system:String>
+    <system:String x:Key="DescriptionLabel">Описание</system:String>
+    <system:String x:Key="MembersLabel">Участники</system:String>
+    
+    <!-- TeamPage -->
+    <system:String x:Key="InfoViewButton">Смотреть</system:String>
+    <system:String x:Key="EditViewButton">Изменить</system:String>
+    <system:String x:Key="TeamPageTitle">Имя Команды</system:String>
+    <system:String x:Key="TeamDescriptionLabel">Описание</system:String>
+    <system:String x:Key="NoRegion">Регион не указан</system:String>
+    <system:String x:Key="SaveButton">Сохранить</system:String>
+    <system:String x:Key="InviteButton">Пригласить</system:String>
+    <system:String x:Key="DeleteTeam">Удалить Команду</system:String>
+    <system:String x:Key="RemoveButton">Удалить</system:String>
+    <system:String x:Key="LeaveTeamButtonText">Покинуть Команду</system:String>
+</ResourceDictionary>

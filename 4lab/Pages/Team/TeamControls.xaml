@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="_4lab.TeamControls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"             
+             d:DesignHeight="334" MinWidth="552"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Stules/GeneralStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Stules/DarkTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <StackPanel Margin="10" MinWidth="200">
+            <!-- Region Section -->
+            <TextBlock Style="{StaticResource TextBlockStyle}" 
+                      Text="{DynamicResource RegionLabel}" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="EditRegionBox" Style="{StaticResource ComboBoxStyle}">
+                <ComboBoxItem Content="{DynamicResource RegionRussia}"/>
+                <ComboBoxItem Content="{DynamicResource RegionUkraine}"/>
+                <ComboBoxItem Content="{DynamicResource RegionBelarus}"/>
+            </ComboBox>
+
+            <!-- Description Section -->
+            <TextBlock Style="{StaticResource TextBlockStyle}" 
+                      Text="{DynamicResource DescriptionLabel}" Margin="0,10,0,0" HorizontalAlignment="Center"/>
+            <TextBox x:Name="EditDescriptionBox" 
+                    Style="{StaticResource InputStyle}" 
+                    MinHeight="100"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Auto"/>
+
+            <!-- Buttons Section -->
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource ButtonStyle}" 
+                           Content="{DynamicResource SaveButton}"  
+                           Click="SaveDescriptionButton_Click" 
+                           Margin="5"
+                           MinWidth="120"/>
+                    <Button Style="{StaticResource ButtonStyle}" 
+                           Content="{DynamicResource InviteButton}" 
+                           Click="InviteMemberButton_Click" 
+                           Margin="5"
+                           MinWidth="120"/>
+                    <Button Style="{StaticResource ButtonStyle}" 
+                           Content="{DynamicResource DeleteTeam}" 
+                           Click="DeleteButton_Click" 
+                           Margin="5"
+                           MinWidth="120"/>
+                    <!--<Button Style="{StaticResource ButtonStyle}" 
+                           Content="{DynamicResource RemoveButton}"
+                           Click="RemoveMemberButton_Click"
+                           MinWidth="120"/>-->
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
