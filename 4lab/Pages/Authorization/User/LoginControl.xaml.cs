@@ -16,6 +16,17 @@ namespace _4lab
             InitializeComponent();
         }
 
+        private void OpenAdminPanel()
+        {
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+                var adminPanel = new _4lab.Windows.AdminPanel();
+                adminPanel.Show();
+                mainWindow.Close();
+            }
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string email = EmailBox.Text;
@@ -30,7 +41,17 @@ namespace _4lab
 
             using (var context = new _4lab.BD.DBContext())
             {
+
                 var user = context.Users.FirstOrDefault(u => u.Email == email);
+                var baseUser = context.Users.OfType<User>().FirstOrDefault(u => u.Id == user.Id && u.Role == UserRole.Admin);
+                var admin = context.Users.OfType<Admin>().FirstOrDefault(a => a.Id == user.Id);
+                if (baseUser != null)
+                {
+                    CurrentUser.Instance.Login(new Admin(), null);
+                    OpenAdminPanel();
+                    return;
+                }
+
                 if (user == null || !DataBaseInteractor.VerifyPassword(password, user.PasswordHash))
                 {
                     MessageBox.Show("Неверный email или пароль.", "Ошибка",

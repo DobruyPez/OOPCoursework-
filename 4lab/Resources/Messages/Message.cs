@@ -49,6 +49,11 @@ namespace _4lab.Resources
             set => MessageTypeString = value.ToString();
         }
 
+        [ForeignKey("TeamOffer")]
+        public int? OfferId { get; set; }  // Nullable, так как не все сообщения связаны с оферами
+
+        public virtual TeamOffer TeamOffer { get; set; }
+
         // Навигационные свойства
         public virtual User Sender { get; set; }
         public virtual User Receiver { get; set; }

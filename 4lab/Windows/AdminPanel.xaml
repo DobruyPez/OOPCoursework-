@@ -1,0 +1,28 @@
+﻿<Window x:Class="_4lab.Windows.AdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Admin Panel" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <Button Content="Управление блокировками" 
+                    Click="BanPlayersButton_Click"
+                    Padding="10,5" FontSize="16" Margin="0,0,10,0"/>
+            <Button Content="Управление ценами" 
+                    Click="ManagePricesButton_Click"
+                    Padding="10,5" FontSize="16" Margin="0,0,10,0"/>
+            <Button Content="Управление рекламой" 
+                    Click="ManageAdsButton_Click"
+                    Padding="10,5" FontSize="16"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

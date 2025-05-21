@@ -14,8 +14,11 @@
                 <ResourceDictionary Source="/Resources/Stules/GeneralStyle.xaml"/>
                 <ResourceDictionary Source="/Resources/Stules/DarkTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <!-- Конвертер для преобразования bool в Visibility -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         </ResourceDictionary>
     </Page.Resources>
+
     <DockPanel LastChildFill="True">
         <!-- Верхняя панель с поиском, фильтрами и кнопкой создания офера -->
         <Grid DockPanel.Dock="Top" Height="60" Background="#995200">
@@ -46,8 +49,10 @@
                     Margin="5,10,10,10" Padding="10,5"
                     Click="CreateOfferButton_Click"/>
         </Grid>
+
         <!-- Основной контент с вкладками -->
         <TabControl Background="Black" Margin="10">
+            <!-- Вкладка с чужими оферами -->
             <TabItem Header="Other Offers">
                 <ListBox x:Name="OtherMatchesList" 
                          HorizontalContentAlignment="Stretch" Margin="5">
@@ -74,13 +79,16 @@
                                             Style="{StaticResource OrangeBlackButtonStyle}"
                                             Margin="10" Padding="10,5"
                                             Command="{Binding DataContext.MakeOfferCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                                            CommandParameter="{Binding}"/>
+                                            CommandParameter="{Binding}"
+                                            Visibility="{Binding CanJoin, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </TabItem>
+
+            <!-- Вкладка с моими оферами -->
             <TabItem Header="My Offers">
                 <ListBox x:Name="MyMatchesList" 
                          HorizontalContentAlignment="Stretch" Margin="5">
@@ -107,7 +115,8 @@
                                             Style="{StaticResource OrangeBlackButtonStyle}"
                                             Margin="10" Padding="10,5"
                                             Command="{Binding DataContext.MakeOfferCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                                            CommandParameter="{Binding}"/>
+                                            CommandParameter="{Binding}"
+                                            Visibility="{Binding CanJoin, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>

@@ -18,19 +18,51 @@
             <Setter Property="FontSize" Value="12"/>
         </Style>
 
-        <!-- Стиль для сообщений -->
-        <Style x:Key="MessageItemStyle" TargetType="Border">
+        <!-- Стиль для заголовка -->
+        <Style x:Key="HeaderTextStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#FF8C00"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+        </Style>
+
+        <!-- Стиль для рамки страницы -->
+        <Style x:Key="PageBorderStyle" TargetType="Border">
             <Setter Property="BorderBrush" Value="#FF8C00"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="CornerRadius" Value="5"/>
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
             <Setter Property="Background" Value="#333333"/>
         </Style>
+
+        <!-- Стиль для сообщения "Нет сообщений" -->
+        <Style x:Key="NoMessagesStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
     </Page.Resources>
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel x:Name="MessagesContainer" Margin="10">
-            <!-- Messages will be added here dynamically -->
-        </StackPanel>
-    </ScrollViewer>
+
+    <Border Style="{StaticResource PageBorderStyle}">
+        <Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Непрочитанные сообщения" Style="{StaticResource HeaderTextStyle}"/>
+
+                    <StackPanel x:Name="MessagesContainer">
+                        <!-- Messages will be added here dynamically -->
+                    </StackPanel>
+
+                    <TextBlock x:Name="NoMessagesText" 
+                               Text="Непрочитанных сообщений нет" 
+                               Style="{StaticResource NoMessagesStyle}" 
+                               Visibility="Collapsed"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
 </Page>

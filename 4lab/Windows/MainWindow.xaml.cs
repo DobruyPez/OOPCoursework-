@@ -14,6 +14,7 @@ using static Roles.CurrentTeam;
 using System.Threading.Tasks;
 using _4lab.BD;
 using _4lab.Resources;
+using System.Diagnostics;
 
 namespace _4lab
 {
@@ -29,11 +30,61 @@ namespace _4lab
             InitializeComponent();
             SetLanguage(isEnglish);
             LoadInitialContent();
+            LoadAdvertisement();
             MainFrame.Navigated += MainFrame_Navigated;
             CurrentTeam.TeamChangedAct += NavigateToHomeOnMembersCleared;
             CurrentTeam.MembersCleared += NavigateToHomeOnMembersCleared;
             InitializeChat();
             Console.WriteLine($"Application started at {DateTime.Now} (CEST: 06:03 PM, May 18, 2025)");
+        }
+        public void RefreshAdvertisement()
+        {
+            LoadAdvertisement();
+        }
+
+        private void LoadAdvertisement()
+        {
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    var latestAd = context.Advertisements
+                        .FirstOrDefault();
+
+                    if (latestAd != null)
+                    {
+                        AdImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(latestAd.Image, UriKind.Absolute));
+                        AdButton.Tag = latestAd.Link; // Сохраняем ссылку в Tag
+                        AdButton.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        AdButton.Visibility = Visibility.Collapsed; // Скрываем, если нет рекламы
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to load advertisement: {ex.Message}");
+                AdButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void AdButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var button = sender as Button;
+                string link = button.Tag as string;
+                if (!string.IsNullOrEmpty(link))
+                {
+                    Process.Start(new ProcessStartInfo(link) { UseShellExecute = true });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void NavigateToHomeOnMembersCleared()
@@ -200,6 +251,14 @@ namespace _4lab
                     MessageBoxImage.Warning);
 
                 Console.WriteLine("User not logged in, cannot open chat.");
+
+                if (CurrentUser.Instance.GetCurrentUser() is Admin)
+                {
+                    var adminPanel = new _4lab.Windows.AdminPanel();
+                    adminPanel.Show();
+                    this.Close();
+                    return;
+                }
 
                 // Перенаправляем на страницу регистрации/авторизации
                 MainFrame.Navigate(new RegisterUserPage());

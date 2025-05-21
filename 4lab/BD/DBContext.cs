@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using _4lab.DB;
+using System.Linq;
 using _4lab.Resources;
 using Roles;
 using static Roles.CurrentTeam;
@@ -12,6 +14,7 @@ namespace _4lab.BD
         public DBContext() : base("name=MyAppDbContext")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DBContext, _4lab.Migrations.Configuration>()); Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+
         }
 
         public DbSet<User> Users { get; set; }
@@ -20,6 +23,25 @@ namespace _4lab.BD
         public DbSet<TeamOffer> TeamOffers { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<SubscriptionPrice> SubscriptionPrices { get; set; }
+        public DbSet<Advertisement> Advertisements { get; set; }
+
+        public void SeedInitialAdmin()
+        {
+            if (!Users.Any(u => u.Role == UserRole.Admin))
+            {
+                var admin = new Admin
+                {
+                    Email = "admin@example.com",
+                    Name = "Administrator",
+                    PasswordHash = DataBaseInteractor.HashPassword("admin123"), // Реализуйте этот метод
+                    Role = UserRole.Admin
+                };
+
+                Users.Add(admin);
+                SaveChanges();
+            }
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -110,6 +132,39 @@ namespace _4lab.BD
 
             modelBuilder.Entity<TeamOffer>()
                 .HasIndex(to => to.Date);
+
+            modelBuilder.Entity<TeamOffer>()
+                .HasIndex(to => to.Resolved);
+
+            modelBuilder.Entity<Message>()
+                .HasOptional(m => m.TeamOffer)
+                .WithMany()
+                .HasForeignKey(m => m.OfferId)
+                .WillCascadeOnDelete(false); 
+            modelBuilder.Entity<SubscriptionPrice>()
+                .Property(p => p.LitePrice)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<SubscriptionPrice>()
+                .Property(p => p.SemiProPrice)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<SubscriptionPrice>()
+                .Property(p => p.ProPrice)
+                .HasPrecision(18, 2);
+            modelBuilder.Entity<Advertisement>()
+                .HasKey(a => a.Id);
+
+            modelBuilder.Entity<Advertisement>()
+                .Property(a => a.Image)
+                .IsRequired()
+                .HasMaxLength(500);
+
+            modelBuilder.Entity<Advertisement>()
+                .Property(a => a.Link)
+                .IsRequired()
+                .HasMaxLength(500);
+
         }
     }
 }

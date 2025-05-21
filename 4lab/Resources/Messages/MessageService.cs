@@ -8,7 +8,7 @@ namespace _4lab.Resources
 {
     public static class MessageService
     {
-        public static void SendMessage(int senderId, int receiverId, string content, MessageType messageType)
+        public static void SendMessage(int senderId, int receiverId, string content, MessageType messageType, int? offerId = null)
         {
             using (var context = new _4lab.BD.DBContext())
             {
@@ -18,7 +18,8 @@ namespace _4lab.Resources
                     ReceiverId = receiverId,
                     Content = content,
                     IsRead = false,
-                    MessageType = messageType
+                    MessageType = messageType,
+                    OfferId = offerId  // Добавляем связь с офером
                 };
 
                 context.Messages.Add(message);

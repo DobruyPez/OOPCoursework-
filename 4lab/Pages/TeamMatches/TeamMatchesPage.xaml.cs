@@ -50,8 +50,9 @@ namespace _4lab.Pages.TeamMatches
                     }
 
                     var teamOffers = context.TeamOffers
-                    .Include("Creator")
-                    .ToList();
+                        .Include("Creator")
+                        .Where(to => !to.Resolved)
+                        .ToList();
 
                     _matches = teamOffers.Select(to => new Match
                     {
@@ -62,6 +63,7 @@ namespace _4lab.Pages.TeamMatches
                         OfferId = to.Id,
                         CreatorId = to.CreatorId,
                         IsTeamDeathMatch = context.Teams.Any(t => t.Id == to.CreatorId)
+                        // CanJoin будет вычисляться автоматически
                     }).ToList();
 
                     UpdateFilteredMatches();
@@ -181,12 +183,7 @@ namespace _4lab.Pages.TeamMatches
             if (parameter is Match selectedMatch)
             {
                 var currentUser = CurrentUser.Instance.GetCurrentUser();
-                if (currentUser == null)
-                {
-                    MessageBox.Show("Пользователь не авторизован.", "Ошибка",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
+                if (currentUser == null) return;
 
                 try
                 {
@@ -201,8 +198,8 @@ namespace _4lab.Pages.TeamMatches
                                 MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                         }
-
-                        //MessageService.SendMessage(currentUser.Id, selectedMatch.CreatorId, MessageType.TeamOffer);
+                        var type = MessageType.TeamOffer;
+                        MessageService.SendMessage(currentUser.Id, selectedMatch.CreatorId, $"{currentUser.Name} хочет присоединиться к игре {teamOffer.Date}", MessageType.TeamOffer, teamOffer.Id);
 
                         MessageBox.Show($"Предложение отправлено для {selectedMatch.TeamName}!", "Успех",
                             MessageBoxButton.OK, MessageBoxImage.Information);
@@ -226,6 +223,8 @@ namespace _4lab.Pages.TeamMatches
         public int OfferId { get; set; }
         public int CreatorId { get; set; }
         public bool IsTeamDeathMatch { get; set; }
+
+        public bool CanJoin => CurrentUser.Instance.GetCurrentUser()?.Id != CreatorId;
     }
 
     public class RelayCommand : ICommand

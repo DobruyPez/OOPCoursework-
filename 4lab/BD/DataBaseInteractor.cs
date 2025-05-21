@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using Roles;
 using System.Security.Cryptography;
+using _4lab.BD;
 
 namespace _4lab.DB
 {
@@ -19,9 +20,10 @@ namespace _4lab.DB
                 if (!context.Database.Exists())
                 {
                     context.Database.Create();
-                    Seed(context);
+                    //Seed(context);
                     context.SaveChanges();
                 }
+                EnsureDefaultAdminExists(context);
             }
         }
 
@@ -58,6 +60,43 @@ namespace _4lab.DB
                 {
                     Seed(context);
                     context.SaveChanges();
+                }
+            }
+        }
+
+        public static void EnsureDefaultAdminExists(DBContext context = null)
+        {
+            bool shouldDispose = false;
+            if (context == null)
+            {
+                context = new DBContext();
+                shouldDispose = true;
+            }
+
+            try
+            {
+                // Проверяем наличие хотя бы одного администратора
+                if (!context.Users.OfType<Admin>().Any())
+                {
+                    var admin = new Admin
+                    {
+                        Email = "admin@example.com",
+                        Name = "Administrator",
+                        PasswordHash = HashPassword("admin123"),
+                        Role = UserRole.Admin
+                    };
+
+                    context.Users.Add(admin);
+                    context.SaveChanges();
+
+                    Console.WriteLine("Default admin created successfully");
+                }
+            }
+            finally
+            {
+                if (shouldDispose)
+                {
+                    context.Dispose();
                 }
             }
         }

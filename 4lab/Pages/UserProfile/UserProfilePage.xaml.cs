@@ -29,7 +29,13 @@ namespace _4lab
                     EmailTextBlock.Text = user.Email;
                     TwitchTextBox.Text = playerUser.TwitchLink ?? "";
                     DiscordTextBox.Text = playerUser.DiscordLink ?? "";
-
+                    PremiumTextBlock.Text = playerUser.Subscription switch
+                    {
+                        SubscriptionType.Lite => "Subscription: Lite",
+                        SubscriptionType.SemiPro => "Subscription: Standard",
+                        SubscriptionType.Pro => "Subscription: Pro",
+                        _ => "Subscription: Free"
+                    };
                     // Обновляем название команды
                     UpdateTeamName();
                 }

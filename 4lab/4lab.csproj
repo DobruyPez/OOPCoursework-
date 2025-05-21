@@ -120,6 +120,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\RoleToStringConverter.cs" />
+    <Compile Include="Pages\Admin\Ads\ManageAdsPage.xaml.cs">
+      <DependentUpon>ManageAdsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Ban\BanPlayersPage.xaml.cs">
+      <DependentUpon>BanPlayersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Ban\BanUserControl.xaml.cs">
+      <DependentUpon>BanUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Prices\ManagePricesPage.xaml.cs">
+      <DependentUpon>ManagePricesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Message\ChoiceControl.xaml.cs">
       <DependentUpon>ChoiceControl.xaml</DependentUpon>
     </Compile>
@@ -154,7 +166,12 @@
     <Compile Include="Pages\Team\AddMembers\UsersListPopup.xaml.cs">
       <DependentUpon>UsersListPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Advertisement.cs" />
     <Compile Include="Resources\AppNavigation.cs" />
+    <Compile Include="Resources\SubscriptionPrice.cs" />
+    <Compile Include="Windows\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ChatMessage.cs" />
     <Compile Include="Resources\Messages\Message.cs" />
     <Compile Include="Resources\Messages\MessageService.cs" />
@@ -196,6 +213,22 @@
     </Compile>
     <Resource Include="Resources\Languages\English.xaml" />
     <Resource Include="Resources\Languages\Russian.xaml" />
+    <Page Include="Pages\Admin\Ads\ManageAdsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Ban\BanPlayersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Ban\BanUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Prices\ManagePricesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Message\ChoiceControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -241,6 +274,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainMenu\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
