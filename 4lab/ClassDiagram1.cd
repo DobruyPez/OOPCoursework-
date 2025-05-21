@@ -1,169 +1,170 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="_4lab.App" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_4lab.RegisterTeamPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+  <Class Name="_4lab.RegisterTeamPage" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\Authorization\Team\RegisterTeamPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.LoginControl" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+  <Class Name="_4lab.LoginControl" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Pages\Authorization\User\LoginControl.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.DependencyObjectExtensions" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+  <Class Name="_4lab.DependencyObjectExtensions">
+    <Position X="32.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\Authorization\User\LoginControl.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_4lab.RegisterControl" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="4" Y="2.5" Width="1.5" />
+  <Class Name="_4lab.RegisterControl" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\Authorization\User\RegisterControl.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.RegisterUserPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+  <Class Name="_4lab.RegisterUserPage" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAACAAAAAAAAABAAAAAEAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\Authorization\User\RegisterUserPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.MainMenuPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="4" Y="1.5" Width="1.5" />
+  <Class Name="_4lab.MainMenuPage" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAQAAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAACA=</HashCode>
       <FileName>Pages\MainMenu\MainMenuPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.PaymentPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+  <Class Name="_4lab.PaymentPage" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAACAAAAAAAEAAAAAAAAAAAAAAABAAAAECAA=</HashCode>
       <FileName>Pages\Payment\PaymentPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.PremiumSubscrationPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+  <Class Name="_4lab.PremiumSubscrationPage" BaseTypeListCollapsed="true">
+    <Position X="24" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAIAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAIAAAAIAAAAgAQAAAAAAA=</HashCode>
       <FileName>Pages\Subscription\PremiumSubscrationPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.DefaultInfoTeamControl" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+  <Class Name="_4lab.DefaultInfoTeamControl" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAgAAAAAAABAAAAAAAAABAAAgAgA=</HashCode>
       <FileName>Pages\Team\DefaultInfoTeamControl.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.TeamControls" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="3.5" Width="1.5" />
+  <Class Name="_4lab.TeamControls" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAwAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAAAAAwAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Pages\Team\TeamControls.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.TeamPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+  <Class Name="_4lab.TeamPage" BaseTypeListCollapsed="true">
+    <Position X="42.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="_4lab.TeamPage.MemberViewModel">
+        <TypeIdentifier>
+          <NewMemberFileName>Pages\Team\TeamPage.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="_4lab.TeamPage.MemberTemplateSelector">
+        <TypeIdentifier>
+          <NewMemberFileName>Pages\Team\TeamPage.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AIAAgQAEAgAACAAAIAAAEAAAgQAIAAABAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAgQAEAgAACAAAIAAAEAAAgQAIAAABAAAAAAACAAA=</HashCode>
       <FileName>Pages\Team\TeamPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.TeamMatchesPage" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgAAAACQAAAAAACAAAAAAAAAAIAAAAAACAACAAEAAAQ=</HashCode>
-      <FileName>Pages\TeamMatches\TeamMatchesPage.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="_4lab.Match" Collapsed="true">
-    <Position X="7.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAIABAAAAAAQAAAAAAACAAAA=</HashCode>
-      <FileName>Pages\TeamMatches\TeamMatchesPage.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="_4lab.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+  <Class Name="_4lab.Pages.TeamMatches.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="40.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\TeamMatches\TeamMatchesPage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.UserProfilePage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="4.5" Width="1.5" />
+  <Class Name="_4lab.UserProfilePage" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAQAAAAAAAAQAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACAQAQAAAAAAQQAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Pages\UserProfile\UserProfilePage.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
+  <Class Name="_4lab.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EIBAAAAgIAAAgAAAAQACAAAAAACAACAAAAAAECAAgAA=</HashCode>
+      <HashCode>EIBAAAAgIQASgAAAAQQGAAAAAACCAiAACAAAECAAgAA=</HashCode>
       <FileName>Windows\MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.DB.DataBaseInteractor" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="_4lab.DB.DataBaseInteractor">
+    <Position X="18.75" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAEAAAAAEACAAAEAAAAEIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAEAAAAAEACAAAEAAAAEIAAAAAAAAAAAAA=</HashCode>
       <FileName>BD\DataBaseInteractor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_4lab.BD.DBContext" Collapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+  <Class Name="_4lab.BD.DBContext">
+    <Position X="30" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACCAAAAAAAAAAIAAAAAAAEAAgAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACCAAAAAAABAAIAAAABAAECAgAACAAAAAAQAAAAA=</HashCode>
       <FileName>BD\DBContext.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_4lab.Migrations.InitialCreate" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+  <Class Name="_4lab.Migrations.InitialCreate" BaseTypeListCollapsed="true">
+    <Position X="32.25" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAI=</HashCode>
       <FileName>BD\Migrations\202505111450541_InitialCreate.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.Migrations.Configuration" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+  <Class Name="_4lab.Migrations.Configuration">
+    <Position X="26.5" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BD\Migrations\Configuration.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_4lab.Converters.RoleToStringConverter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+  <Class Name="_4lab.Converters.RoleToStringConverter" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Converters\RoleToStringConverter.cs</FileName>
@@ -171,58 +172,257 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="_4lab.Pages.Team.TeamInvitationUserControl" BaseTypeListCollapsed="true">
-    <Position X="7.25" Y="4.75" Width="1.5" />
+    <Position X="18.5" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAABAAAAAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\Team\AddMembers\TeamInvitationUserControl.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.Pages.Team.UsersListPopup" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="4.5" Y="6" Width="1.5" />
+  <Class Name="_4lab.Pages.Team.UsersListPopup" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="12.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAQBAAAAAAAAAAAAAAAAAAMAAAAAAAAAIAAAAACAA=</HashCode>
+      <HashCode>AABAQAAAAAAAAAAAAAAAAAAAMAAAAAAAAAIAAAAACAA=</HashCode>
       <FileName>Pages\Team\AddMembers\UsersListPopup.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="_4lab.Pages.Team.ChangeRole.MemberTemplateSelector" Collapsed="true">
-    <Position X="9.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAACAAAAAAAAAAAAAQAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Pages\Team\ChangeRole\MemberTemplateSelector.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="_4lab.Properties.Resources" Collapsed="true">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+  <Class Name="_4lab.Properties.Resources">
+    <Position X="28.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="_4lab.Properties.Settings" Collapsed="true">
-    <Position X="4" Y="3.5" Width="1.5" />
+    <Position X="28.25" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="AppNavigation" Collapsed="true">
-    <Position X="0.75" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Resources\AppNavigation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="System.Windows.Application" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+    <Position X="9.5" Y="1.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="System.Windows.Controls.UserControl" Collapsed="true">
-    <Position X="13.25" Y="2.75" Width="1.5" />
+    <Position X="16.5" Y="7.75" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.Object" Collapsed="true">
-    <Position X="17.25" Y="2.25" Width="1.5" />
+    <Position X="40.75" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Threading.DispatcherObject" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Data.Entity.DbContext" Collapsed="true">
+    <Position X="30" Y="9" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Data.Entity.Migrations.DbMigrationsConfiguration&lt;TContext&gt;" Collapsed="true">
+    <Position X="26.5" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
+    <Position X="28.25" Y="10" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Controls.Page" Collapsed="true">
+    <Position X="17.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Data.Entity.Migrations.DbMigration" Collapsed="true">
+    <Position X="32.25" Y="9" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Configuration.SettingsBase" Collapsed="true">
+    <Position X="28.25" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="_4lab.Pages.Admin.Ban.BanUserControl">
+    <Position X="16.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAACA=</HashCode>
+      <FileName>Pages\Admin\Ban\BanUserControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.ChoiceControl">
+    <Position X="24.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACUAAAAAAAAEIAAAAAIAAgAEAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Message\ChoiceControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.Pages.TeamMatches.RegisterOffer.OfferRegistrationControl">
+    <Position X="24.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.PercentageConverter">
+    <Position X="40.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\PercentageConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.Pages.TeamMatches.Match">
+    <Position X="21" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAABAAACAAAAAIABAAAAAAQAAAAAAACAAAI=</HashCode>
+      <FileName>Pages\TeamMatches\TeamMatchesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4lab.Resources.Advertisement">
+    <Position X="30.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAQAAAAAA=</HashCode>
+      <FileName>Resources\Advertisement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4lab.Resources.Message">
+    <Position X="23" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAFAAAAAAAAEAAQAAAFIAAEAAAABAAIAAA=</HashCode>
+      <FileName>Resources\Messages\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Roles.User">
+    <Position X="38.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAACAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resources\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Roles.Team">
+    <Position X="35" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIgAAgAAAAAAAAAAQAAAAAAAACAAAEAAAAAAA=</HashCode>
+      <FileName>Resources\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Roles.TeamMember">
+    <Position X="36.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAEAAAAAgCAAAAAAAAEQAAAAAAAAA=</HashCode>
+      <FileName>Resources\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Roles.CurrentUser">
+    <Position X="36.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAACAAAAAKAQIAAAACAABAQAATAQAAAAA=</HashCode>
+      <FileName>Resources\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Roles.TeamOffer">
+    <Position X="26.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAACAAAAAAQAAAAAAAABEAAAAACAAAA=</HashCode>
+      <FileName>Resources\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4lab.Resources.SubscriptionPrice">
+    <Position X="25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAECAAEAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Resources\SubscriptionPrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4lab.Resources.ChatMessage">
+    <Position X="38.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAACAAgAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Windows\ChatMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4lab.Pages.Admin.Ads.ManageAdsPage">
+    <Position X="25.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAUAAAAAAAAAAAAAMAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\Ads\ManageAdsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.Pages.Admin.Ban.BanPlayersPage">
+    <Position X="31.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\Ban\BanPlayersPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.Pages.Admin.Prices.ManagePricesPage">
+    <Position X="33.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAEAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\Prices\ManagePricesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.MessagesPage">
+    <Position X="35.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Pages\Message\MessagesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.Pages.TeamMatches.RegisterOffer.OfferRegistrationPage">
+    <Position X="37.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4lab.Pages.TeamMatches.TeamMatchesPage" Collapsed="true">
+    <Position X="39" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgQACSAAAAAACAgAABQAEAAIAAAAAACAACAAAAAAQ=</HashCode>
+      <FileName>Pages\TeamMatches\TeamMatchesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="15.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.ContentControl" Collapsed="true">
+    <Position X="16.5" Y="5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Controls.Control" Collapsed="true">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.FrameworkElement" Collapsed="true">
+    <Position X="16.5" Y="3" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.UIElement" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Media.Visual" Collapsed="true">
+    <Position X="14.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.DependencyObject" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Font Name="Tahoma" Size="8.25" />

@@ -168,7 +168,6 @@
       <DependentUpon>UsersListPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Advertisement.cs" />
-    <Compile Include="Resources\AppNavigation.cs" />
     <Compile Include="Resources\SubscriptionPrice.cs" />
     <Compile Include="Windows\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
