@@ -17,22 +17,82 @@ namespace _4lab.Pages.TeamMatches
         private List<Match> _filteredOtherMatches;
         private List<Match> _filteredMyMatches;
         private string _selectedOfferType;
+        private string _searchText = "";
 
         public ICommand MakeOfferCommand { get; }
+        public ICommand DeleteOfferCommand { get; }
 
         public TeamMatchesPage()
         {
             InitializeComponent();
             MakeOfferCommand = new RelayCommand(MakeOffer);
+            DeleteOfferCommand = new RelayCommand(DeleteOffer);
             DataContext = this;
-            _selectedOfferType = "All"; 
+            _selectedOfferType = "All";
             LoadMatches();
             OfferTypeFilter.SelectedIndex = 0;
+            SearchBox.TextChanged += SearchBox_TextChanged;
         }
 
         public TeamMatchesPage(MainWindow parent) : this()
         {
             _parentWindow = parent;
+        }
+
+        private void OfferTypeFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (OfferTypeFilter.SelectedItem is ComboBoxItem selectedItem)
+            {
+                _selectedOfferType = selectedItem.Content.ToString();
+                UpdateFilteredMatches();
+            }
+        }
+
+        private string DetermineImagePath(TeamOffer offer)
+        {
+            var imagePaths = new Dictionary<string, string>
+            {
+                { "VIRTUS.PRO", "Images/virtus.jfif" },
+                { "ABSOLUTE", "Images/ManWithDog.jpg" },
+                { "FORZE ESPORTS", "Images/Бабка.jpg" }
+            };
+            return imagePaths.ContainsKey(offer.Name) ? imagePaths[offer.Name] : "Images/default.jpg";
+        }
+
+        private void DeleteOffer(object parameter)
+        {
+            if (parameter is Match selectedMatch)
+            {
+                var currentUser = CurrentUser.Instance.GetCurrentUser();
+                if (currentUser == null || currentUser.Id != selectedMatch.CreatorId) return;
+
+                try
+                {
+                    using (var context = new DBContext())
+                    {
+                        var offerToDelete = context.TeamOffers.FirstOrDefault(to => to.Id == selectedMatch.OfferId);
+                        if (offerToDelete != null)
+                        {
+                            context.TeamOffers.Remove(offerToDelete);
+                            context.SaveChanges();
+                            LoadMatches();
+                            MessageBox.Show("Offer deleted successfully!", "Success",
+                                MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error deleting offer: {ex.Message}", "Error",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _searchText = SearchBox.Text.ToLower();
+            UpdateFilteredMatches();
         }
 
         private void LoadMatches()
@@ -62,8 +122,8 @@ namespace _4lab.Pages.TeamMatches
                         ImagePath = DetermineImagePath(to),
                         OfferId = to.Id,
                         CreatorId = to.CreatorId,
-                        IsTeamDeathMatch = context.Teams.Any(t => t.Id == to.CreatorId)
-                        // CanJoin будет вычисляться автоматически
+                        IsTeamDeathMatch = to.Offertype == Offertype.TeamDethMatch,
+                        OfferType = to.Offertype
                     }).ToList();
 
                     UpdateFilteredMatches();
@@ -83,11 +143,19 @@ namespace _4lab.Pages.TeamMatches
             var filteredMatches = _matches;
             if (_selectedOfferType == "OneToOne")
             {
-                filteredMatches = _matches.Where(m => !m.IsTeamDeathMatch).ToList();
+                filteredMatches = _matches.Where(m => m.OfferType == Offertype.OneToOne).ToList();
             }
             else if (_selectedOfferType == "TeamDeathMatch")
             {
-                filteredMatches = _matches.Where(m => m.IsTeamDeathMatch).ToList();
+                filteredMatches = _matches.Where(m => m.OfferType == Offertype.TeamDethMatch).ToList();
+            }
+
+            if (!string.IsNullOrWhiteSpace(_searchText) && _searchText != (string)FindResource("SearchLabel"))
+            {
+                filteredMatches = filteredMatches
+                    .Where(m => m.TeamName.ToLower().Contains(_searchText) ||
+                               m.Maps.ToLower().Contains(_searchText))
+                    .ToList();
             }
 
             _filteredOtherMatches = filteredMatches
@@ -97,53 +165,8 @@ namespace _4lab.Pages.TeamMatches
                 .Where(m => m.CreatorId == currentUser.Id)
                 .ToList();
 
-            OtherMatchesList.ItemsSource = null;
             OtherMatchesList.ItemsSource = _filteredOtherMatches;
-            MyMatchesList.ItemsSource = null;
             MyMatchesList.ItemsSource = _filteredMyMatches;
-        }
-
-        private string DetermineImagePath(TeamOffer offer)
-        {
-            var imagePaths = new Dictionary<string, string>
-            {
-                { "VIRTUS.PRO", "Images/virtus.jfif" },
-                { "ABSOLUTE", "Images/ManWithDog.jpg" },
-                { "FORZE ESPORTS", "Images/Бабка.jpg" }
-            };
-            return imagePaths.ContainsKey(offer.Name) ? imagePaths[offer.Name] : "Images/default.jpg";
-        }
-
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
-        {
-            string searchText = SearchBox.Text.ToLower();
-            if (string.IsNullOrEmpty(searchText) || searchText == (string)FindResource("SearchLabel"))
-            {
-                UpdateFilteredMatches();
-            }
-            else
-            {
-                _filteredOtherMatches = _filteredOtherMatches
-                    .Where(m => m.TeamName.ToLower().Contains(searchText) || m.Maps.ToLower().Contains(searchText))
-                    .ToList();
-                _filteredMyMatches = _filteredMyMatches
-                    .Where(m => m.TeamName.ToLower().Contains(searchText) || m.Maps.ToLower().Contains(searchText))
-                    .ToList();
-
-                OtherMatchesList.ItemsSource = null;
-                OtherMatchesList.ItemsSource = _filteredOtherMatches;
-                MyMatchesList.ItemsSource = null;
-                MyMatchesList.ItemsSource = _filteredMyMatches;
-            }
-        }
-
-        private void OfferTypeFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (OfferTypeFilter.SelectedItem is ComboBoxItem selectedItem)
-            {
-                _selectedOfferType = selectedItem.Content.ToString();
-                UpdateFilteredMatches();
-            }
         }
 
         private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
@@ -174,7 +197,16 @@ namespace _4lab.Pages.TeamMatches
             }
             else
             {
-                MessageBox.Show("Parent window is not set.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+                if (mainWindow != null)
+                {
+                    _parentWindow = mainWindow;
+                    _parentWindow.ShowContent(new _4lab.Pages.TeamMatches.RegisterOffer.OfferRegistrationPage());
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось найти главное окно приложения.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
@@ -198,8 +230,9 @@ namespace _4lab.Pages.TeamMatches
                                 MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                         }
-                        var type = MessageType.TeamOffer;
-                        MessageService.SendMessage(currentUser.Id, selectedMatch.CreatorId, $"{currentUser.Name} хочет присоединиться к игре {teamOffer.Date}", MessageType.TeamOffer, teamOffer.Id);
+                        MessageService.SendMessage(currentUser.Id, selectedMatch.CreatorId,
+                            $"{currentUser.Name} хочет присоединиться к игре {teamOffer.Date}",
+                            MessageType.TeamOffer, teamOffer.Id);
 
                         MessageBox.Show($"Предложение отправлено для {selectedMatch.TeamName}!", "Успех",
                             MessageBoxButton.OK, MessageBoxImage.Information);
@@ -223,8 +256,10 @@ namespace _4lab.Pages.TeamMatches
         public int OfferId { get; set; }
         public int CreatorId { get; set; }
         public bool IsTeamDeathMatch { get; set; }
+        public Offertype OfferType { get; set; }
 
         public bool CanJoin => CurrentUser.Instance.GetCurrentUser()?.Id != CreatorId;
+        public bool IsMyOffer => CurrentUser.Instance.GetCurrentUser()?.Id == CreatorId;
     }
 
     public class RelayCommand : ICommand
