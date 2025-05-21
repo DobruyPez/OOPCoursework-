@@ -17,6 +17,8 @@ using System.Net.Mail;
 using System.Net;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Roles;
+using _4lab.BD;
 
 namespace _4lab
 {
@@ -114,6 +116,50 @@ namespace _4lab
                     StatusMessage.Text = "Оплата успешна, но ошибка при отправке чека.";
                     StatusMessage.Foreground = new SolidColorBrush(Colors.Orange);
                 }
+                try
+                {
+                    using (var context = new _4lab.BD.DBContext())
+                    {
+                        var currentUser = CurrentUser.Instance.GetCurrentUser();
+                        if (currentUser is Player player)
+                        {
+                            var dbPlayer = context.Players.Find(player.Id);
+                            if (dbPlayer != null)
+                            {
+                                // Устанавливаем подписку в зависимости от выбранного плана
+                                dbPlayer.Subscription = selectedPlan.ToLower() switch
+                                {
+                                    "lite" => SubscriptionType.Lite,
+                                    "standard" => SubscriptionType.SemiPro,
+                                    "pro" => SubscriptionType.Pro,
+                                    _ => dbPlayer.Subscription
+                                };
+
+                                context.SaveChanges();
+
+                                // Обновляем текущего пользователя
+                                CurrentUser.Instance.UpdateCurrentUser(dbPlayer);
+
+                                StatusMessage.Text = "Оплата проведена успешно. Подписка активирована!";
+                                StatusMessage.Foreground = new SolidColorBrush(Colors.Green);
+
+                                // Возвращаемся на страницу профиля через 2 секунды
+                                Task.Delay(2000).ContinueWith(_ =>
+                                {
+                                    Dispatcher.Invoke(() =>
+                                    {
+                                        NavigationService.Navigate(new UserProfilePage());
+                                    });
+                                });
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    StatusMessage.Text = $"Ошибка при обновлении подписки: {ex.Message}";
+                    StatusMessage.Foreground = new SolidColorBrush(Colors.Red);
+                }
             }
             else
             {
@@ -145,23 +191,35 @@ namespace _4lab
         // Формирование чека
         private string GenerateReceipt(string plan, string cardHolder, string email)
         {
-            decimal amount = plan.ToLower() switch
+            decimal amount = 0.00m;
+
+            using (var context = new DBContext())
             {
-                "basic" => 10.00m,
-                "pro" => 20.00m,
-                "enterprise" => 50.00m,
-                _ => 0.00m
-            };
+                var latestPrices = context.SubscriptionPrices
+                    .OrderByDescending(p => p.CreatedAt)
+                    .FirstOrDefault();
+
+                if (latestPrices != null)
+                {
+                    amount = plan.ToLower() switch
+                    {
+                        "lite" => latestPrices.LitePrice,
+                        "semipro" => latestPrices.SemiProPrice,
+                        "pro" => latestPrices.ProPrice,
+                        _ => 0.00m
+                    };
+                }
+            }
 
             return $@"Чек об оплате
--------------------
-План: {plan}
-Сумма: {amount:C}
-Владелец карты: {cardHolder}
-Email: {email}
-Дата: {DateTime.Now:dd.MM.yyyy HH:mm}
--------------------
-Спасибо за покупку!";
+            -------------------
+            План: {plan}
+            Сумма: {amount:C}
+            Владелец карты: {cardHolder}
+            Email: {email}
+            Дата: {DateTime.Now:dd.MM.yyyy HH:mm}
+            -------------------
+            Спасибо за покупку!";
         }
 
         // Отправка чека по email

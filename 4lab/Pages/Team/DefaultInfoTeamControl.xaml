@@ -16,6 +16,14 @@
                        Text="{DynamicResource NoRegion}"/>
             <TextBlock x:Name="TeamDescriptionTextBlock" Style="{StaticResource TextBlockStyle}" 
                        Text="{DynamicResource NoDescription}"/>
+
+            <!-- Кнопка "Выйти из команды" -->
+            <Button x:Name="LeaveTeamButton"
+                    Content="{DynamicResource LeaveTeamButtonText}"
+                    Style="{StaticResource ButtonStyle}"
+                    Margin="0,10,0,0"
+                    Click="LeaveTeamButton_Click"
+                    Visibility="Collapsed"/>
         </StackPanel>
     </Border>
 </UserControl>

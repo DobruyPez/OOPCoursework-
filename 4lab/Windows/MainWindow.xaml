@@ -6,7 +6,7 @@
         ResizeMode="NoResize"
         Background="#1A1A1A">
     <Window.Resources>
-        <!-- Стиль для TextBlock -->
+        <!-- Стили без изменений -->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -21,14 +21,12 @@
             </Setter>
         </Style>
 
-        <!-- Стиль для заголовков TextBlock -->
         <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Margin" Value="0"/>
         </Style>
 
-        <!-- Стиль для текстов в чате -->
         <Style x:Key="ChatTextBlockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -37,7 +35,6 @@
             <Setter Property="FontSize" Value="12"/>
         </Style>
 
-        <!-- Шаблон для Button -->
         <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
             <Border x:Name="ButtonBorder" 
                     CornerRadius="10" 
@@ -89,7 +86,6 @@
             </Border>
         </ControlTemplate>
 
-        <!-- Стиль для Button -->
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
@@ -100,7 +96,6 @@
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
 
-        <!-- Стиль для Language Button -->
         <Style x:Key="LanguageButtonStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="14"/>
@@ -108,19 +103,16 @@
             <Setter Property="Width" Value="50"/>
         </Style>
 
-        <!-- Стиль для Chat Button -->
         <Style x:Key="ChatButtonStyle" BasedOn="{StaticResource ButtonStyle}" TargetType="Button">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="Width" Value="50"/>
             <Setter Property="Height" Value="38"/>
         </Style>
 
-        <!-- Стиль для StackPanel -->
         <Style x:Key="StackPanelStyle" TargetType="StackPanel">
             <Setter Property="Margin" Value="10"/>
         </Style>
 
-        <!-- Стиль для Grid (Header) -->
         <Style x:Key="HeaderGridStyle" TargetType="Grid">
             <Setter Property="Background">
                 <Setter.Value>
@@ -137,7 +129,6 @@
             </Setter>
         </Style>
 
-        <!-- Стиль для Footer Grid -->
         <Style x:Key="FooterGridStyle" TargetType="Grid">
             <Setter Property="Background" Value="#111111"/>
             <Setter Property="Effect">
@@ -147,7 +138,6 @@
             </Setter>
         </Style>
 
-        <!-- Стиль для Popup -->
         <Style x:Key="ChatPopupStyle" TargetType="Border">
             <Setter Property="Background" Value="#333333"/>
             <Setter Property="BorderBrush" Value="#FF8C00"/>
@@ -160,6 +150,11 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="UserListItemStyle" TargetType="StackPanel">
+            <Setter Property="Background" Value="#444444"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
     </Window.Resources>
     <DockPanel>
         <Grid DockPanel.Dock="Top" Height="60" Style="{StaticResource HeaderGridStyle}">
@@ -169,7 +164,6 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Navigation -->
             <Grid Grid.Column="0" VerticalAlignment="Center" Margin="10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" MinWidth="100"/>
@@ -211,19 +205,26 @@
                 </StackPanel>
             </Grid>
 
-            <!-- Logo -->
             <TextBlock Grid.Column="1" 
                        Style="{StaticResource HeaderTextBlockStyle}" 
                        HorizontalAlignment="Left" 
                        VerticalAlignment="Center" 
-                       Margin="150,0,0,0">
+                       Margin="61,0,0,0" RenderTransformOrigin="-0.128,0.602">
                 <TextBlock.Text>
                     <DynamicResource ResourceKey="LogoText"/>
                 </TextBlock.Text>
             </TextBlock>
 
-            <!-- User Icon, Language Switch, and Chat Button -->
             <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="10" Style="{StaticResource StackPanelStyle}">
+                <Button Style="{StaticResource ButtonStyle}" 
+                        Click="NavigateToMessagesPage" 
+                        Width="50" 
+                        Height="38" 
+                        FontSize="24" 
+                        ToolTip="Сообщения"
+                        Margin="5,0">
+                    <Button.Content>✉️</Button.Content>
+                </Button>
                 <Button Style="{StaticResource LanguageButtonStyle}" 
                         x:Name="LanguageButton" 
                         Click="LanguageButton_Click" 
@@ -233,13 +234,58 @@
                 <Button Style="{StaticResource ChatButtonStyle}" 
                         x:Name="ChatButton" 
                         Click="ChatButton_Click" 
-                        IsEnabled="False"
                         ToolTip="Открыть чат с игроками" 
                         Height="40" 
                         Margin="5,0,5,0" 
                         Width="55">
                     <Button.Content>💬</Button.Content>
                 </Button>
+                <Popup x:Name="UserSelectionPopup" 
+                       Placement="Bottom" 
+                       PlacementTarget="{Binding ElementName=ChatButton}" 
+                       AllowsTransparency="True"
+                       PopupAnimation="Slide"
+                       StaysOpen="False">
+                    <Border Style="{StaticResource ChatPopupStyle}" 
+                            Width="300" 
+                            Height="400">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="UsersList" Orientation="Vertical" Margin="0,0,0,10"/>
+                            </ScrollViewer>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="UserMessageInput" 
+                                         Grid.Column="0" 
+                                         Margin="0,0,5,0" 
+                                         Background="#444444" 
+                                         Foreground="#FFFFFF" 
+                                         BorderBrush="#FF8C00" 
+                                         BorderThickness="1" 
+                                         Padding="5" 
+                                         FontSize="12" 
+                                         AcceptsReturn="False"/>
+                                <Button Grid.Column="1" 
+                                        Style="{StaticResource ButtonStyle}" 
+                                        Width="40" 
+                                        Height="30" 
+                                        FontSize="16" 
+                                        Click="SendToSelectedUser_Click">
+                                    <Button.Content>➤</Button.Content>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Popup>
                 <Button Style="{StaticResource ButtonStyle}" 
                         Click="NavigateToTeamProfile" 
                         Width="50" 
@@ -267,60 +313,8 @@
                     <Button.Content>🏠</Button.Content>
                 </Button>
             </StackPanel>
-
-            <!-- Popup для чата -->
-            <Popup x:Name="ChatPopup" 
-                   Placement="Bottom" 
-                   PlacementTarget="{Binding ElementName=ChatButton}" 
-                   AllowsTransparency="True" 
-                   PopupAnimation="Slide" 
-                   StaysOpen="False">
-                <Border Style="{StaticResource ChatPopupStyle}" 
-                        Width="300" 
-                        Height="400">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-
-                        <!-- Область сообщений -->
-                        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
-                            <StackPanel x:Name="ChatMessages" Orientation="Vertical"/>
-                        </ScrollViewer>
-
-                        <!-- Поле ввода и кнопка отправки -->
-                        <Grid Grid.Row="1">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBox x:Name="ChatInput" 
-                                     Grid.Column="0" 
-                                     Margin="0,0,5,0" 
-                                     Background="#444444" 
-                                     Foreground="#FFFFFF" 
-                                     BorderBrush="#FF8C00" 
-                                     BorderThickness="1" 
-                                     Padding="5" 
-                                     FontSize="12" 
-                                     AcceptsReturn="False" 
-                                     KeyDown="ChatInput_KeyDown"/>
-                            <Button Grid.Column="1" 
-                                    Style="{StaticResource ButtonStyle}" 
-                                    Width="40" 
-                                    Height="30" 
-                                    FontSize="16" 
-                                    Click="SendMessage_Click">
-                                <Button.Content>➤</Button.Content>
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </Border>
-            </Popup>
         </Grid>
 
-        <!-- Footer -->
         <Grid DockPanel.Dock="Bottom" Height="68" Style="{StaticResource FooterGridStyle}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -345,21 +339,19 @@
                 </TextBlock>
             </StackPanel>
             <StackPanel Grid.Column="1" Style="{StaticResource StackPanelStyle}" VerticalAlignment="Center">
-                <TextBlock Style="{StaticResource TextBlockStyle}">
-                    <TextBlock.Text>
-                        <DynamicResource ResourceKey="SocialMedia"/>
-                    </TextBlock.Text>
-                </TextBlock>
-                <TextBlock Style="{StaticResource TextBlockStyle}">
-                    <TextBlock.Text>
-                        <DynamicResource ResourceKey="SocialMediaLinks"/>
-                    </TextBlock.Text>
-                </TextBlock>
-                <TextBlock Style="{StaticResource TextBlockStyle}">
-                    <TextBlock.Text>
-                        <DynamicResource ResourceKey="Instagram"/>
-                    </TextBlock.Text>
-                </TextBlock>
+                <!-- Реклама -->
+                <Button Style="{StaticResource ButtonStyle}" 
+                        x:Name="AdButton" 
+                        Click="AdButton_Click" 
+                        Padding="0" 
+                        Margin="0" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center">
+                    <Image x:Name="AdImage" 
+                           Stretch="Uniform" 
+                           MaxHeight="50" 
+                           MaxWidth="150"/>
+                </Button>
             </StackPanel>
             <StackPanel Grid.Column="2" Style="{StaticResource StackPanelStyle}" VerticalAlignment="Center">
                 <TextBlock Style="{StaticResource TextBlockStyle}">

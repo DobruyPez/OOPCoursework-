@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using Roles;
 using System.Security.Cryptography;
+using _4lab.BD;
 
 namespace _4lab.DB
 {
@@ -19,9 +20,10 @@ namespace _4lab.DB
                 if (!context.Database.Exists())
                 {
                     context.Database.Create();
-                    Seed(context);
+                    //Seed(context);
                     context.SaveChanges();
                 }
+                EnsureDefaultAdminExists(context);
             }
         }
 
@@ -62,17 +64,54 @@ namespace _4lab.DB
             }
         }
 
+        public static void EnsureDefaultAdminExists(DBContext context = null)
+        {
+            bool shouldDispose = false;
+            if (context == null)
+            {
+                context = new DBContext();
+                shouldDispose = true;
+            }
+
+            try
+            {
+                // Проверяем наличие хотя бы одного администратора
+                if (!context.Users.OfType<Admin>().Any())
+                {
+                    var admin = new Admin
+                    {
+                        Email = "admin@example.com",
+                        Name = "Administrator",
+                        PasswordHash = HashPassword("admin123"),
+                        Role = UserRole.Admin
+                    };
+
+                    context.Users.Add(admin);
+                    context.SaveChanges();
+
+                    Console.WriteLine("Default admin created successfully");
+                }
+            }
+            finally
+            {
+                if (shouldDispose)
+                {
+                    context.Dispose();
+                }
+            }
+        }
+
         // Вспомогательный метод для начального заполнения (Seed)
         private static void Seed(_4lab.BD.DBContext context)
         {
             if (!context.Users.Any())
             {
                 // Добавляем базовых User
-                context.Users.Add(new User { Username = "John Doe", Email = "john@example.com", PasswordHash = "hashedpassword" });
-                context.Users.Add(new User { Username = "Jane Smith", Email = "jane@example.com", PasswordHash = "hashedpassword" });
+                context.Users.Add(new User { Name = "John Doe", Email = "john@example.com", PasswordHash = "hashedpassword" });
+                context.Users.Add(new User { Name = "Jane Smith", Email = "jane@example.com", PasswordHash = "hashedpassword" });
 
                 // Добавляем Player с подпиской
-                context.Users.Add(new Player { Username = "Alex Player", Email = "alex@example.com", PasswordHash = "hashedpassword", Subscription = SubscriptionType.Pro });
+                context.Users.Add(new Player { Name = "Alex Player", Email = "alex@example.com", PasswordHash = "hashedpassword", Subscription = SubscriptionType.Pro });
             }
         }
     }

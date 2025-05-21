@@ -20,7 +20,7 @@
             // Здесь можно добавить начальные данные, если нужно
             if (!context.Users.Any())
             {
-                context.Users.Add(new User { Username = "John Doe", Email = "john@example.com", PasswordHash = "hashedpassword" });
+                context.Users.Add(new User { Name = "John Doe", Email = "john@example.com", PasswordHash = "hashedpassword" });
                 context.SaveChanges();
             }
         }

@@ -8,6 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="UserProfilePage"
       Background="#1A1A1A">
+
     <Page.Resources>
         <!-- Стиль для TextBlock -->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
@@ -144,62 +145,85 @@
             <Setter Property="Margin" Value="20"/>
         </Style>
     </Page.Resources>
-    <Grid Margin="0,0,0,-40">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="303*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid>
-            <!-- Кнопка смены темы с иконкой -->
-            <Button x:Name="ToggleThemeButton"
-            Style="{StaticResource ButtonStyle}"
-            Click="ToggleThemeButton_Click"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Top"
-            Margin="0,10,10,0"
-            Width="50"
-            Height="50"
-            ToolTip="Toggle Theme"
-            Panel.ZIndex="1">
-                <TextBlock Text="🌞"
-                   FontSize="20"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   TextAlignment="Center"/>
-            </Button>
-        </Grid>
 
-        <!-- Header with User Info -->
-        <StackPanel Style="{StaticResource StackPanelStyle}">
-            <TextBlock x:Name="UsernameTextBlock" Text="Username: [Username]" Style="{StaticResource HeaderTextBlockStyle}"/>
-            <TextBlock x:Name="EmailTextBlock" Text="Email: [Email]" Style="{StaticResource TextBlockStyle}" FontSize="18"/>
-            <TextBlock x:Name="PremiumTextBlock" Text="Subscription: Free" Style="{StaticResource TextBlockStyle}"/>
-        </StackPanel>
+    <Grid>
+        <!-- Кнопка смены темы в правом верхнем углу -->
+        <Button x:Name="ToggleThemeButton"
+                Style="{StaticResource ButtonStyle}"
+                Click="ToggleThemeButton_Click"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,10,10,0"
+                Width="50"
+                Height="50"
+                ToolTip="Toggle Theme"
+                Panel.ZIndex="1">
+            <TextBlock Text="🌞"
+                       FontSize="20"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"/>
+        </Button>
 
-        <!-- Profile Settings -->
-        <StackPanel Style="{StaticResource StackPanelStyle}" Height="296" Margin="239,130,0,0" VerticalAlignment="Top" Grid.RowSpan="3" Width="355" HorizontalAlignment="Left">
-            <!-- Twitch Link -->
-            <StackPanel Orientation="Horizontal" Margin="0,10">
-                <TextBlock Text="Twitch Username:" Style="{StaticResource TextBlockStyle}" Width="150"/>
-                <TextBox x:Name="TwitchTextBox" Width="200" Style="{StaticResource InputStyle}"/>
+        <!-- Основное содержимое, центрированное -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+            <!-- Header with User Info -->
+            <StackPanel>
+                <TextBlock x:Name="UsernameTextBlock" 
+                           Text="Username: [Username]" 
+                           Style="{StaticResource HeaderTextBlockStyle}"/>
+                <TextBlock x:Name="EmailTextBlock" 
+                           Text="Email: [Email]" 
+                           Style="{StaticResource TextBlockStyle}" 
+                           FontSize="18"/>
+                <TextBlock x:Name="PremiumTextBlock" 
+                           Text="Subscription: Free" 
+                           Style="{StaticResource TextBlockStyle}"/>
             </StackPanel>
 
-            <!-- Discord Link -->
-            <StackPanel Orientation="Horizontal" Margin="0,10">
-                <TextBlock Text="Discord Username:" Style="{StaticResource TextBlockStyle}" Width="150"/>
-                <TextBox x:Name="DiscordTextBox" Width="200" Style="{StaticResource InputStyle}"/>
+            <!-- Profile Settings -->
+            <StackPanel Margin="0,20,0,0">
+                <!-- Twitch Link -->
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Twitch Username:" 
+                               Style="{StaticResource TextBlockStyle}" 
+                               Width="150"/>
+                    <TextBox x:Name="TwitchTextBox" 
+                             Width="200" 
+                             Style="{StaticResource InputStyle}"/>
+                </StackPanel>
+
+                <!-- Discord Link -->
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Discord Username:" 
+                               Style="{StaticResource TextBlockStyle}" 
+                               Width="150"/>
+                    <TextBox x:Name="DiscordTextBox" 
+                             Width="200" 
+                             Style="{StaticResource InputStyle}"/>
+                </StackPanel>
+
+                <!-- Team Info -->
+                <TextBlock x:Name="TeamTextBlock" 
+                           Text="Team: Not in a team" 
+                           Style="{StaticResource TextBlockStyle}" 
+                           HorizontalAlignment="Center" 
+                           Margin="0,20,0,0"/>
+
+                <!-- Save Button -->
+                <Button Content="Save Links" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Click="SaveLinksButton_Click"
+                        HorizontalAlignment="Center"
+                        Margin="0,20"/>
+
+                <!-- Log Out Button -->
+                <Button x:Name="LogOutButton" 
+                        Content="Log Out" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Click="LogOutButton_Click"
+                        HorizontalAlignment="Center"/>
             </StackPanel>
-
-            <!-- Team Info -->
-            <TextBlock x:Name="TeamTextBlock" Text="Team: Not in a team" Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Center" Margin="0,20,0,0"/>
-
-            <!-- Save Button -->
-            <Button Content="Save Links" Style="{StaticResource ButtonStyle}" Click="SaveLinksButton_Click"/>
-
-            <!-- Log Out Button -->
-            <Button x:Name="LogOutButton" Content="Log Out" Style="{StaticResource ButtonStyle}" Click="LogOutButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

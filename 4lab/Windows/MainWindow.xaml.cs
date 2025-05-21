@@ -14,6 +14,7 @@ using static Roles.CurrentTeam;
 using System.Threading.Tasks;
 using _4lab.BD;
 using _4lab.Resources;
+using System.Diagnostics;
 
 namespace _4lab
 {
@@ -22,22 +23,79 @@ namespace _4lab
         private bool isEnglish = true;
         private DBContext dbContext = new DBContext(); // Контекст БД
         private string currentUserName; // Имя текущего пользователя из БД
+        private int _selectedUserId = -1;
 
         public MainWindow()
         {
             InitializeComponent();
             SetLanguage(isEnglish);
             LoadInitialContent();
+            LoadAdvertisement();
             MainFrame.Navigated += MainFrame_Navigated;
+            CurrentTeam.TeamChangedAct += NavigateToHomeOnMembersCleared;
+            CurrentTeam.MembersCleared += NavigateToHomeOnMembersCleared;
             InitializeChat();
             Console.WriteLine($"Application started at {DateTime.Now} (CEST: 06:03 PM, May 18, 2025)");
+        }
+        public void RefreshAdvertisement()
+        {
+            LoadAdvertisement();
+        }
+
+        private void LoadAdvertisement()
+        {
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    var latestAd = context.Advertisements
+                        .FirstOrDefault();
+
+                    if (latestAd != null)
+                    {
+                        AdImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(latestAd.Image, UriKind.Absolute));
+                        AdButton.Tag = latestAd.Link; // Сохраняем ссылку в Tag
+                        AdButton.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        AdButton.Visibility = Visibility.Collapsed; // Скрываем, если нет рекламы
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to load advertisement: {ex.Message}");
+                AdButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void AdButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var button = sender as Button;
+                string link = button.Tag as string;
+                if (!string.IsNullOrEmpty(link))
+                {
+                    Process.Start(new ProcessStartInfo(link) { UseShellExecute = true });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void NavigateToHomeOnMembersCleared()
+        {
+            // Просто перенаправляем на главную страницу
+            MainFrame.Navigate(new MainMenuPage(this));
+            //RefreshCurrentPage();
         }
 
         private void InitializeChat()
         {
-            // Изначально кнопка чата выключена
-            ChatButton.IsEnabled = false;
-
             if (CurrentUser.Instance.IsLoggedIn)
             {
                 try
@@ -46,7 +104,7 @@ namespace _4lab
                     var user = dbContext.Users.FirstOrDefault(u => u.Id == CurrentUser.Instance.Id);
                     if (user != null)
                     {
-                        currentUserName = user.Username;
+                        currentUserName = user.Name;
                         ChatButton.IsEnabled = true; // Включаем кнопку чата только если пользователь найден
                         Console.WriteLine($"Chat initialized for user: {currentUserName}");
                     }
@@ -64,53 +122,111 @@ namespace _4lab
 
         private void ChatButton_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("ChatButton_Click triggered.");
-
             if (!CurrentUser.Instance.IsLoggedIn)
             {
-                System.Windows.MessageBox.Show(
-                    "Для использования чата необходимо авторизоваться.",
-                    "Доступ запрещен",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Warning);
+                MessageBox.Show("Для использования чата необходимо авторизоваться.",
+                               "Доступ запрещен",
+                               MessageBoxButton.OK,
+                               MessageBoxImage.Warning);
+                return;
+            }
 
-                Console.WriteLine("User not logged in, cannot open chat.");
+            LoadUserList();
+            UserSelectionPopup.IsOpen = true;
+        }
 
-                // Перенаправляем на страницу регистрации/авторизации
-                MainFrame.Navigate(new RegisterUserPage());
+        private void LoadUserList()
+        {
+            UsersList.Children.Clear();
+
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    var currUser = CurrentUser.Instance.GetCurrentUser();
+                    var users = context.Users
+                        .Where(u => u.Id != currUser.Id)
+                        .ToList();
+
+                    foreach (var user in users)
+                    {
+                        var userButton = new Button
+                        {
+                            Content = user.Name,
+                            Tag = user.Id,
+                            Style = (Style)FindResource("ButtonStyle"),
+                            Margin = new Thickness(0, 2, 0, 2),
+                            HorizontalContentAlignment = HorizontalAlignment.Left
+                        };
+                        userButton.Click += (s, args) =>
+                        {
+                            _selectedUserId = (int)((Button)s).Tag;
+                            UserMessageInput.Focus();
+                        };
+
+                        UsersList.Children.Add(userButton);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки списка пользователей: {ex.Message}",
+                               "Ошибка",
+                               MessageBoxButton.OK,
+                               MessageBoxImage.Error);
+            }
+        }
+
+        private void SendToSelectedUser_Click(object sender, RoutedEventArgs e)
+        {
+            var currUser = CurrentUser.Instance.GetCurrentUser();
+            if (_selectedUserId == -1)
+            {
+                MessageBox.Show("Выберите пользователя из списка",
+                               "Ошибка",
+                               MessageBoxButton.OK,
+                               MessageBoxImage.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(UserMessageInput.Text))
+            {
+                MessageBox.Show("Введите текст сообщения",
+                               "Ошибка",
+                               MessageBoxButton.OK,
+                               MessageBoxImage.Warning);
                 return;
             }
 
             try
             {
-                ChatPopup.IsOpen = !ChatPopup.IsOpen;
-                Console.WriteLine($"ChatPopup.IsOpen set to: {ChatPopup.IsOpen}");
 
-                if (ChatPopup.IsOpen)
+                if (!MessageService.CanSendMessage(currUser.Id, _selectedUserId))
                 {
-                    ChatInput.Focus();
-                    LoadChatMessages(); // Загружаем сообщения при открытии
-                    Console.WriteLine("Chat opened and messages loaded.");
+                    MessageBox.Show("Невозможно отправить сообщение - пользователь не найден");
+                    return;
                 }
-                else
-                {
-                    Console.WriteLine("Chat closed.");
-                }
+                MessageService.SendMessage(
+                    currUser.Id,
+                    _selectedUserId,
+                    UserMessageInput.Text,
+                    MessageType.Default);
+
+                UserMessageInput.Text = string.Empty;
+                MessageBox.Show("Сообщение отправлено", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show(
-                    $"Ошибка при открытии чата: {ex.Message}",
-                    "Ошибка",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error);
-                Console.WriteLine($"Error opening chat: {ex.Message}");
+                MessageBox.Show($"Ошибка отправки сообщения: {ex.Message}",
+                               "Ошибка",
+                               MessageBoxButton.OK,
+                               MessageBoxImage.Error);
             }
         }
 
         private void LoadInitialContent()
         {
-            MainFrame.Navigate(new MainMenuPage(this));
+            MainFrame.Navigate(new RegisterUserPage());
         }
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
@@ -126,7 +242,48 @@ namespace _4lab
 
         private void NavigateToHome(object sender, RoutedEventArgs e)
         {
+            if (!CurrentUser.Instance.IsLoggedIn)
+            {
+                System.Windows.MessageBox.Show(
+                    "Зарегестрируйся",
+                    "Доступ запрещен",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+
+                Console.WriteLine("User not logged in, cannot open chat.");
+
+                if (CurrentUser.Instance.GetCurrentUser() is Admin)
+                {
+                    var adminPanel = new _4lab.Windows.AdminPanel();
+                    adminPanel.Show();
+                    this.Close();
+                    return;
+                }
+
+                // Перенаправляем на страницу регистрации/авторизации
+                MainFrame.Navigate(new RegisterUserPage());
+                return;
+            }
             MainFrame.Navigate(new MainMenuPage(this));
+        }
+
+        private void NavigateToMessagesPage(object sender, RoutedEventArgs e)
+        {
+            if(!CurrentUser.Instance.IsLoggedIn)
+            {
+                System.Windows.MessageBox.Show(
+                    "Для просмотра сообщений необходимо авторизоваться.",
+                    "Доступ запрещен",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+
+                Console.WriteLine("User not logged in, cannot open chat.");
+
+                // Перенаправляем на страницу регистрации/авторизации
+                MainFrame.Navigate(new RegisterUserPage());
+                return;
+            }
+            MainFrame.Navigate(new MessagesPage());
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -195,9 +352,13 @@ namespace _4lab
                 {
                     newPage = new UserProfilePage();
                 }
-                else if (pageType == typeof(TeamMatchesPage))
+                else if (pageType == typeof(_4lab.Pages.TeamMatches.TeamMatchesPage))
                 {
-                    newPage = new TeamMatchesPage(this);
+                    newPage = new _4lab.Pages.TeamMatches.TeamMatchesPage(this);
+                }
+                else if (pageType == typeof(TeamPage))
+                {
+                    newPage = new TeamPage();
                 }
                 else
                 {
@@ -224,92 +385,22 @@ namespace _4lab
 
         private void NavigateToTeamProfile(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new TeamPage());
-        }
 
-        // Обработчик отправки сообщения по кнопке
-        private void SendMessage_Click(object sender, RoutedEventArgs e)
-        {
-            SendMessage();
-        }
-
-        // Обработчик нажатия Enter в поле ввода
-        private void ChatInput_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
+            if (!CurrentUser.Instance.IsLoggedIn)
             {
-                SendMessage();
-            }
-        }
+                System.Windows.MessageBox.Show(
+                    "Пожалуйста, войдите в систему и выберите команду. ",
+                    "Доступ запрещен",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
 
-        // Загрузка сообщений из БД
-        private void LoadChatMessages()
-        {
-            try
-            {
-                ChatMessages.Children.Clear(); // Очищаем текущие сообщения
-                var messages = dbContext.ChatMessages
-                    .OrderBy(m => m.Timestamp)
-                    .ToList();
+                Console.WriteLine("User not logged in, cannot open chat.");
 
-                foreach (var message in messages)
-                {
-                    var user = dbContext.Users.FirstOrDefault(u => u.Id == message.UserId);
-                    if (user != null)
-                    {
-                        string formattedMessage = $"{user.Username}: {message.Message} ({message.Timestamp:HH:mm})";
-                        TextBlock messageBlock = new TextBlock
-                        {
-                            Text = formattedMessage,
-                            Style = (Style)FindResource("ChatTextBlockStyle")
-                        };
-                        ChatMessages.Children.Add(messageBlock);
-                    }
-                }
-
-                // Прокручиваем вниз
-                var scrollViewer = ChatMessages.Parent as ScrollViewer;
-                scrollViewer?.ScrollToBottom();
-                Console.WriteLine("Chat messages loaded successfully.");
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show($"Ошибка при загрузке сообщений: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                Console.WriteLine($"Error loading chat messages: {ex.Message}");
-            }
-        }
-
-        // Логика отправки сообщения
-        private void SendMessage()
-        {
-            if (!CurrentUser.Instance.IsLoggedIn || string.IsNullOrWhiteSpace(ChatInput.Text))
+                // Перенаправляем на страницу регистрации/авторизации
+                MainFrame.Navigate(new RegisterUserPage());
                 return;
-
-            try
-            {
-                string messageText = ChatInput.Text.Trim();
-                var user = dbContext.Users.FirstOrDefault(u => u.Id == CurrentUser.Instance.Id);
-                if (user == null) return;
-
-                var chatMessage = new ChatMessage
-                {
-                    UserId = user.Id,
-                    Message = messageText,
-                    Timestamp = DateTime.Now
-                };
-
-                dbContext.ChatMessages.Add(chatMessage);
-                dbContext.SaveChanges(); // Сохраняем в БД
-
-                LoadChatMessages(); // Обновляем отображение
-                ChatInput.Text = string.Empty;
-                Console.WriteLine("Message sent successfully.");
             }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show($"Ошибка при отправке сообщения: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                Console.WriteLine($"Error sending message: {ex.Message}");
-            }
+            MainFrame.Navigate(new TeamPage());
         }
     }
 }

@@ -36,7 +36,7 @@ namespace _4lab
 
         private void FindPraccsButton_Click(object sender, RoutedEventArgs e)
         {
-            _parentWindow.ShowContent(new TeamMatchesPage(_parentWindow));
+            _parentWindow.ShowContent(new _4lab.Pages.TeamMatches.TeamMatchesPage(_parentWindow));
         }
 
         public void RegisterUser()

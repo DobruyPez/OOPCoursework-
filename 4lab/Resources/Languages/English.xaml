@@ -25,19 +25,19 @@
 
     <!-- PremiumSubscrationPage -->
     <system:String x:Key="LitePlan">Lite</system:String>
-    <system:String x:Key="LitePrice">$9.99/month</system:String>
+    <system:String x:Key="LitePrice">/month</system:String>
     <system:String x:Key="LiteFeatures">Basic features</system:String>
     <system:String x:Key="LiteUsers">1 user</system:String>
     <system:String x:Key="LiteSupport">Limited support</system:String>
     <system:String x:Key="ChooseLite">Choose Lite</system:String>
     <system:String x:Key="StandardPlan">Standard</system:String>
-    <system:String x:Key="StandardPrice">$19.99/month</system:String>
+    <system:String x:Key="StandardPrice">/month</system:String>
     <system:String x:Key="StandardFeatures">Advanced features</system:String>
     <system:String x:Key="StandardUsers">Up to 3 users</system:String>
     <system:String x:Key="StandardSupport">Priority support</system:String>
     <system:String x:Key="ChooseStandard">Choose Standard</system:String>
     <system:String x:Key="ProPlan">Pro</system:String>
-    <system:String x:Key="ProPrice">$29.99/month</system:String>
+    <system:String x:Key="ProPrice">/month</system:String>
     <system:String x:Key="ProFeatures">All features</system:String>
     <system:String x:Key="ProUsers">Unlimited users</system:String>
     <system:String x:Key="ProSupport">24/7 support</system:String>
@@ -103,7 +103,8 @@
     <system:String x:Key="NoRegion">No Region</system:String>
     <system:String x:Key="SaveButton">Save</system:String>
     <system:String x:Key="InviteButton">Invite</system:String>
-    <system:String x:Key="ChangeRoleButton">Change Role</system:String>
+    <system:String x:Key="DeleteTeam">Delete Team</system:String>
     <system:String x:Key="RemoveButton">Delete</system:String>
+    <system:String x:Key="LeaveTeamButtonText">Leave Team</system:String>
 
 </ResourceDictionary>

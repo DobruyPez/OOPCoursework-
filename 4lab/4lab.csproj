@@ -120,6 +120,30 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\RoleToStringConverter.cs" />
+    <Compile Include="Pages\Admin\Ads\ManageAdsPage.xaml.cs">
+      <DependentUpon>ManageAdsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Ban\BanPlayersPage.xaml.cs">
+      <DependentUpon>BanPlayersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Ban\BanUserControl.xaml.cs">
+      <DependentUpon>BanUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Prices\ManagePricesPage.xaml.cs">
+      <DependentUpon>ManagePricesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Message\ChoiceControl.xaml.cs">
+      <DependentUpon>ChoiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Message\MessagesPage.xaml.cs">
+      <DependentUpon>MessagesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml.cs">
+      <DependentUpon>OfferRegistrationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.xaml.cs">
+      <DependentUpon>OfferRegistrationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Team\ChangeRole\MemberTemplateSelector.cs" />
     <Compile Include="Pages\Team\DefaultInfoTeamControl.xaml.cs">
       <DependentUpon>DefaultInfoTeamControl.xaml</DependentUpon>
@@ -142,8 +166,15 @@
     <Compile Include="Pages\Team\AddMembers\UsersListPopup.xaml.cs">
       <DependentUpon>UsersListPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Advertisement.cs" />
     <Compile Include="Resources\AppNavigation.cs" />
-    <Compile Include="Resources\ChatMessage.cs" />
+    <Compile Include="Resources\SubscriptionPrice.cs" />
+    <Compile Include="Windows\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ChatMessage.cs" />
+    <Compile Include="Resources\Messages\Message.cs" />
+    <Compile Include="Resources\Messages\MessageService.cs" />
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -182,6 +213,38 @@
     </Compile>
     <Resource Include="Resources\Languages\English.xaml" />
     <Resource Include="Resources\Languages\Russian.xaml" />
+    <Page Include="Pages\Admin\Ads\ManageAdsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Ban\BanPlayersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Ban\BanUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Prices\ManagePricesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Message\ChoiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Message\MessagesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeamMatches\RegisterOffer\OfferRegistrationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Team\AddMembers\TeamInvitationUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,6 +274,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MainMenu\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -276,6 +343,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

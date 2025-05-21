@@ -25,11 +25,17 @@ namespace _4lab
                 var user = CurrentUser.Instance.GetCurrentUser();
                 if (user != null && user is Player playerUser)
                 {
-                    UsernameTextBlock.Text = user.Username;
+                    UsernameTextBlock.Text = user.Name;
                     EmailTextBlock.Text = user.Email;
                     TwitchTextBox.Text = playerUser.TwitchLink ?? "";
                     DiscordTextBox.Text = playerUser.DiscordLink ?? "";
-
+                    PremiumTextBlock.Text = playerUser.Subscription switch
+                    {
+                        SubscriptionType.Lite => "Subscription: Lite",
+                        SubscriptionType.SemiPro => "Subscription: Standard",
+                        SubscriptionType.Pro => "Subscription: Pro",
+                        _ => "Subscription: Free"
+                    };
                     // Обновляем название команды
                     UpdateTeamName();
                 }
