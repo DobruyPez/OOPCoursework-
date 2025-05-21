@@ -201,6 +201,6 @@
         <PasswordBox x:Name="PasswordBox" Style="{StaticResource PasswordBoxStyle}" Height="32"/>
         <TextBlock Text="{DynamicResource ConfirmPasswordLabel}" Style="{StaticResource TextBlockStyle}"/>
         <PasswordBox x:Name="ConfirmPasswordBox" Style="{StaticResource PasswordBoxStyle}" Height="32"/>
-        <Button x:Name="RegisterButton" Content="{DynamicResource RegisterButton}" Style="{StaticResource ButtonStyle}" Click="RegisterButton_Click" Height="40" Width="150" Margin="0,5,0,0"/>
+        <Button x:Name="RegisterButton" Content="{DynamicResource RegisterButton}" Style="{StaticResource ButtonStyle}" Click="RegisterButton_Click" Height="40" Width="178" Margin="0,5,0,0"/>
     </StackPanel>
 </UserControl>
