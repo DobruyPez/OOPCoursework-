@@ -3,43 +3,103 @@
   "WorkspaceRootPath": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\userprofile\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\userprofile\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\registercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\registercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\ads\\manageadspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ads\\manageadspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\teammatchespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\teammatchespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\resources\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\team\\teamcontrols.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teamcontrols.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\bd\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\bd\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\userprofile\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\userprofile\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\addmembers\\userslistpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\addmembers\\userslistpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\resources\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\registeruserpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\registeruserpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\windows\\adminpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\windows\\adminpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\ads\\manageadspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ads\\manageadspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\defaultinfoteamcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\defaultinfoteamcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\userprofile\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\userprofile\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\converters\\percentageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\converters\\percentageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\ads\\manageadspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ads\\manageadspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\windows\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\ads\\manageadspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ads\\manageadspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\windows\\adminpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\windows\\adminpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\resources\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\windows\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\windows\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -47,7 +107,7 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\subscription\\premiumsubscrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\resources\\languages\\russian.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\resources\\languages\\russian.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\languages\\russian.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -67,44 +127,36 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\payment\\paymentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\prices\\managepricespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\prices\\managepricespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\prices\\managepricespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\prices\\managepricespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\prices\\managepricespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\prices\\managepricespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ban\\banusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\resources\\subscriptionprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\resources\\subscriptionprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\subscriptionprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banplayerspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banplayerspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ban\\banplayerspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\bd\\databaseinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\bd\\databaseinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banplayerspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banplayerspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ban\\banplayerspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banusercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\admin\\ban\\banusercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\admin\\ban\\banusercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\resources\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -115,39 +167,15 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\registercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\registercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\registeruserpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\registeruserpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\userprofile\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\userprofile\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\teammatchespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\teammatchespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\teammatches\\teammatchespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\teammatchespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\message\\choicecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\message\\choicecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\message\\choicecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\message\\choicecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\message\\choicecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\message\\choicecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -155,7 +183,7 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\messages\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\message\\messagespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\message\\messagespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\message\\messagespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -163,7 +191,7 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\resources\\messages\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|d:\\laby\\4_sem\\oop\\4_5lab\\4lab\\4lab\\pages\\message\\messagespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\message\\messagespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\message\\messagespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -171,32 +199,12 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teampage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teampage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\mainmenu\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\mainmenu\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\teammatches\\registeroffer\\offerregistrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\teammatches\\registeroffer\\offerregistrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\obj\\Debug\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:4lab\\obj\\Debug\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\authorization\\user\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\user\\registercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -215,20 +223,8 @@
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\addmembers\\userslistpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\addmembers\\userslistpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\addmembers\\userslistpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\teamcontrols.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teamcontrols.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\teamcontrols.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\teamcontrols.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\team\\defaultinfoteamcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|solutionrelative:4lab\\pages\\team\\defaultinfoteamcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A8188D-98E2-4E2D-8BD7-239BA47561DD}|4lab\\4lab.csproj|D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\pages\\authorization\\team\\registerteampage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -316,383 +312,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 270,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 239,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminPanel.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\AdminPanel.xaml",
-              "RelativeDocumentMoniker": "4lab\\Windows\\AdminPanel.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\AdminPanel.xaml",
-              "RelativeToolTip": "4lab\\Windows\\AdminPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T22:43:40.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.config",
-              "RelativeDocumentMoniker": "4lab\\App.config",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.config",
-              "RelativeToolTip": "4lab\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-16T05:34:38.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ManageAdsPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-21T00:51:11.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "4lab\\Windows\\MainWindow.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml",
-              "RelativeToolTip": "4lab\\Windows\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T05:44:15.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserProfilePage.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwB0AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T05:15:01.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PremiumSubscrationPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T08:50:55.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PaymentPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Payment\\PaymentPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Payment\\PaymentPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T08:50:47.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DataBaseInteractor.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\BD\\DataBaseInteractor.cs",
-              "RelativeDocumentMoniker": "4lab\\BD\\DataBaseInteractor.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\BD\\DataBaseInteractor.cs",
-              "RelativeToolTip": "4lab\\BD\\DataBaseInteractor.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwFIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T20:54:20.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\App.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml.cs",
-              "RelativeToolTip": "4lab\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T05:18:14.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "BanPlayersPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T23:35:42.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "LoginControl.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T06:00:36.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ClassDiagram1.cd",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\ClassDiagram1.cd",
-              "RelativeDocumentMoniker": "4lab\\ClassDiagram1.cd",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\ClassDiagram1.cd",
-              "RelativeToolTip": "4lab\\ClassDiagram1.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2025-05-18T15:47:50.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml",
-              "RelativeDocumentMoniker": "4lab\\App.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml",
-              "RelativeToolTip": "4lab\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-15T23:57:16.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "RegisterUserPage.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T23:06:50.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RegisterControl.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAcwDkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T05:59:20.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserProfilePage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T05:21:43.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "TeamMatchesPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T22:00:45.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "OfferRegistrationControl.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAADwv3YAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:22:57.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ChoiceControl.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\ChoiceControl.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Message\\ChoiceControl.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\ChoiceControl.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Message\\ChoiceControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T19:37:10.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "MessageService.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\MessageService.cs",
-              "RelativeDocumentMoniker": "4lab\\Resources\\Messages\\MessageService.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\MessageService.cs",
-              "RelativeToolTip": "4lab\\Resources\\Messages\\MessageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T01:53:43.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "MessagesPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\MessagesPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Message\\MessagesPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\MessagesPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Message\\MessagesPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T20:01:42.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\Message.cs",
-              "RelativeDocumentMoniker": "4lab\\Resources\\Messages\\Message.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\Message.cs",
-              "RelativeToolTip": "4lab\\Resources\\Messages\\Message.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAqwDYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T01:51:20.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "TeamPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Team\\TeamPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T06:02:26.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "MainMenuPage.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAjwCYAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T13:32:38.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "OfferRegistrationPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T14:20:50.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "LoginControl.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-15T23:53:01.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "RegisterControl.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-15T23:53:08.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "RegisterUserPage.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
-              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-15T23:53:12.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "ChoiceControl.xaml",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\ChoiceControl.xaml",
-              "RelativeDocumentMoniker": "4lab\\Message\\ChoiceControl.xaml",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\ChoiceControl.xaml",
-              "RelativeToolTip": "4lab\\Message\\ChoiceControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T02:11:50.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "TeamInvitationUserControl.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:58:01.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 4,
               "Title": "OfferRegistrationControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml",
@@ -704,32 +329,365 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 2,
+              "Title": "LoginControl.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T06:00:36.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterControl.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T05:59:20.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "OfferRegistrationPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml.cs",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml.cs",
               "RelativeToolTip": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T14:21:29.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 7,
+              "Title": "TeamControls.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamControls.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Team\\TeamControls.xaml.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAIwKYAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T00:00:08.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterUserPage.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T23:06:50.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginControl.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\LoginControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T23:53:01.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DefaultInfoTeamControl.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAIAywGUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T00:00:11.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserProfilePage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T05:21:43.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TeamPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Team\\TeamPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T06:02:26.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "MainMenuPage.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAjwCYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T13:32:38.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "RegisterControl.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T23:53:08.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "RegisterUserPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T23:53:12.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ChoiceControl.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\ChoiceControl.xaml",
+              "RelativeDocumentMoniker": "4lab\\Message\\ChoiceControl.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\ChoiceControl.xaml",
+              "RelativeToolTip": "4lab\\Message\\ChoiceControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T02:11:50.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TeamInvitationUserControl.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:58:01.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PercentageConverter.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Converters\\PercentageConverter.cs",
+              "RelativeDocumentMoniker": "4lab\\Converters\\PercentageConverter.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Converters\\PercentageConverter.cs",
+              "RelativeToolTip": "4lab\\Converters\\PercentageConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:35:30.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "4lab\\Windows\\MainWindow.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml",
+              "RelativeToolTip": "4lab\\Windows\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T05:44:15.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ManageAdsPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-21T00:51:11.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.config",
+              "RelativeDocumentMoniker": "4lab\\App.config",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.config",
+              "RelativeToolTip": "4lab\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-16T05:34:38.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PremiumSubscrationPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T08:50:55.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PaymentPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Payment\\PaymentPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Payment\\PaymentPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T08:50:47.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AdminPanel.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\AdminPanel.xaml",
+              "RelativeDocumentMoniker": "4lab\\Windows\\AdminPanel.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\AdminPanel.xaml",
+              "RelativeToolTip": "4lab\\Windows\\AdminPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T22:43:40.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\App.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml.cs",
+              "RelativeToolTip": "4lab\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T05:18:14.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "BanPlayersPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T23:35:42.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "4lab\\ClassDiagram1.cd",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\ClassDiagram1.cd",
+              "RelativeToolTip": "4lab\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2025-05-18T15:47:50.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml",
+              "RelativeDocumentMoniker": "4lab\\App.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\App.xaml",
+              "RelativeToolTip": "4lab\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T23:57:16.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "TeamMatchesPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T22:00:45.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ChoiceControl.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\ChoiceControl.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Message\\ChoiceControl.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\ChoiceControl.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Message\\ChoiceControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T19:37:10.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\MessageService.cs",
+              "RelativeDocumentMoniker": "4lab\\Resources\\Messages\\MessageService.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\MessageService.cs",
+              "RelativeToolTip": "4lab\\Resources\\Messages\\MessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T01:53:43.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "MessagesPage.xaml",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\MessagesPage.xaml",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Message\\MessagesPage.xaml",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\MessagesPage.xaml",
+              "RelativeToolTip": "4lab\\Pages\\Message\\MessagesPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T20:01:42.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Message.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\Message.cs",
+              "RelativeDocumentMoniker": "4lab\\Resources\\Messages\\Message.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Messages\\Message.cs",
+              "RelativeToolTip": "4lab\\Resources\\Messages\\Message.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwDYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T01:51:20.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
               "Title": "TeamInvitationUserControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml",
               "RelativeToolTip": "4lab\\Pages\\Team\\AddMembers\\TeamInvitationUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T01:44:12.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T01:44:12.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 59,
               "Title": "MemberTemplateSelector.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\ChangeRole\\MemberTemplateSelector.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\ChangeRole\\MemberTemplateSelector.cs",
@@ -737,24 +695,22 @@
               "RelativeToolTip": "4lab\\Pages\\Team\\ChangeRole\\MemberTemplateSelector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:57:37.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:57:37.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 66,
               "Title": "DarkTheme.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\DarkTheme.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Stules\\DarkTheme.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\DarkTheme.xaml",
               "RelativeToolTip": "4lab\\Resources\\Stules\\DarkTheme.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T09:45:07.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T09:45:07.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 70,
               "Title": "TeamInvitationUserControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamInvitationUserControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamInvitationUserControl.xaml.cs",
@@ -765,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "OfferRegistrationPage.g.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\obj\\Debug\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.g.cs",
               "RelativeDocumentMoniker": "4lab\\obj\\Debug\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationPage.g.cs",
@@ -777,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 72,
               "Title": "ChatMessage.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\ChatMessage.cs",
               "RelativeDocumentMoniker": "4lab\\Resources\\ChatMessage.cs",
@@ -789,7 +745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 73,
               "Title": "MessagesPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\MessagesPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Message\\MessagesPage.xaml",
@@ -800,57 +756,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "UsersListPopup.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml",
               "RelativeToolTip": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T01:36:37.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T01:36:37.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "TeamControls.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamControls.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml",
               "RelativeToolTip": "4lab\\Pages\\Team\\TeamControls.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T05:00:26.479Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "TeamControls.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamControls.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamControls.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Team\\TeamControls.xaml.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAADwv5sAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T00:00:08.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T05:00:26.479Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 56,
-              "Title": "DefaultInfoTeamControl.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAWwGUAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T00:00:11.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
               "Title": "RegisterTeamPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml.cs",
@@ -858,24 +786,22 @@
               "RelativeToolTip": "4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAcwB8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T06:30:39.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T06:30:39.26Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 57,
               "Title": "DefaultInfoTeamControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml",
               "RelativeToolTip": "4lab\\Pages\\Team\\DefaultInfoTeamControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T05:00:29.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T05:00:29.944Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 68,
               "Title": "MemberTemplateSelector.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\MemberTemplateSelector.cs",
               "RelativeDocumentMoniker": "4lab\\MemberTemplateSelector.cs",
@@ -886,19 +812,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 62,
               "Title": "RegisterTeamPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml",
               "RelativeToolTip": "4lab\\Pages\\Authorization\\Team\\RegisterTeamPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T07:50:08.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T07:50:08.398Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 63,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\packages.config",
               "RelativeDocumentMoniker": "4lab\\packages.config",
@@ -910,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 69,
               "Title": "UsersListPopup.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\UsersListPopup.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\UsersListPopup.xaml.cs",
@@ -921,19 +846,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 64,
               "Title": "MainMenuPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\MainMenu\\MainMenuPage.xaml",
               "RelativeToolTip": "4lab\\Pages\\MainMenu\\MainMenuPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T09:49:09.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T09:49:09.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 67,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\drozd\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
               "ToolTip": "C:\\Users\\drozd\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
@@ -943,31 +867,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 65,
               "Title": "LightTheme.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\LightTheme.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Stules\\LightTheme.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\LightTheme.xaml",
               "RelativeToolTip": "4lab\\Resources\\Stules\\LightTheme.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T09:45:11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T09:45:11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 60,
               "Title": "GeneralStyle.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "RelativeToolTip": "4lab\\Resources\\Stules\\GeneralStyle.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T07:42:40.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T07:42:40.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 61,
               "Title": "AppNavigation.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\AppNavigation.cs",
               "RelativeDocumentMoniker": "4lab\\Resources\\AppNavigation.cs",
@@ -975,83 +897,141 @@
               "RelativeToolTip": "4lab\\Resources\\AppNavigation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T23:23:08.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T23:23:08.865Z"
             }
           ]
         },
         {
-          "DockedWidth": 234,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 265,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageAdsPage.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAqwHQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T00:51:32.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "DBContext.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\BD\\DBContext.cs",
               "RelativeDocumentMoniker": "4lab\\BD\\DBContext.cs",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\BD\\DBContext.cs",
               "RelativeToolTip": "4lab\\BD\\DBContext.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAmwKUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T05:51:30.373Z",
+              "WhenOpened": "2025-05-16T05:51:30.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Roles.cs",
+              "RelativeDocumentMoniker": "4lab\\Resources\\Roles.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Roles.cs",
+              "RelativeToolTip": "4lab\\Resources\\Roles.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAArwJAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T05:48:49.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "OfferRegistrationControl.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\RegisterOffer\\OfferRegistrationControl.xaml.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAkwF8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T14:22:57.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeamMatchesPage.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAArwLMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:40:10.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserProfilePage.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\UserProfile\\UserProfilePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T05:15:01.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsersListPopup.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:58:19.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Windows\\MainWindow.xaml.cs",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\MainWindow.xaml.cs",
               "RelativeToolTip": "4lab\\Windows\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwDIAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAwwG8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T05:19:47.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Advertisement.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Advertisement.cs",
-              "RelativeDocumentMoniker": "4lab\\Resources\\Advertisement.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Advertisement.cs",
-              "RelativeToolTip": "4lab\\Resources\\Advertisement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "ManageAdsPage.xaml.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
+              "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
+              "RelativeToolTip": "4lab\\Pages\\Admin\\Ads\\ManageAdsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T00:46:38.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T00:51:32.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "AdminPanel.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\AdminPanel.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Windows\\AdminPanel.xaml.cs",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Windows\\AdminPanel.xaml.cs",
               "RelativeToolTip": "4lab\\Windows\\AdminPanel.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAIAxwCYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T23:05:30.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:05:30.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
+              "Title": "Advertisement.cs",
+              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Advertisement.cs",
+              "RelativeDocumentMoniker": "4lab\\Resources\\Advertisement.cs",
+              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Advertisement.cs",
+              "RelativeToolTip": "4lab\\Resources\\Advertisement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T00:46:38.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "PremiumSubscrationPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml.cs",
@@ -1059,36 +1039,33 @@
               "RelativeToolTip": "4lab\\Pages\\Subscription\\PremiumSubscrationPage.xaml.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAwFMAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T07:20:01.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T07:20:01.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "English.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Languages\\English.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Languages\\English.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Languages\\English.xaml",
               "RelativeToolTip": "4lab\\Resources\\Languages\\English.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T07:08:41.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T07:08:41.406Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "Russian.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Languages\\Russian.xaml",
               "RelativeDocumentMoniker": "4lab\\Resources\\Languages\\Russian.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Languages\\Russian.xaml",
               "RelativeToolTip": "4lab\\Resources\\Languages\\Russian.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-21T00:22:17.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T00:22:17.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "PaymentPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
@@ -1096,12 +1073,11 @@
               "RelativeToolTip": "4lab\\Pages\\Payment\\PaymentPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:30:09.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T14:30:09.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 31,
               "Title": "ManagePricesPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml.cs",
@@ -1109,36 +1085,33 @@
               "RelativeToolTip": "4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAA2wEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T23:52:47.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:52:47.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 32,
               "Title": "ManagePricesPage.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml",
               "RelativeToolTip": "4lab\\Pages\\Admin\\Prices\\ManagePricesPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T23:52:30.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:52:30.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 33,
               "Title": "BanUserControl.xaml",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml",
               "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml",
               "RelativeToolTip": "4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-20T23:38:09.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:38:09.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 34,
               "Title": "SubscriptionPrice.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\SubscriptionPrice.cs",
               "RelativeDocumentMoniker": "4lab\\Resources\\SubscriptionPrice.cs",
@@ -1146,12 +1119,11 @@
               "RelativeToolTip": "4lab\\Resources\\SubscriptionPrice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T23:48:45.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:48:45.039Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 35,
               "Title": "BanPlayersPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ban\\BanPlayersPage.xaml.cs",
@@ -1164,7 +1136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 38,
               "Title": "BanUserControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml.cs",
@@ -1172,38 +1144,11 @@
               "RelativeToolTip": "4lab\\Pages\\Admin\\Ban\\BanUserControl.xaml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowAMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T23:38:22.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:38:22.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Roles.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Roles.cs",
-              "RelativeDocumentMoniker": "4lab\\Resources\\Roles.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Resources\\Roles.cs",
-              "RelativeToolTip": "4lab\\Resources\\Roles.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwC8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T05:48:49.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "TeamMatchesPage.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T06:40:10.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "ChoiceControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\ChoiceControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Message\\ChoiceControl.xaml.cs",
@@ -1211,12 +1156,11 @@
               "RelativeToolTip": "4lab\\Pages\\Message\\ChoiceControl.xaml.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAhwJkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T19:37:14.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T19:37:14.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 47,
               "Title": "MessagesPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Message\\MessagesPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Message\\MessagesPage.xaml.cs",
@@ -1224,12 +1168,11 @@
               "RelativeToolTip": "4lab\\Pages\\Message\\MessagesPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T19:54:02.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T19:54:02.673Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 74,
               "Title": "ChoiceControl.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\ChoiceControl.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Message\\ChoiceControl.xaml.cs",
@@ -1241,7 +1184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 75,
               "Title": "MessagesPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Message\\MessagesPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Message\\MessagesPage.xaml.cs",
@@ -1253,20 +1196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "UsersListPopup.xaml.cs",
-              "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
-              "RelativeDocumentMoniker": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
-              "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
-              "RelativeToolTip": "4lab\\Pages\\Team\\AddMembers\\UsersListPopup.xaml.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAjwEkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:58:19.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "TeamPage.xaml.cs",
               "DocumentMoniker": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Team\\TeamPage.xaml.cs",
               "RelativeDocumentMoniker": "4lab\\Pages\\Team\\TeamPage.xaml.cs",
@@ -1274,8 +1204,7 @@
               "RelativeToolTip": "4lab\\Pages\\Team\\TeamPage.xaml.cs",
               "ViewState": "AgIAAKEAAAAAAAAAAAAtwPAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T00:00:04.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T00:00:04.973Z"
             }
           ]
         }

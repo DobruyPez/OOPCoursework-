@@ -119,6 +119,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\PercentageConverter.cs" />
     <Compile Include="Converters\RoleToStringConverter.cs" />
     <Compile Include="Pages\Admin\Ads\ManageAdsPage.xaml.cs">
       <DependentUpon>ManageAdsPage.xaml</DependentUpon>
@@ -355,6 +356,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Windows\ICO\standoff2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Add\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

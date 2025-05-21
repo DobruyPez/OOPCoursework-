@@ -89,18 +89,20 @@ namespace _4lab.Pages.TeamMatches.RegisterOffer
                             return;
                         }
 
-                        newOffer.Name = team.Name;
-                        newOffer.CreatorId = team.Id;
+                        newOffer.Name = offerType + " " + team.Name;
+                        newOffer.CreatorId = user.Id;
                         newOffer.Maps = maps;
                         newOffer.Date = selectedDateTime;
+                        newOffer.Offertype = Offertype.TeamDethMatch;
                     }
                     else // OneToOne
                     {
                         var user = CurrentUser.Instance.GetCurrentUser();
-                        newOffer.Name = user.Name;
+                        newOffer.Name = offerType + " " + user.Name;
                         newOffer.CreatorId = user.Id;
                         newOffer.Maps = maps;
                         newOffer.Date = selectedDateTime;
+                        newOffer.Offertype = Offertype.OneToOne;
                     }
 
                     context.TeamOffers.Add(newOffer);

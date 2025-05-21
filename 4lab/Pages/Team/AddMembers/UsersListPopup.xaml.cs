@@ -31,7 +31,7 @@ namespace _4lab.Pages.Team
                 {
                     // Получаем всех пользователей, которые еще не в команде
                     var availablePlayers = context.Players
-                        .Where(u => !context.Players.Any(tm => tm.Id == u.Id && tm.TeamId == _teamId) && u.TeamId == null)
+                        .Where(u => !context.Players.Any(tm => tm.Id == u.Id && tm.TeamId == _teamId) && u.TeamId == null && !u.Banned)
                         .ToList();
 
                     UsersList.Items.Clear();

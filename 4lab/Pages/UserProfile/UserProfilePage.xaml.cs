@@ -4,6 +4,9 @@ using System.Windows;
 using System.Windows.Controls;
 using Roles;
 using static Roles.CurrentTeam;
+using _4lab.BD;
+using System.IO;
+using System.Diagnostics;
 
 namespace _4lab
 {
@@ -14,8 +17,70 @@ namespace _4lab
             InitializeComponent();
             LoadUserData();
 
+            LoadAdvertisement();
             // Подписываемся на изменение текущей команды
             CurrentTeam.TeamChanged += (s, e) => UpdateTeamName();
+        }
+        private void LoadAdvertisement()
+        {
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    var latestAd = context.Advertisements
+                        .FirstOrDefault();
+
+                    if (latestAd != null)
+                    {
+                        string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                        string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "Ads", latestAd.Image);
+                        if (File.Exists(imagePath))
+                        {
+                            var bitmap = new System.Windows.Media.Imaging.BitmapImage(new Uri(imagePath, UriKind.Absolute));
+                            LeftAdImage.Source = bitmap;
+                            RightAdImage.Source = bitmap;
+                            LeftAdButton.Tag = latestAd.Link;
+                            RightAdButton.Tag = latestAd.Link;
+                            LeftAdButton.Visibility = Visibility.Visible;
+                            RightAdButton.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Advertisement image not found: {imagePath}");
+                            LeftAdButton.Visibility = Visibility.Collapsed;
+                            RightAdButton.Visibility = Visibility.Collapsed;
+                        }
+                    }
+                    else
+                    {
+                        LeftAdButton.Visibility = Visibility.Collapsed;
+                        RightAdButton.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to load advertisement: {ex.Message}");
+                LeftAdButton.Visibility = Visibility.Collapsed;
+                RightAdButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void AdButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var button = sender as Button;
+                string link = button.Tag as string;
+                if (!string.IsNullOrEmpty(link))
+                {
+                    Process.Start(new ProcessStartInfo(link) { UseShellExecute = true });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void LoadUserData()

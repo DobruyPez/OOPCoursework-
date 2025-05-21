@@ -10,7 +10,7 @@
       Background="#1A1A1A">
 
     <Page.Resources>
-        <!-- Стиль для TextBlock -->
+        <!-- Стили -->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -24,16 +24,12 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <!-- Стиль для заголовков TextBlock -->
         <Style x:Key="HeaderTextBlockStyle" BasedOn="{StaticResource TextBlockStyle}" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
-
-        <!-- Стиль для TextBox -->
         <Style x:Key="InputStyle" TargetType="TextBox">
             <Setter Property="Background" Value="#995200"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
@@ -71,24 +67,23 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
         <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
             <Border x:Name="ButtonBorder" 
-            CornerRadius="10" 
-            Background="#995200" 
-            BorderBrush="Black" 
-            BorderThickness="1">
+                    CornerRadius="10" 
+                    Background="#995200" 
+                    BorderBrush="Black" 
+                    BorderThickness="1">
                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
                 <Border.Triggers>
                     <EventTrigger RoutedEvent="MouseEnter">
                         <BeginStoryboard>
                             <Storyboard>
                                 <ColorAnimation Storyboard.TargetName="ButtonBorder" 
-                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                       To="#4A4A4A" Duration="0:0:0.3"/>
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                To="#4A4A4A" Duration="0:0:0.3"/>
                                 <DoubleAnimation Storyboard.TargetName="ButtonBorder"
-                                        Storyboard.TargetProperty="Opacity"
-                                        To="0.9" Duration="0:0:0.3"/>
+                                                 Storyboard.TargetProperty="Opacity"
+                                                 To="0.9" Duration="0:0:0.3"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -96,12 +91,11 @@
                         <BeginStoryboard>
                             <Storyboard>
                                 <ColorAnimation Storyboard.TargetName="ButtonBorder" 
-                                       Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                       To="#995200" Duration="0:0:0.3"/>
-                                <!-- Изменено на начальный цвет -->
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                To="#995200" Duration="0:0:0.3"/>
                                 <DoubleAnimation Storyboard.TargetName="ButtonBorder"
-                                        Storyboard.TargetProperty="Opacity"
-                                        To="1" Duration="0:0:0.3"/>
+                                                 Storyboard.TargetProperty="Opacity"
+                                                 To="1" Duration="0:0:0.3"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -109,11 +103,11 @@
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation Storyboard.TargetName="ButtonBorder"
-                                        Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
-                                        To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                                 Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                                 To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
                                 <DoubleAnimation Storyboard.TargetName="ButtonBorder"
-                                        Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
-                                        To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
+                                                 Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                                 To="0.95" Duration="0:0:0.1" AutoReverse="True"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -123,8 +117,6 @@
                 </Border.RenderTransform>
             </Border>
         </ControlTemplate>
-
-        <!-- Стиль для Button -->
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
@@ -137,93 +129,124 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
-
-        <!-- Стиль для StackPanel -->
         <Style x:Key="StackPanelStyle" TargetType="StackPanel">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="20"/>
         </Style>
+
+        <!-- Конвертер для процентов -->
+        <local:PercentageConverter x:Key="PercentageConverter"/>
     </Page.Resources>
 
     <Grid>
-        <!-- Кнопка смены темы в правом верхнем углу -->
-        <Button x:Name="ToggleThemeButton"
-                Style="{StaticResource ButtonStyle}"
-                Click="ToggleThemeButton_Click"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="0,10,10,0"
-                Width="50"
-                Height="50"
-                ToolTip="Toggle Theme"
-                Panel.ZIndex="1">
-            <TextBlock Text="🌞"
-                       FontSize="20"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       TextAlignment="Center"/>
-        </Button>
+        <!-- Основной Grid для размещения рекламы и профиля -->
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="400" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-        <!-- Основное содержимое, центрированное -->
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
-            <!-- Header with User Info -->
-            <StackPanel>
-                <TextBlock x:Name="UsernameTextBlock" 
-                           Text="Username: [Username]" 
-                           Style="{StaticResource HeaderTextBlockStyle}"/>
-                <TextBlock x:Name="EmailTextBlock" 
-                           Text="Email: [Email]" 
-                           Style="{StaticResource TextBlockStyle}" 
-                           FontSize="18"/>
-                <TextBlock x:Name="PremiumTextBlock" 
-                           Text="Subscription: Free" 
-                           Style="{StaticResource TextBlockStyle}"/>
-            </StackPanel>
+            <!-- Левая реклама -->
+            <Button x:Name="LeftAdButton" 
+                    Grid.Column="0"
+                    Click="AdButton_Click" 
+                    Padding="0" 
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    Width="{Binding RelativeSource={RelativeSource AncestorType=Page}, Path=ActualWidth, Converter={StaticResource PercentageConverter}, ConverterParameter=0.15}"
+                    Height="{Binding RelativeSource={RelativeSource AncestorType=Page}, Path=ActualHeight, Converter={StaticResource PercentageConverter}, ConverterParameter=0.8}">
+                <Image x:Name="LeftAdImage" 
+                       Stretch="Uniform" 
+                       Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Button}}"
+                       Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Button}}"/>
+            </Button>
 
-            <!-- Profile Settings -->
-            <StackPanel Margin="0,20,0,0">
-                <!-- Twitch Link -->
-                <StackPanel Orientation="Horizontal" Margin="0,10">
-                    <TextBlock Text="Twitch Username:" 
+            <!-- Центральный профиль -->
+            <StackPanel Grid.Column="1" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Width="400">
+                <!-- Header with User Info -->
+                <StackPanel>
+                    <TextBlock x:Name="UsernameTextBlock" 
+                               Text="Username: [Username]" 
+                               Style="{StaticResource HeaderTextBlockStyle}"/>
+                    <TextBlock x:Name="EmailTextBlock" 
+                               Text="Email: [Email]" 
                                Style="{StaticResource TextBlockStyle}" 
-                               Width="150"/>
-                    <TextBox x:Name="TwitchTextBox" 
-                             Width="200" 
-                             Style="{StaticResource InputStyle}"/>
+                               FontSize="18"/>
+                    <TextBlock x:Name="PremiumTextBlock" 
+                               Text="Subscription: Free" 
+                               Style="{StaticResource TextBlockStyle}"/>
                 </StackPanel>
 
-                <!-- Discord Link -->
-                <StackPanel Orientation="Horizontal" Margin="0,10">
-                    <TextBlock Text="Discord Username:" 
+                <!-- Profile Settings -->
+                <StackPanel Margin="0,20,0,0">
+                    <!-- Twitch Link -->
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Text="Twitch Username:" 
+                                   Style="{StaticResource TextBlockStyle}" 
+                                   Width="150"/>
+                        <TextBox x:Name="TwitchTextBox" 
+                                 Width="200" 
+                                 Style="{StaticResource InputStyle}"/>
+                    </StackPanel>
+
+                    <!-- Discord Link -->
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Text="Discord Username:" 
+                                   Style="{StaticResource TextBlockStyle}" 
+                                   Width="150"/>
+                        <TextBox x:Name="DiscordTextBox" 
+                                 Width="200" 
+                                 Style="{StaticResource InputStyle}"/>
+                    </StackPanel>
+
+                    <!-- Team Info -->
+                    <TextBlock x:Name="TeamTextBlock" 
+                               Text="Team: Not in a team" 
                                Style="{StaticResource TextBlockStyle}" 
-                               Width="150"/>
-                    <TextBox x:Name="DiscordTextBox" 
-                             Width="200" 
-                             Style="{StaticResource InputStyle}"/>
+                               HorizontalAlignment="Center" 
+                               Margin="0,20,0,0"/>
+
+                    <!-- Save Button -->
+                    <Button Content="Save Links" 
+                            Style="{StaticResource ButtonStyle}" 
+                            Click="SaveLinksButton_Click"
+                            HorizontalAlignment="Center"
+                            Margin="0,20"/>
+
+                    <!-- Log Out Button -->
+                    <Button x:Name="LogOutButton" 
+                            Content="Log Out" 
+                            Style="{StaticResource ButtonStyle}" 
+                            Click="LogOutButton_Click"
+                            HorizontalAlignment="Center"/>
                 </StackPanel>
-
-                <!-- Team Info -->
-                <TextBlock x:Name="TeamTextBlock" 
-                           Text="Team: Not in a team" 
-                           Style="{StaticResource TextBlockStyle}" 
-                           HorizontalAlignment="Center" 
-                           Margin="0,20,0,0"/>
-
-                <!-- Save Button -->
-                <Button Content="Save Links" 
-                        Style="{StaticResource ButtonStyle}" 
-                        Click="SaveLinksButton_Click"
-                        HorizontalAlignment="Center"
-                        Margin="0,20"/>
-
-                <!-- Log Out Button -->
-                <Button x:Name="LogOutButton" 
-                        Content="Log Out" 
-                        Style="{StaticResource ButtonStyle}" 
-                        Click="LogOutButton_Click"
-                        HorizontalAlignment="Center"/>
             </StackPanel>
-        </StackPanel>
+
+            <!-- Правая реклама -->
+            <Button x:Name="RightAdButton" 
+                    Grid.Column="2"
+                    Click="AdButton_Click" 
+                    Padding="0" 
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    Width="{Binding RelativeSource={RelativeSource AncestorType=Page}, Path=ActualWidth, Converter={StaticResource PercentageConverter}, ConverterParameter=0.15}"
+                    Height="{Binding RelativeSource={RelativeSource AncestorType=Page}, Path=ActualHeight, Converter={StaticResource PercentageConverter}, ConverterParameter=0.8}">
+                <Image x:Name="RightAdImage" 
+                       Stretch="Uniform" 
+                       Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Button}}"
+                       Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Button}}"/>
+            </Button>
+        </Grid>
     </Grid>
 </Page>
