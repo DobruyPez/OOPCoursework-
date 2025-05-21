@@ -25,19 +25,19 @@
 
     <!-- PremiumSubscrationPage -->
     <system:String x:Key="LitePlan">Лайт</system:String>
-    <system:String x:Key="LitePrice">999 руб./месяц</system:String>
+    <system:String x:Key="LitePrice">/месяц</system:String>
     <system:String x:Key="LiteFeatures">Базовые функции</system:String>
     <system:String x:Key="LiteUsers">1 пользователь</system:String>
     <system:String x:Key="LiteSupport">Ограниченная поддержка</system:String>
     <system:String x:Key="ChooseLite">Выбрать Лайт</system:String>
     <system:String x:Key="StandardPlan">Стандарт</system:String>
-    <system:String x:Key="StandardPrice">1999 руб./месяц</system:String>
+    <system:String x:Key="StandardPrice">/месяц</system:String>
     <system:String x:Key="StandardFeatures">Расширенные функции</system:String>
     <system:String x:Key="StandardUsers">До 3 пользователей</system:String>
     <system:String x:Key="StandardSupport">Приоритетная поддержка</system:String>
     <system:String x:Key="ChooseStandard">Выбрать Стандарт</system:String>
     <system:String x:Key="ProPlan">Про</system:String>
-    <system:String x:Key="ProPrice">2999 руб./месяц</system:String>
+    <system:String x:Key="ProPrice">/месяц</system:String>
     <system:String x:Key="ProFeatures">Все функции</system:String>
     <system:String x:Key="ProUsers">Неограниченное количество пользователей</system:String>
     <system:String x:Key="ProSupport">Поддержка 24/7</system:String>

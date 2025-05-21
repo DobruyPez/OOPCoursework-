@@ -15,10 +15,10 @@ namespace Roles
         Admin,
         Player
     }
-    public enum SubscriptionType  // Заглушка, можно расширить
+    public enum SubscriptionType  
     {
         Lite,
-        Semiro,
+        SemiPro,
         Pro
     }
     public enum TeamRole
@@ -42,15 +42,17 @@ namespace Roles
     public class Player : User
     {
         public SubscriptionType? Subscription { get; set; }
-        public string TwitchLink { get; set; }   // Добавлено
-        public string DiscordLink { get; set; }  // Добавлено
-        public int? TeamId { get; set; }          // Добавлено
+        public string TwitchLink { get; set; }   
+        public string DiscordLink { get; set; }  
+        public int? TeamId { get; set; }          
+        public bool Banned { get; set; } = false;      
     }
 
     public class Admin : User
     {
         // Пока без дополнительных возможностей
     }
+
     public class Team
     {
         [Key]
@@ -605,6 +607,9 @@ namespace Roles
         [Required]
         [Column(TypeName = "timestamp")]
         public DateTime Date { get; set; }
+
+        [Required]
+        public bool Resolved { get; set; } = false;
 
         public virtual User Creator { get; set; }
     }

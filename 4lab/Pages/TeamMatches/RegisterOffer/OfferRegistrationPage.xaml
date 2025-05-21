@@ -40,7 +40,7 @@
             <StackPanel Style="{StaticResource StackPanelStyle}">
                 <TextBlock Text="Регистрация офера" Style="{StaticResource TextBlockStyle}"/>
                 
-            <!--<local:OfferRegistrationControl/>-->
+            <local:OfferRegistrationControl/>
             </StackPanel>
         </Border>
     </Grid>

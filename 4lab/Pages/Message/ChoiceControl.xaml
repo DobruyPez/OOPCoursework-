@@ -6,30 +6,32 @@
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="300">
     <UserControl.Resources>
-        <!-- Стиль TextBlock -->
+        <!-- Улучшенный стиль TextBlock -->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="FontSize" Value="12"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
 
-        <!-- Шаблон для кнопок -->
+        <!-- Улучшенный шаблон для кнопок -->
         <ControlTemplate x:Key="CustomButtonTemplate" TargetType="Button">
             <Border x:Name="ButtonBorder" 
                     CornerRadius="10" 
-                    Background="#2A2A2A" 
-                    BorderBrush="Black" 
+                    Background="#FF8C00" 
+                    BorderBrush="#FFFFFF" 
                     BorderThickness="1">
-                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                  Margin="{TemplateBinding Padding}"/>
                 <Border.Triggers>
                     <EventTrigger RoutedEvent="MouseEnter">
                         <BeginStoryboard>
                             <Storyboard>
                                 <ColorAnimation Storyboard.TargetName="ButtonBorder" 
                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                               To="#4A4A4A" Duration="0:0:0.3"/>
+                                               To="#FFA040" Duration="0:0:0.2"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -38,7 +40,16 @@
                             <Storyboard>
                                 <ColorAnimation Storyboard.TargetName="ButtonBorder" 
                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                               To="#2A2A2A" Duration="0:0:0.3"/>
+                                               To="#FF8C00" Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="ButtonBorder" 
+                                               Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                               To="#E67300" Duration="0:0:0.1"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -46,28 +57,32 @@
             </Border>
         </ControlTemplate>
 
-        <!-- Стиль для кнопок -->
+        <!-- Улучшенный стиль для кнопок -->
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Template" Value="{StaticResource CustomButtonTemplate}"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
             <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Padding" Value="10,5"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Width" Value="30"/>
-            <Setter Property="Height" Value="30"/>
+            <Setter Property="MinWidth" Value="80"/>
+            <Setter Property="MinHeight" Value="30"/>
         </Style>
     </UserControl.Resources>
+
     <Grid>
-        <Border BorderBrush="#FF8C00" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5">
+        <Border BorderBrush="#FF8C00" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5"
+                Background="#333333">
             <StackPanel>
-                <TextBlock x:Name="SenderName" FontWeight="Bold" Foreground="#FF8C00"/>
-                <TextBlock x:Name="MessageContent" TextWrapping="Wrap" Margin="0,5,0,5"/>
+                <TextBlock x:Name="SenderName" Style="{StaticResource TextBlockStyle}" 
+                          FontWeight="Bold" Foreground="#FF8C00"/>
+                <TextBlock x:Name="MessageContent" Style="{StaticResource TextBlockStyle}" 
+                          Margin="0,5,0,5"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button x:Name="AcceptButton" Content="✓" Width="30" Margin="0,0,5,0" 
+                    <Button x:Name="AcceptButton" Content="✓" 
                             Click="AcceptButton_Click" Style="{StaticResource ButtonStyle}"/>
-                    <Button x:Name="DeclineButton" Content="✕" Width="30" 
+                    <Button x:Name="DeclineButton" Content="✕" Margin="5,0,0,0"
                             Click="DeclineButton_Click" Style="{StaticResource ButtonStyle}"/>
                 </StackPanel>
             </StackPanel>

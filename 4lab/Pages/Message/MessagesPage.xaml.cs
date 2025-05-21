@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using _4lab.BD;
+using Roles;
 
 namespace _4lab
 {
@@ -17,10 +18,18 @@ namespace _4lab
         {
             using (var context = new DBContext())
             {
+                var currPlayId = CurrentUser.Instance.GetCurrentUser().Id;
                 var unreadMessages = context.Messages
                     .Include("Sender")
                     .Where(m => !m.IsRead)
+                    .Where(m => m.ReceiverId == currPlayId)
                     .ToList();
+
+                if (unreadMessages.Count == 0)
+                {
+                    NoMessagesText.Visibility = Visibility.Visible;
+                    return;
+                }
 
                 foreach (var message in unreadMessages)
                 {
@@ -37,6 +46,12 @@ namespace _4lab
                             }
                         }
                         MessagesContainer.Children.Remove(control);
+
+                        // Проверяем, остались ли еще сообщения
+                        if (MessagesContainer.Children.Count == 0)
+                        {
+                            NoMessagesText.Visibility = Visibility.Visible;
+                        }
                     };
 
                     MessagesContainer.Children.Add(control);
