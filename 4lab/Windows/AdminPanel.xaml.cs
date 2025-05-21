@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using _4lab.Pages.Admin.Ban;
 using _4lab.Pages.Admin.Prices;
-using _4lab.Pages.Admin.Ads; // Добавим пространство имен для новой страницы
+using _4lab.Pages.Admin.Ads; 
 
 namespace _4lab.Windows
 {

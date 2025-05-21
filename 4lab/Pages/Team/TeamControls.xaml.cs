@@ -148,29 +148,46 @@ namespace _4lab
                         .Include(t => t.Members)
                         .FirstOrDefault(t => t.Id == team.Id);
 
-                    if (teamToDelete != null)
-                    {                        
-                        CurrentTeam.ClearAllTeamMembers();
-                        context.Teams.Remove(teamToDelete);
-                        context.SaveChanges();
-
-                        CurrentTeam.ClearCurrentTeam();
-
-                        MessageBox.Show(
-                            Application.Current.Resources["TeamDeletedSuccess"]?.ToString() ?? "Команда успешно удалена",
-                            Application.Current.Resources["SuccessTitle"]?.ToString() ?? "Успех",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-
-                        // Можно вызвать событие для обновления UI
-                        // OnTeamDeleted?.Invoke();
-                    }
-                    else
+                    if (teamToDelete == null)
                     {
                         MessageBox.Show(
                             Application.Current.Resources["TeamNotFound"]?.ToString() ?? "Команда не найдена",
                             Application.Current.Resources["ErrorTitle"]?.ToString() ?? "Ошибка",
                             MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
                     }
+
+                    // Получаем текущего пользователя
+                    var currentUser = CurrentUser.Instance.GetCurrentUser();
+                    if (currentUser == null)
+                    {
+                        MessageBox.Show(
+                            Application.Current.Resources["UserNotFound"]?.ToString() ?? "Текущий пользователь не найден",
+                            Application.Current.Resources["ErrorTitle"]?.ToString() ?? "Ошибка",
+                            MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                    // Удаляем все TeamOffer, где CreatorId соответствует текущему пользователю
+                    var offersToDelete = context.TeamOffers
+                        .Where(to => to.CreatorId == currentUser.Id && to.Offertype == Offertype.TeamDethMatch)
+                        .ToList();
+                    context.TeamOffers.RemoveRange(offersToDelete);
+
+                    // Очищаем членов команды и удаляем команду
+                    CurrentTeam.ClearAllTeamMembers();
+                    context.Teams.Remove(teamToDelete);
+
+                    // Сохраняем изменения
+                    context.SaveChanges();
+
+                    // Очищаем текущую команду
+                    CurrentTeam.ClearCurrentTeam();
+
+                    MessageBox.Show(
+                        Application.Current.Resources["TeamDeletedSuccess"]?.ToString() ?? "Команда успешно удалена",
+                        Application.Current.Resources["SuccessTitle"]?.ToString() ?? "Успех",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)

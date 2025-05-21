@@ -610,6 +610,8 @@ namespace Roles
 
         [Required]
         public bool Resolved { get; set; } = false;
+        public Offertype Offertype { get; set; } = Offertype.OneToOne;
+
 
         public virtual User Creator { get; set; }
     }

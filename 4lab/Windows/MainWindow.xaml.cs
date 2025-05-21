@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using _4lab.BD;
 using _4lab.Resources;
 using System.Diagnostics;
+using System.IO;
 
 namespace _4lab
 {
@@ -30,44 +31,11 @@ namespace _4lab
             InitializeComponent();
             SetLanguage(isEnglish);
             LoadInitialContent();
-            LoadAdvertisement();
             MainFrame.Navigated += MainFrame_Navigated;
             CurrentTeam.TeamChangedAct += NavigateToHomeOnMembersCleared;
             CurrentTeam.MembersCleared += NavigateToHomeOnMembersCleared;
             InitializeChat();
             Console.WriteLine($"Application started at {DateTime.Now} (CEST: 06:03 PM, May 18, 2025)");
-        }
-        public void RefreshAdvertisement()
-        {
-            LoadAdvertisement();
-        }
-
-        private void LoadAdvertisement()
-        {
-            try
-            {
-                using (var context = new DBContext())
-                {
-                    var latestAd = context.Advertisements
-                        .FirstOrDefault();
-
-                    if (latestAd != null)
-                    {
-                        AdImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(latestAd.Image, UriKind.Absolute));
-                        AdButton.Tag = latestAd.Link; // Сохраняем ссылку в Tag
-                        AdButton.Visibility = Visibility.Visible;
-                    }
-                    else
-                    {
-                        AdButton.Visibility = Visibility.Collapsed; // Скрываем, если нет рекламы
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Failed to load advertisement: {ex.Message}");
-                AdButton.Visibility = Visibility.Collapsed;
-            }
         }
 
         private void AdButton_Click(object sender, RoutedEventArgs e)
@@ -144,8 +112,8 @@ namespace _4lab
                 using (var context = new DBContext())
                 {
                     var currUser = CurrentUser.Instance.GetCurrentUser();
-                    var users = context.Users
-                        .Where(u => u.Id != currUser.Id)
+                    var users = context.Players
+                        .Where(u => u.Id != currUser.Id && !u.Banned)
                         .ToList();
 
                     foreach (var user in users)

@@ -5,19 +5,18 @@ using System.Windows.Controls;
 using Microsoft.Win32;
 using _4lab.BD;
 using _4lab.Resources;
+using System.Linq;
+using _4lab.Windows;
 
 namespace _4lab.Pages.Admin.Ads
 {
     public partial class ManageAdsPage : Page
     {
-        private readonly MainWindow _mainWindow;
-        private readonly string _adsImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "wwwroot", "images", "ads");
+        private readonly string _adsImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "Ads");
 
-        public ManageAdsPage(MainWindow mainWindow = null)
+        public ManageAdsPage()
         {
             InitializeComponent();
-            _mainWindow = mainWindow;
-            // Создаем папку для изображений, если она не существует
             Directory.CreateDirectory(_adsImagePath);
         }
 
@@ -101,19 +100,21 @@ namespace _4lab.Pages.Admin.Ads
                     return;
                 }
 
-                // Копируем изображение в папку wwwroot/images/ads
+                // Копируем изображение в папку Images/Ads
                 string fileName = $"{Guid.NewGuid()}{Path.GetExtension(imagePath)}";
                 string destinationPath = Path.Combine(_adsImagePath, fileName);
                 File.Copy(imagePath, destinationPath, true);
 
-                // Формируем относительный путь для сохранения в БД
-                string relativePath = $"/images/ads/{fileName}";
-
+                // Сохраняем только имя файла в БД
                 using (var context = new DBContext())
                 {
+                    // Удаляем старую рекламу, если она есть
+                    var oldAds = context.Advertisements.ToList();
+                    context.Advertisements.RemoveRange(oldAds);
+
                     var newAd = new Advertisement
                     {
-                        Image = relativePath,
+                        Image = fileName, // Сохраняем только имя файла
                         Link = link,
                     };
 
@@ -123,9 +124,6 @@ namespace _4lab.Pages.Admin.Ads
                     MessageBox.Show("Реклама успешно сохранена.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                     ImageUrlTextBox.Text = string.Empty;
                     LinkTextBox.Text = string.Empty;
-
-                    // Обновляем рекламу в MainWindow
-                    _mainWindow?.RefreshAdvertisement();
                 }
             }
             catch (Exception ex)

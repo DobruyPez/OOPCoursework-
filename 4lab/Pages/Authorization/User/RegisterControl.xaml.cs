@@ -23,6 +23,7 @@ namespace _4lab
             string password = PasswordBox.Password;
             string confirmPassword = ConfirmPasswordBox.Password;
 
+            // Проверка на пустые поля
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
             {
@@ -31,13 +32,23 @@ namespace _4lab
                 return;
             }
 
-            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            // Проверка на отсутствие русских символов
+            if (Regex.IsMatch(username, @"[а-яА-ЯёЁ]") || Regex.IsMatch(email, @"[а-яА-ЯёЁ]") || Regex.IsMatch(password, @"[а-яА-ЯёЁ]"))
+            {
+                MessageBox.Show("Имя пользователя, email и пароль не должны содержать русские символы.", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Проверка формата email
+            if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]{2,}$"))
             {
                 MessageBox.Show("Введите корректный email.", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
+            // Проверка совпадения паролей
             if (password != confirmPassword)
             {
                 MessageBox.Show("Пароли не совпадают.", "Ошибка",
