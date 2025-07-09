@@ -14,47 +14,37 @@
                 <ResourceDictionary Source="/Resources/Stules/GeneralStyle.xaml"/>
                 <ResourceDictionary Source="/Resources/Stules/DarkTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <!-- Конвертер для преобразования bool в Visibility -->
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         </ResourceDictionary>
     </Page.Resources>
 
     <DockPanel LastChildFill="True">
-        <!-- Верхняя панель с поиском, фильтрами и кнопкой создания офера -->
         <Grid DockPanel.Dock="Top" Height="60" Background="#995200">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" x:Name="SearchBox" 
-                     Text="{DynamicResource SearchLabel}"
+                     Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                      Foreground="White" Background="Black"
-                     FontSize="14" Margin="10,10,5,10" Padding="5"
-                     GotFocus="SearchBox_GotFocus"/>
-            <ComboBox Grid.Column="1" x:Name="OfferTypeFilter" 
+                     FontSize="14" Margin="10,10,5,10" Padding="5"/>
+            <!--<ComboBox Grid.Column="1" x:Name="OfferTypeFilter" 
                       Margin="5,10" Width="150" 
-                      SelectionChanged="OfferTypeFilter_SelectionChanged">
+                      SelectedValue="{Binding SelectedOfferType, UpdateSourceTrigger=PropertyChanged}">
                 <ComboBoxItem Content="All"/>
                 <ComboBoxItem Content="OneToOne"/>
                 <ComboBoxItem Content="TeamDeathMatch"/>
-            </ComboBox>
-            <Button Grid.Column="2" Content="{DynamicResource SearchButton}"
-                    Style="{StaticResource OrangeBlackButtonStyle}"
-                    Margin="5,10" Padding="10,5"
-                    Click="SearchButton_Click"/>
-            <Button Grid.Column="3" Content="Create Offer"
+            </ComboBox>-->
+            <Button Grid.Column="2" Content="Create Offer"
                     Style="{StaticResource OrangeBlackButtonStyle}"
                     Margin="5,10,10,10" Padding="10,5"
-                    Click="CreateOfferButton_Click"/>
+                    Command="{Binding CreateOfferCommand}"/>
         </Grid>
 
-        <!-- Основной контент с вкладками -->
         <TabControl Background="Black" Margin="10">
-            <!-- Вкладка с чужими оферами -->
             <TabItem Header="Other Offers">
-                <ListBox x:Name="OtherMatchesList" 
+                <ListBox ItemsSource="{Binding OtherMatches}" 
                          HorizontalContentAlignment="Stretch" Margin="5">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -78,7 +68,7 @@
                                     <Button Grid.Column="2" Content="{DynamicResource JoinMatchButton}"
                                             Style="{StaticResource OrangeBlackButtonStyle}"
                                             Margin="10" Padding="10,5"
-                                            Command="{Binding DataContext.MakeOfferCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                            Command="{Binding DataContext.MakeOfferCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
                                             CommandParameter="{Binding}"
                                             Visibility="{Binding CanJoin, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                                 </Grid>
@@ -88,9 +78,8 @@
                 </ListBox>
             </TabItem>
 
-            <!-- Вкладка с моими оферами -->
             <TabItem Header="My Offers">
-                <ListBox x:Name="MyMatchesList" 
+                <ListBox ItemsSource="{Binding MyMatches}" 
                          HorizontalContentAlignment="Stretch" Margin="5">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -111,12 +100,12 @@
                                         <TextBlock Text="{Binding DateTime}" 
                                                    Foreground="White" FontSize="14" Margin="0,5,0,0"/>
                                     </StackPanel>
-                                    <Button Grid.Column="2" Content="{DynamicResource JoinMatchButton}"
+                                    <Button Grid.Column="2" Content="Delete Offer"
                                             Style="{StaticResource OrangeBlackButtonStyle}"
                                             Margin="10" Padding="10,5"
-                                            Command="{Binding DataContext.MakeOfferCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                            Command="{Binding DataContext.DeleteOfferCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
                                             CommandParameter="{Binding}"
-                                            Visibility="{Binding CanJoin, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                            Visibility="{Binding IsMyOffer, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>

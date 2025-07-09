@@ -195,7 +195,8 @@
         <!-- Стиль для DatePicker -->
         <Style x:Key="DatePickerStyle" TargetType="{x:Type DatePicker}">
             <Setter Property="Background" Value="#FF8C00"/>
-            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#000000"/>
+            <!-- Changed text color to black -->
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="8"/>
@@ -290,17 +291,17 @@
 
         <TextBlock Text="Выберите карты:" Style="{StaticResource TextBlockStyle}"/>
         <ListBox x:Name="MapsComboBox" Style="{StaticResource ListBoxStyle}" SelectionMode="Multiple">
-            <ListBoxItem Content="Dust2"/>
-            <ListBoxItem Content="Mirage"/>
-            <ListBoxItem Content="Inferno"/>
-            <ListBoxItem Content="Nuke"/>
-            <ListBoxItem Content="Overpass"/>
-            <ListBoxItem Content="Vertigo"/>
-            <ListBoxItem Content="Ancient"/>
+            <ListBoxItem Content="Sandstone"/>
+            <ListBoxItem Content="Province"/>
+            <ListBoxItem Content="Rust"/>
+            <ListBoxItem Content="Zone 9"/>
+            <ListBoxItem Content="Breeze"/>
+            <ListBoxItem Content="Training Outside"/>
+            <ListBoxItem Content="Arena"/>
         </ListBox>
 
         <TextBlock Text="Выберите дату:" Style="{StaticResource TextBlockStyle}"/>
-        <DatePicker x:Name="DatePicker" Style="{StaticResource DatePickerStyle}" SelectedDateFormat="Short"/>
+        <DatePicker x:Name="DatePicker" Style="{StaticResource DatePickerStyle}" SelectedDateFormat="Short" Height="39"/>
 
         <TextBlock Text="Выберите время:" Style="{StaticResource TextBlockStyle}"/>
         <ComboBox x:Name="TimePicker" Style="{StaticResource ComboBoxStyle}">

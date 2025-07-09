@@ -107,7 +107,7 @@
             <StackPanel Style="{StaticResource StackPanelStyle}">
                 <TextBlock x:Name="TitleTextBlock" Style="{StaticResource TextBlockStyle}" Margin="0,0,0,-15"/>
                 <ContentControl x:Name="AuthContentControl"/>
-                <Button x:Name="ToggleButton" Style="{StaticResource ButtonStyle}" Click="ToggleButton_Click" RenderTransformOrigin="0.482,-1.685" Margin="0,0,0,0"/>
+                <Button x:Name="ToggleButton" Style="{StaticResource ButtonStyle}" Click="ToggleButton_Click" RenderTransformOrigin="0.482,-1.685" Margin="0,0,0,0" Width="258"/>
             </StackPanel>
         </Border>
     </Grid>
