@@ -48,14 +48,10 @@
               "RelativeDocumentMoniker": "4lab\\BD\\DBContext.cs",
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\BD\\DBContext.cs",
               "RelativeToolTip": "4lab\\BD\\DBContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAIA5wAsAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T12:51:05.151Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -67,7 +63,8 @@
               "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterUserPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T12:50:13.717Z"
+              "WhenOpened": "2025-05-27T12:50:13.717Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -78,7 +75,8 @@
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
               "RelativeToolTip": "4lab\\Pages\\Authorization\\User\\RegisterControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-27T12:49:56.477Z"
+              "WhenOpened": "2025-05-27T12:49:56.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -90,7 +88,8 @@
               "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T12:37:11.905Z"
+              "WhenOpened": "2025-05-27T12:37:11.905Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -101,7 +100,8 @@
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\ClassDiagram1.cd",
               "RelativeToolTip": "4lab\\ClassDiagram1.cd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2025-05-27T12:32:06.14Z"
+              "WhenOpened": "2025-05-27T12:32:06.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -113,7 +113,8 @@
               "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesViewModel.cs",
               "ViewState": "AgIAALsAAAAAAAAAAAAUwPYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T12:13:35.24Z"
+              "WhenOpened": "2025-05-27T12:13:35.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -124,7 +125,8 @@
               "ToolTip": "D:\\laby\\4_sem\\OOP\\4_5lab\\4lab\\4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
               "RelativeToolTip": "4lab\\Pages\\TeamMatches\\TeamMatchesPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-27T11:44:40.217Z"
+              "WhenOpened": "2025-05-27T11:44:40.217Z",
+              "EditorCaption": ""
             }
           ]
         }
